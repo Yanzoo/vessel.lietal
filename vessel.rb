@@ -5,6 +5,18 @@ class Lietl
 
   include Vessel
 
+  class Corpse
+
+    attr_accessor :dictionaery
+
+    def result
+
+      return "WAT"
+
+    end
+
+  end
+
   class PassiveActions
 
     include ActionCollection
@@ -17,8 +29,11 @@ class Lietl
       path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
 
       load_folder("#{path}/objects/*")
+      load "#{path}/modules/documentation.rb"
 
-      return "Hello"
+      corpse = Corpse.new
+      corpse.dictionaery = Dictionaery.new
+      return corpse.result
 
     end
 
