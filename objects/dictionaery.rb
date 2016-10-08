@@ -1,19 +1,24 @@
 class Dictionaery
 
+	attr_accessor :vowels
+	attr_accessor :consonants
+
 	def initialize
+
+		@vowels = ["i","a","o"]
+		@consonants = ["k","x","s","t","d","l","p","b","v"]
 
 	end
 
 	def aebeth
 
-		c = ["k","x","s","t","d","l","p","b","v"]
-		v = ["i","a","o"]
-
 		a = []
 
-		c.each do |lc|
-			v.each do |lv|
-				a.push(lc+lv)
+		consonants.each do |lc|
+			vowels.each do |lv|
+				aeth = Aeth.new
+				aeth.lietal = lc+lv
+				a.push(aeth)
 			end
 		end
 
@@ -21,5 +26,20 @@ class Dictionaery
 
 	end
 
+	def divieths
+
+		a = []
+
+		aebeth.each do |aeth1|
+			aebeth.each do |aeth2|
+				aeth = Aeth.new
+				aeth.lietal = aeth1+aeth2
+				a.push(aeth)
+			end
+		end
+
+		return a
+
+	end
 
 end

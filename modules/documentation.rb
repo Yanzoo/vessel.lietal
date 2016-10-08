@@ -6,15 +6,24 @@ class Lietl
 
     def result
 
-      p dictionaery.aebeth
-      return "Working--"  
+      # Sounds
+      # Aebeth
+      # Particles
+      # Key Setences
+      # Traversing
+      # Vocabulary
+
+      Dictionaery.new.aebeth.each do |aeth|
+        
+        puts aeth.ae.english+" -> "+aeth.ae.form
+
+      end
+
+      return "<p>Working on improving the documentation.</p>"  
 
     end
 
   end
-
-  
-
 
   def body
 
@@ -295,9 +304,7 @@ class Lietl
 
     </table>
 
-    <p>Feel free to contact me at aliceffekt@gmail.com if you have any further question.</p>
-
-    "
+    <p>Feel free to contact me at aliceffekt@gmail.com if you have any further question.</p>"
 
   end
 

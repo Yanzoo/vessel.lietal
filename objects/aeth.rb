@@ -1,33 +1,28 @@
 class Aeth
 
-	def initialize hash
+	attr_accessor :english
+	attr_accessor :lietal
 
-		@hash = hash
-
-	end
-
-	def english
-
-		return @hash['english']
+	def initialize
 
 	end
 
-	def traumae
+	def ae
 
-		return @hash['traumae']
-
+		return Ae.new(lietal[0,2])
+		
 	end
 
 	def adultspeak
 
-		if traumae.include?("'") then return traumae end
+		if lietal.include?("'") then return lietal end
 
-		c1 = traumae[0,1]
-		c2 = traumae[2,1]
-		c3 = traumae[4,1]
-		v1 = traumae[1,1]
-		v2 = traumae[3,1]
-		v3 = traumae[5,1]
+		c1 = lietal[0,1]
+		c2 = lietal[2,1]
+		c3 = lietal[4,1]
+		v1 = lietal[1,1]
+		v2 = lietal[3,1]
+		v3 = lietal[5,1]
 
 		if c1 == c2 then c2 = "" end
 		if v1 == v2 then v2 = "" end
