@@ -90,7 +90,7 @@ class Ae
     h["Objectional"]["Relation"] = "With","United","Without"
     h["Objectional"]["Counter"] = "Multiple","One","None"
     h["Subjectional"] = {}
-    h["Subjectional"]["Interaction"] = "To touch","To see","To be"
+    h["Subjectional"]["Interaction"] = "To make","To see","To be"
     h["Subjectional"]["Modality"] = "Certain","Possible","Impossible"
     h["Subjectional"]["Alignment"] = "Agree","Ambivalent","Disagree"
 

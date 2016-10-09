@@ -163,14 +163,8 @@ class Lietl
   <tr>
     <th>time</th><td>#{@dictionaery.translate('time','lietal').capitalize}</td>
     <th>person</th><td>#{@dictionaery.translate('person','lietal').capitalize}</td>
-    <th>year</th><td>#{@dictionaery.translate('year','lietal').capitalize}</td>
     <th>way</th><td>#{@dictionaery.translate('way','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>day</th><td>#{@dictionaery.translate('day','lietal').capitalize}</td>
     <th>thing</th><td>#{@dictionaery.translate('thing','lietal').capitalize}</td>
-    <th>man</th><td>#{@dictionaery.translate('man','lietal').capitalize}</td>
-    <th>world</th><td>#{@dictionaery.translate('world','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>life</th><td>#{@dictionaery.translate('life','lietal').capitalize}</td>
@@ -180,9 +174,9 @@ class Lietl
   </tr>
   <tr>
     <th>eye</th><td>#{@dictionaery.translate('eye','lietal').capitalize}</td>
-    <th>woman</th><td>#{@dictionaery.translate('woman','lietal').capitalize}</td>
     <th>place</th><td>#{@dictionaery.translate('place','lietal').capitalize}</td>
     <th>work</th><td>#{@dictionaery.translate('work','lietal').capitalize}</td>
+    <th>world</th><td>#{@dictionaery.translate('world','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>week</th><td>#{@dictionaery.translate('week','lietal').capitalize}</td>
@@ -226,12 +220,12 @@ class Lietl
   </tr>
   <tr>
     <th>to find</th><td>#{@dictionaery.translate('to find','lietal').capitalize}</td>
-    <th>to tell</th><td>#{@dictionaery.translate('to tell','lietal').capitalize}</td>
+    <th>to touch</th><td>#{@dictionaery.translate('to touch','lietal').capitalize}</td>
     <th>to ask</th><td>#{@dictionaery.translate('to ask','lietal').capitalize}</td>
     <th>to work</th><td>#{@dictionaery.translate('to work','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>to seem</th><td>#{@dictionaery.translate('to seem','lietal').capitalize}</td>
+    <th>to help</th><td>#{@dictionaery.translate('to help','lietal').capitalize}</td>
     <th>to feel</th><td>#{@dictionaery.translate('to feel','lietal').capitalize}</td>
     <th>to try</th><td>#{@dictionaery.translate('to try','lietal').capitalize}</td>
     <th>to leave</th><td>#{@dictionaery.translate('to leave','lietal').capitalize}</td>

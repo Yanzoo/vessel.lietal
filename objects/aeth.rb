@@ -17,6 +17,8 @@ class Aeth
 
 	def adultspeak
 
+		if lietal.length < 4 then return lietal end
+			
 		ae_1 = Ae.new(lietal[0,2])
 		ae_2 = Ae.new(lietal[2,2])
 
@@ -30,6 +32,8 @@ class Aeth
 
 		if ae_1.consonant_vector < ae_2.consonant_vector
 			return "#{c1}#{c2}#{v1}#{v2}"
+		elsif ae_1.consonant_vector > ae_2.consonant_vector
+			return "#{c1}#{v1}#{v2}#{c2}"
 		else
 			return "#{c1}#{v1}#{c2}#{v2}"
 		end	

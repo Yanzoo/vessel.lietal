@@ -63,11 +63,11 @@ class Dictionaery
 	def find_english english_word
 
 		@en.to_h.each do |word,content|
-			if !content['DEF'] then next end
-			if !content['DEF'].like(english_word) then next end
-			aeth = Aeth.new(word)
-			aeth.english = content['DEF']
-			return aeth
+			if content['DEF'] && content['DEF'].like(english_word) || content['ALT'] && content['ALT'].like(english_word)
+				aeth = Aeth.new(word)
+				aeth.english = english_word
+				return aeth
+			end
 		end
 		return nil
 

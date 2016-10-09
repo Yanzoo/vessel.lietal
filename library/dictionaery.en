@@ -2,13 +2,17 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
+KI
+  ALT : On
 KIKI
 KIXI
 KISI
 KITI
+  ALT : By
 KIDI
 KILI
 KIPI
+  DEF : World
 KIBI
 KIVI
 KIKA
@@ -56,6 +60,9 @@ XILO
 XIPO
 XIBO
 XIVO
+SI
+  DEF : At
+  ALT : In
 SIKI
 SIXI
 SISI
@@ -65,6 +72,7 @@ SILI
 SIPI
 SIBI
 SIVI
+  DEF : Part
 SIKA
 SIXA
 SISA
@@ -84,17 +92,24 @@ SIPO
 SIBO
 SIVO
 TIKI
+  DEF : From
 TIXI
 TISI
 TITI
 TIDI
+  DEF : Next
+  ALT : After
 TILI
 TIPI
+  DEF : Time
 TIBI
 TIVI
 TIKA
 TIXA
+  DEF : Large
+  ALT : Long
 TISA
+  DEF : Big
 TITA
 TIDA
 TILA
@@ -106,6 +121,8 @@ TIVA
 TIKO
 TIXO
 TISO
+  DEF : New
+  ALT : Young
 TITO
 TIDO
 TILO
@@ -142,17 +159,23 @@ DIPO
 DIBO
 DIVO
 LIKI
+  DEF : To
 LIXI
 LISI
 LITI
 LIDI
+  DEF : Previous
+  ALT : Before
 LILI
 LIPI
 LIBI
 LIVI
 LIKA
 LIXA
+  DEF : Short
+  ALT : Little
 LISA
+  DEF : Small
 LITA
 LIDA
 LILA
@@ -164,6 +187,7 @@ LIVA
 LIKO
 LIXO
 LISO
+  DEF : Old
 LITO
 LIDO
 LILO
@@ -200,9 +224,9 @@ PIVO
 BIKI
   DEF : Mother/Father
 BIXI
-  DEF : Human
+  DEF : Person
 BISI
-  DEF : Children
+  DEF : Child
 BITI
 BIDI
 BILI
@@ -227,6 +251,8 @@ BILO
 BIPO
 BIBO
 BIVO
+VI
+  DEF : Thing
 VIKI
 VIXI
 VISI
@@ -291,12 +317,14 @@ XAPI
 XABI
 XAVI
 XAKA
+  DEF : Language
 XAXA
 XASA
 XATA
 XADA
 XALA
 XAPA
+  DEF : Number
 XABA
 XAVA
 XAKO
@@ -309,6 +337,7 @@ XAPO
 XABO
 XAVO
 SAKI
+  DEF : Place
 SAXI
 SASI
 SATI
@@ -335,6 +364,8 @@ SALO
 SAPO
 SABO
 SAVO
+TA
+  ALT : With
 TAKI
 TAXI
 TASI
@@ -462,9 +493,11 @@ BAPA
 BABA
 BAVA
 BAKO
+  DEF : Way
 BAXO
 BASO
 BATO
+  DEF : Fact
 BADO
 BALO
 BAPO
@@ -497,9 +530,14 @@ VALO
 VAPO
 VABO
 VAVO
+KO
+  DEF : To make
+  ALT : To do
 KOKI
+  DEF : To take
 KOXI
 KOSI
+  DEF : To give
 KOTI
 KODI
 KOLI
@@ -510,8 +548,11 @@ KOKA
 KOXA
 KOSA
 KOTA
+  DEF : To join
 KODA
+  DEF : To merge
 KOLA
+  DEF : To split
 KOPA
 KOBA
 KOVA
@@ -519,28 +560,41 @@ KOKO
 KOXO
 KOSO
 KOTO
+  DEF : To ensure
 KODO
+  DEF : To help
 KOLO
+  DEF : To deny
 KOPO
+  DEF : To convince
 KOBO
+  DEF : To confuse
 KOVO
+XO
+  DEF : To see
+  ALT : To look
 XOKI
 XOXI
 XOSI
 XOTI
+  DEF : To say
 XODI
 XOLI
 XOPI
 XOBI
 XOVI
 XOKA
+  DEF : To think
 XOXA
+  DEF : To feel
 XOSA
+  DEF : To touch
 XOTA
 XODA
 XOLA
 XOPA
 XOBA
+  DEF : To find
 XOVA
 XOKO
 XOXO
@@ -551,9 +605,14 @@ XOLO
 XOPO
 XOBO
 XOVO
+SO
+  DEF : To be
 SOKI
+  DEF : To have
 SOXI
 SOSI
+  DEF : To go
+  ALT : To come
 SOTI
 SODI
 SOLI
@@ -578,6 +637,8 @@ SOLO
 SOPO
 SOBO
 SOVO
+TO
+  ALT : For
 TOKI
 TOXI
 TOSI
@@ -598,10 +659,14 @@ TODA
 TOLA
 TOPA
 TOBA
+  ALT : Important
 TOVA
 TOKO
+  DEF : Hand
 TOXO
+  DEF : Eye
 TOSO
+  DEF : Heart
 TOTO
 TODO
 TOLO
@@ -686,7 +751,9 @@ POPI
 POBI
 POVI
 POKA
+  DEF : Good
 POXA
+  DEF : Beauty
 POSA
 POTA
 PODA
@@ -738,8 +805,10 @@ VODI
 VOLI
 VOPI
 VOBI
+  DEF : Different
 VOVI
 VOKA
+  DEF : Bad
 VOXA
 VOSA
 VOTA
