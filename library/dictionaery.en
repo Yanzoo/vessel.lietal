@@ -99,7 +99,9 @@ TITA
 TIDA
 TILA
 TIPA
+  DEF : Yous
 TIBA
+  DEF : You
 TIVA
 TIKO
 TIXO
@@ -126,7 +128,9 @@ DITA
 DIDA
 DILA
 DIPA
+  DEF : They
 DIBA
+  DEF : He/She
 DIVA
 DIKO
 DIXO
@@ -153,7 +157,9 @@ LITA
 LIDA
 LILA
 LIPA
+  DEF : We
 LIBA
+  DEF : I
 LIVA
 LIKO
 LIXO
@@ -573,8 +579,11 @@ TOKI
 TOXI
 TOSI
 TOTI
+  DEF : Future
 TODI
+  DEF : Present
 TOLI
+  DEF : Past
 TOPI
 TOBI
 TOVI
@@ -601,8 +610,11 @@ DOKI
 DOXI
 DOSI
 DOTI
+  DEF : Conditional Future
 DODI
+  DEF : Conditional Present
 DOLI
+  DEF : Conditional Past
 DOPI
   DEF : When
 DOBI
@@ -618,6 +630,7 @@ DOLA
 DOPA
   DEF : How many
 DOBA
+  DEF : Which
 DOVA
 DOKO
   DEF : How
@@ -634,8 +647,11 @@ LOKI
 LOXI
 LOSI
 LOTI
+  DEF : Impossible Future
 LODI
+  DEF : Impossible Present
 LOLI
+  DEF : Impossible Past
 LOPI
 LOBI
 LOVI

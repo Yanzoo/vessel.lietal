@@ -20,18 +20,18 @@ class Aeth
 		ae_1 = Ae.new(lietal[0,2])
 		ae_2 = Ae.new(lietal[2,2])
 
+		c1 = ae_1.consonant
+		c2 = ae_2.consonant
+		v1 = ae_1.vowel
+		v2 = ae_2.vowel
+
+		if c1.like(c2) then c2 = "" end
+		if v1.like(v2) then v2 = "" end
+
 		if ae_1.consonant_vector < ae_2.consonant_vector
-			if ae_1.vowel.like(ae_2.vowel)
-				return "#{ae_1.consonant}#{ae_2.consonant}#{ae_1.vowel}"
-			else
-				return "#{ae_1.consonant}#{ae_2.consonant}#{ae_1.vowel}#{ae_2.vowel}"
-			end
+			return "#{c1}#{c2}#{v1}#{v2}"
 		else
-			if ae_1.vowel.like(ae_2.vowel)
-				return "#{ae_1.consonant}#{ae_1.vowel}#{ae_2.consonant}"
-			else
-				return "#{ae_1.consonant}#{ae_1.vowel}#{ae_2.consonant}#{ae_2.vowel}"
-			end
+			return "#{c1}#{v1}#{c2}#{v2}"
 		end	
 
 	end

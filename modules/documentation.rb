@@ -109,16 +109,51 @@ class Lietl
 <h2>Particles</h2>
 
 <h3>Question Words</h3>
-
 <table>
   <tr>
     <th>Who</th><td>#{@dictionaery.translate('who','lietal').capitalize}</td>
     <th>What</th><td>#{@dictionaery.translate('what','lietal').capitalize}</td>
     <th>Where</th><td>#{@dictionaery.translate('where','lietal').capitalize}</td>
     <th>When</th><td>#{@dictionaery.translate('when','lietal').capitalize}</td>
+  </tr>
+  <tr>
+    <th>Which</th><td>#{@dictionaery.translate('which','lietal').capitalize}</td>
     <th>How</th><td>#{@dictionaery.translate('how','lietal').capitalize}</td>
     <th>How many</th><td>#{@dictionaery.translate('how many','lietal').capitalize}</td>
     <th>How are you</th><td>#{@dictionaery.translate('how are you','lietal').capitalize}</td>
+  </tr>
+</table>
+
+<h3>Pronouns</h3>
+<table>
+  <tr>
+    <th>I</th><td>#{@dictionaery.translate('I','lietal').capitalize}</td>
+    <th>You</th><td>#{@dictionaery.translate('you','lietal').capitalize}</td>
+    <th>He/She</th><td>#{@dictionaery.translate('he/she','lietal').capitalize}</td>
+  </tr>
+  <tr>
+    <th>We</th><td>#{@dictionaery.translate('we','lietal').capitalize}</td>
+    <th>Yous</th><td>#{@dictionaery.translate('yous','lietal').capitalize}</td>
+    <th>They</th><td>#{@dictionaery.translate('they','lietal').capitalize}</td>
+  </tr>
+</table>
+
+<h3>Tenses</h3>
+<table>
+  <tr>
+    <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>
+    <th>Present</th><td>#{@dictionaery.translate('present','lietal').capitalize}</td>
+    <th>Future</th><td>#{@dictionaery.translate('future','lietal').capitalize}</td>
+  </tr>
+  <tr>
+    <th>Conditional Past</th><td>#{@dictionaery.translate('conditional past','lietal').capitalize}</td>
+    <th>Conditional Present</th><td>#{@dictionaery.translate('conditional present','lietal').capitalize}</td>
+    <th>Conditional Future</th><td>#{@dictionaery.translate('conditional future','lietal').capitalize}</td>
+  </tr>
+  <tr>
+    <th>Failed Past</th><td>#{@dictionaery.translate('impossible past','lietal').capitalize}</td>
+    <th>Failed Present</th><td>#{@dictionaery.translate('impossible present','lietal').capitalize}</td>
+    <th>Failed Future</th><td>#{@dictionaery.translate('impossible future','lietal').capitalize}</td>
   </tr>
 </table>
 
