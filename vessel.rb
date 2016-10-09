@@ -32,7 +32,7 @@ class Lietl
       load "#{path}/modules/documentation.rb"
 
       corpse = Corpse.new
-      corpse.dictionaery = Dictionaery.new
+      corpse.dictionaery = Dictionaery.new(path)
       return corpse.result
 
     end

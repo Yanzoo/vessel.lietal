@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-@dictionaery = Dictionaery.new
-
 # Sounds
 
 def docs_sounds
@@ -49,12 +47,12 @@ def docs_aebeth
 
   html = "
 <h2>Aebeth</h2>
-<p>The sounds are combined into syllables that are elemental particles of the language, and are called Aeths. There are 27 Aeths and they are better remembered by looking at them as a square or cube.</p>
+<p>The sounds are combined into syllables that are elemental particles of the language, and are called Aeths. There are 27 Aeths, they are better remembered by looking at them as a square or cube. The following table lists them alongside their approximated english equivalent word.</p>
 <table>
   <tr>
-    <th colspan='2'>Traversing</th>
-    <th colspan='2'>State</th>
-    <th colspan='2'>Origin</th>
+    <th colspan='2'>#{Aeth.new('ki').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('ti').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('pi').ae.type}</th>
   </tr>
   <tr>
     <td>ki</td><td>#{Aeth.new('ki').ae.value}</td>
@@ -72,9 +70,9 @@ def docs_aebeth
     <td>vi</td><td>#{Aeth.new('vi').ae.value}</td>
   </tr>
   <tr>
-    <th colspan='2'>Direction</th>
-    <th colspan='2'>Transformation</th>
-    <th colspan='2'>Counters</th>
+    <th colspan='2'>#{Aeth.new('ka').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('ta').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('pa').ae.type}</th>
   </tr>
   <tr>
     <td>ka</td><td>#{Aeth.new('ka').ae.value}</td>
@@ -92,9 +90,9 @@ def docs_aebeth
     <td>va</td><td>#{Aeth.new('va').ae.value}</td>
   </tr>
   <tr>
-    <th colspan='2'>Modality</th>
-    <th colspan='2'>Alignment</th>
-    <th colspan='2'>Interaction</th>
+    <th colspan='2'>#{Aeth.new('ko').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('to').ae.type}</th>
+    <th colspan='2'>#{Aeth.new('po').ae.type}</th>
   </tr>
   <tr>
     <td>ko</td><td>#{Aeth.new('ko').ae.value}</td>
@@ -125,6 +123,7 @@ class Lietl
     def result
 
       docs = ""
+
       # Sounds
       docs += docs_sounds
       docs += docs_aebeth
@@ -148,97 +147,7 @@ class Lietl
 
     return "
 
-    <h2>The Alphabet</h2>
-
-    <p>It wouldn't be wrong to assume that traumae has 27 core words, and to learn these few concepts should be enough to guess at what a new word might mean. In practice, the relationship between sounds and meanings can become very blurry, it is good to rely on both memory and logic while learning traumae.</p>
-
-    <table>
-    <tr><th colspan='2'>Traversing</th><th colspan='2'>State</th><th colspan='2'>Origin</th></tr>
-
-    <tr>
-      <td>ki</td>
-      <td>#{@dict["ki"].english}</td>
-      <td>xi</td>
-      <td>#{@dict["xi"].english}</td>
-      <td>si</td>
-      <td>#{@dict["si"].english}</td>
-    </tr>
-
-    <tr>
-      <td>ti</td>
-      <td>#{@dict["ti"].english}</td>
-      <td>di</td>
-      <td>#{@dict["di"].english}</td>
-      <td>li</td>
-      <td>#{@dict["li"].english}</td>
-    </tr>
-
-    <tr>
-      <td>pi</td>
-      <td>#{@dict["pi"].english}</td>
-      <td>bi</td>
-      <td>#{@dict["bi"].english}</td>
-      <td>vi</td>
-      <td>#{@dict["vi"].english}</td>
-    </tr>
-
-    <tr><th colspan='2'>Direction</th><th colspan='2'>Transformation</th><th colspan='2'>Counters</th></tr>
-
-    <tr>
-      <td>ka</td>
-      <td>#{@dict["ka"].english}</td>
-      <td>xa</td>
-      <td>#{@dict["xa"].english}</td>
-      <td>sa</td>
-      <td>#{@dict["sa"].english}</td>
-    </tr>
-
-    <tr>
-      <td>ta</td>
-      <td>#{@dict["ta"].english}</td>
-      <td>da</td>
-      <td>#{@dict["da"].english}</td>
-      <td>la</td>
-      <td>#{@dict["la"].english}</td>
-    </tr>
-    <tr>
-      <td>pa</td>
-      <td>#{@dict["pa"].english}</td>
-      <td>ba</td>
-      <td>#{@dict["ba"].english}</td>
-      <td>va</td>
-      <td>#{@dict["va"].english}</td>
-    </tr>
-
-    <tr><th colspan='2'>Modality</th><th colspan='2'>Alignment</th><th colspan='2'>Interaction</th></tr>
-
-    <tr>
-      <td>ko</td>
-      <td>#{@dict["ko"].english}</td>
-      <td>xo</td>
-      <td>#{@dict["xo"].english}</td>
-      <td>so</td>
-      <td>#{@dict["so"].english}</td>
-    </tr>
-    <tr>
-      <td>to</td>
-      <td>#{@dict["to"].english}</td>
-      <td>do</td>
-      <td>#{@dict["do"].english}</td>
-      <td>lo</td>
-      <td>#{@dict["lo"].english}</td>
-    </tr>
-
-    <tr>
-      <td>po</td>
-      <td>#{@dict["po"].english}</td>
-      <td>bo</td>
-      <td>#{@dict["bo"].english}</td>
-      <td>vo</td>
-      <td>#{@dict["vo"].english}</td>
-    </tr>
-
-    </table>
+    
 
     <p>Similarly to how kanji compound words work, Traumae constructs are formed by combining letters from its alphabet. To give you a sense of the possibilities of Traumae, the following table will show you how to create many words stemming from the <a href='So'>so</a> letter, in combination with the <a href='Ka'>ka</a>, <a href='Ta'>ta</a> & <a href='Pa'>pa</a> syllables.</p>
 

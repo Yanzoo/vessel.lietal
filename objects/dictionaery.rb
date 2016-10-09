@@ -2,11 +2,13 @@ class Dictionaery
 
 	attr_accessor :vowels
 	attr_accessor :consonants
+	attr_accessor :path
 
-	def initialize
+	def initialize path
 
 		@vowels = ["i","a","o"]
 		@consonants = ["k","x","s","t","d","l","p","b","v"]
+		@content = En.new("dictionaery",path)
 
 	end
 
@@ -16,8 +18,7 @@ class Dictionaery
 
 		vowels.each do |lv|
 			consonants.each do |lc|
-				aeth = Aeth.new
-				aeth.lietal = lc+lv
+				aeth = Aeth.new(lc+lv)
 				a.push(aeth)
 			end
 		end
@@ -32,8 +33,7 @@ class Dictionaery
 
 		aebeth.each do |aeth1|
 			aebeth.each do |aeth2|
-				aeth = Aeth.new
-				aeth.lietal = aeth1+aeth2
+				aeth = Aeth.new(aeth1.lietal+aeth2.lietal)
 				a.push(aeth)
 			end
 		end
