@@ -3,14 +3,16 @@ class Aeth
 	attr_accessor :english
 	attr_accessor :lietal
 
-	def initialize
+	def initialize lietal = nil
 
+		@lietal = lietal ? lietal : nil
+		
 	end
 
 	def ae
 
 		return Ae.new(lietal[0,2])
-		
+
 	end
 
 	def adultspeak

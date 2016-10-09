@@ -14,8 +14,8 @@ class Dictionaery
 
 		a = []
 
-		consonants.each do |lc|
-			vowels.each do |lv|
+		vowels.each do |lv|
+			consonants.each do |lc|
 				aeth = Aeth.new
 				aeth.lietal = lc+lv
 				a.push(aeth)

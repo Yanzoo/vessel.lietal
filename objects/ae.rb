@@ -20,7 +20,7 @@ class Ae
 
   def category
 
-    return ae.keys[vectors_normal[consonant]]
+    return ae.keys[vectors[@vowel]]
 
   end
 
@@ -38,24 +38,24 @@ class Ae
 
   def vector
 
-    return vectors[@vowel]
+    return vectors_normal[@consonant]
 
   end
 
   def vectors
 
     return "i" => 0, "a" => 1, "o" => 2,
-    "k" => 0, "x" => 1, "s" => 2,
-    "t" => 0, "d" => 1, "l" => 2,
-    "p" => 0, "b" => 1, "v" => 2
+    "k" => 0, "x" => 0, "s" => 0,
+    "t" => 1, "d" => 1, "l" => 1,
+    "p" => 2, "b" => 2, "v" => 2
 
   end
 
   def vectors_normal
 
-    return "k" => 0,"x" => 0,"s" => 0,
-    "t" => 1,"d" => 1,"l" => 1,
-    "p" => 2,"b" => 2,"v" => 2
+    return "k" => 0,"x" => 1,"s" => 2,
+    "t" => 0,"d" => 1,"l" => 2,
+    "p" => 0,"b" => 1,"v" => 2
     
   end
 
