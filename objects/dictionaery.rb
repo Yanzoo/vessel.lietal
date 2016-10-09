@@ -45,7 +45,7 @@ class Dictionaery
 	def translate word,lang
 		
 		aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
-		if !aeth then return "Translation Missing" end
+		if !aeth then return "??" end
 
 		return lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase
 
