@@ -6,7 +6,7 @@ class Aeth
 	def initialize lietal = nil
 
 		@lietal = lietal ? lietal : nil
-		
+
 	end
 
 	def ae
@@ -17,24 +17,22 @@ class Aeth
 
 	def adultspeak
 
-		if lietal.include?("'") then return lietal end
+		ae_1 = Ae.new(lietal[0,2])
+		ae_2 = Ae.new(lietal[2,2])
 
-		c1 = lietal[0,1]
-		c2 = lietal[2,1]
-		c3 = lietal[4,1]
-		v1 = lietal[1,1]
-		v2 = lietal[3,1]
-		v3 = lietal[5,1]
-
-		if c1 == c2 then c2 = "" end
-		if v1 == v2 then v2 = "" end
-
-		if c2 == c3 then c3 = "" end
-		if v2 == v3 then v3 = "" end
-
-		assembled = "#{c1}#{v1}#{c2}#{v2}#{v3}#{c3}"
-		
-		return assembled
+		if ae_1.consonant_vector < ae_2.consonant_vector
+			if ae_1.vowel.like(ae_2.vowel)
+				return "#{ae_1.consonant}#{ae_2.consonant}#{ae_1.vowel}"
+			else
+				return "#{ae_1.consonant}#{ae_2.consonant}#{ae_1.vowel}#{ae_2.vowel}"
+			end
+		else
+			if ae_1.vowel.like(ae_2.vowel)
+				return "#{ae_1.consonant}#{ae_1.vowel}#{ae_2.consonant}"
+			else
+				return "#{ae_1.consonant}#{ae_1.vowel}#{ae_2.consonant}#{ae_2.vowel}"
+			end
+		end	
 
 	end
 

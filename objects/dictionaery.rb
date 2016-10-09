@@ -8,7 +8,7 @@ class Dictionaery
 
 		@vowels = ["i","a","o"]
 		@consonants = ["k","x","s","t","d","l","p","b","v"]
-		@content = En.new("dictionaery",path)
+		@en = En.new("dictionaery",path)
 
 	end
 
@@ -39,6 +39,37 @@ class Dictionaery
 		end
 
 		return a
+
+	end
+
+	def translate word,lang
+		
+		aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
+		if !aeth then return "Translation Missing" end
+
+		return lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase
+
+	end
+
+	def find_lietal lietal_word
+
+		if !@en.to_h[word.upcase] then return nil end
+		aeth = Aeth.new(word)
+		aeth.english = content['DEF']
+		return aeth
+
+	end
+
+	def find_english english_word
+
+		@en.to_h.each do |word,content|
+			if !content['DEF'] then next end
+			if !content['DEF'].like(english_word) then next end
+			aeth = Aeth.new(word)
+			aeth.english = content['DEF']
+			return aeth
+		end
+		return nil
 
 	end
 

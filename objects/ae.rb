@@ -7,8 +7,8 @@ class Ae
   def initialize key
 
     @key       = key
-    @vowel     = key[1,1]
-    @consonant = key[0,1]
+    @vowel     = key[1,1].downcase
+    @consonant = key[0,1].downcase
 
   end
 
@@ -64,6 +64,18 @@ class Ae
     a = ["Superior", "Central", "Inferior"]
     return a[vector]
 
+  end
+
+  def vowel_vector
+
+    return vectors_normal[@vowel]
+
+  end
+
+  def consonant_vector
+
+    return vectors_normal[@consonant]
+    
   end
 
   def ae
