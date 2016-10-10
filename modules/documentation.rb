@@ -64,17 +64,17 @@ class Lietl
   </tr>
   <tr>
     <td>ki</td><td>#{Aeth.new('ki').ae.value}</td>
-    <td>xi</td><td>#{Aeth.new('xi').ae.value}</td>
-    <td>si</td><td>#{Aeth.new('si').ae.value}</td>
+    <td>xi</td><td>#{Aeth.new('ti').ae.value}</td>
+    <td>si</td><td>#{Aeth.new('pi').ae.value}</td>
   </tr>
   <tr>
-    <td>ti</td><td>#{Aeth.new('ti').ae.value}</td>
+    <td>ti</td><td>#{Aeth.new('xi').ae.value}</td>
     <td>di</td><td>#{Aeth.new('di').ae.value}</td>
-    <td>li</td><td>#{Aeth.new('li').ae.value}</td>
+    <td>li</td><td>#{Aeth.new('bi').ae.value}</td>
   <tr>
   <tr>
-    <td>pi</td><td>#{Aeth.new('pi').ae.value}</td>
-    <td>bi</td><td>#{Aeth.new('bi').ae.value}</td>
+    <td>pi</td><td>#{Aeth.new('si').ae.value}</td>
+    <td>bi</td><td>#{Aeth.new('li').ae.value}</td>
     <td>vi</td><td>#{Aeth.new('vi').ae.value}</td>
   </tr>
   <tr>
@@ -84,17 +84,17 @@ class Lietl
   </tr>
   <tr>
     <td>ka</td><td>#{Aeth.new('ka').ae.value}</td>
-    <td>xa</td><td>#{Aeth.new('xa').ae.value}</td>
-    <td>sa</td><td>#{Aeth.new('sa').ae.value}</td>
+    <td>xa</td><td>#{Aeth.new('ta').ae.value}</td>
+    <td>sa</td><td>#{Aeth.new('pa').ae.value}</td>
   </tr>
   <tr>
-    <td>ta</td><td>#{Aeth.new('ta').ae.value}</td>
+    <td>ta</td><td>#{Aeth.new('xa').ae.value}</td>
     <td>da</td><td>#{Aeth.new('da').ae.value}</td>
-    <td>la</td><td>#{Aeth.new('la').ae.value}</td>
+    <td>la</td><td>#{Aeth.new('ba').ae.value}</td>
   </tr>
   <tr>
-    <td>pa</td><td>#{Aeth.new('pa').ae.value}</td>
-    <td>ba</td><td>#{Aeth.new('ba').ae.value}</td>
+    <td>pa</td><td>#{Aeth.new('sa').ae.value}</td>
+    <td>ba</td><td>#{Aeth.new('la').ae.value}</td>
     <td>va</td><td>#{Aeth.new('va').ae.value}</td>
   </tr>
   <tr>
@@ -104,17 +104,17 @@ class Lietl
   </tr>
   <tr>
     <td>ko</td><td>#{Aeth.new('ko').ae.value}</td>
-    <td>xo</td><td>#{Aeth.new('xo').ae.value}</td>
-    <td>so</td><td>#{Aeth.new('so').ae.value}</td>
+    <td>xo</td><td>#{Aeth.new('to').ae.value}</td>
+    <td>so</td><td>#{Aeth.new('po').ae.value}</td>
   </tr>
   <tr>
-    <td>to</td><td>#{Aeth.new('to').ae.value}</td>
+    <td>to</td><td>#{Aeth.new('xo').ae.value}</td>
     <td>do</td><td>#{Aeth.new('do').ae.value}</td>
-    <td>lo</td><td>#{Aeth.new('lo').ae.value}</td>
+    <td>lo</td><td>#{Aeth.new('bo').ae.value}</td>
   </tr>
   <tr>
-    <td>po</td><td>#{Aeth.new('po').ae.value}</td>
-    <td>bo</td><td>#{Aeth.new('bo').ae.value}</td>
+    <td>po</td><td>#{Aeth.new('so').ae.value}</td>
+    <td>bo</td><td>#{Aeth.new('lo').ae.value}</td>
     <td>vo</td><td>#{Aeth.new('vo').ae.value}</td>
   </tr>
 </table>
