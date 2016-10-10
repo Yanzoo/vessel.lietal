@@ -1,0 +1,18 @@
+~ NAME : Notes
+~ NOTE : *
+~ AUTH : Devine Lu Linvega
+
+~ The Aebeth
++-------------------+-------------------+-------------------+
+| ki Parent         | ti Outward        | pi Complex        |
+| xi Self           | di Stable         | bi Akin           |
+| si Child          | li Inward         | vi Simple         |
++-------------------+-------------------+-------------------+
+| ka Psychologic    | ta With           | pa Multiple       |
+| xa Physionomic    | da United         | ba One            |
+| sa Physic         | la Without        | va None           |
++-------------------+-------------------+-------------------+
+| ko To make        | to Certain        | po Agree          |
+| xo To see         | do Possible       | bo Ambivalent     |
+| so To be          | lo Impossible     | vo Disagree       |
++-------------------+-------------------+-------------------+

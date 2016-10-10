@@ -195,13 +195,7 @@ class Lietl
     <th>world</th><td>#{@dictionaery.translate('world','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>week</th><td>#{@dictionaery.translate('week','lietal').capitalize}</td>
-    <th>case</th><td>#{@dictionaery.translate('case','lietal').capitalize}</td>
-    <th>point</th><td>#{@dictionaery.translate('point','lietal').capitalize}</td>
-    <th>government</th><td>#{@dictionaery.translate('government','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>company</th><td>#{@dictionaery.translate('company','lietal').capitalize}</td>
+    <th>language</th><td>#{@dictionaery.translate('language','lietal').capitalize}</td>
     <th>number</th><td>#{@dictionaery.translate('number','lietal').capitalize}</td>
     <th>group</th><td>#{@dictionaery.translate('group','lietal').capitalize}</td>
     <th>fact</th><td>#{@dictionaery.translate('fact','lietal').capitalize}</td>
@@ -217,10 +211,10 @@ class Lietl
     <th>to say</th><td>#{@dictionaery.translate('to say','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>to get</th><td>#{@dictionaery.translate('to get','lietal').capitalize}</td>
     <th>to make</th><td>#{@dictionaery.translate('to make','lietal').capitalize}</td>
     <th>to go</th><td>#{@dictionaery.translate('to go','lietal').capitalize}</td>
     <th>to know</th><td>#{@dictionaery.translate('to know','lietal').capitalize}</td>
+    <th>to find</th><td>#{@dictionaery.translate('to find','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>to take</th><td>#{@dictionaery.translate('to take','lietal').capitalize}</td>
@@ -235,12 +229,6 @@ class Lietl
     <th>to use</th><td>#{@dictionaery.translate('to use','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>to find</th><td>#{@dictionaery.translate('to find','lietal').capitalize}</td>
-    <th>to touch</th><td>#{@dictionaery.translate('to touch','lietal').capitalize}</td>
-    <th>to ask</th><td>#{@dictionaery.translate('to ask','lietal').capitalize}</td>
-    <th>to work</th><td>#{@dictionaery.translate('to work','lietal').capitalize}</td>
-  </tr>
-  <tr>
     <th>to help</th><td>#{@dictionaery.translate('to help','lietal').capitalize}</td>
     <th>to feel</th><td>#{@dictionaery.translate('to feel','lietal').capitalize}</td>
     <th>to try</th><td>#{@dictionaery.translate('to try','lietal').capitalize}</td>
@@ -253,38 +241,28 @@ class Lietl
   <tr>
     <th>good</th><td>#{@dictionaery.translate('good','lietal').capitalize}</td>
     <th>new</th><td>#{@dictionaery.translate('new','lietal').capitalize}</td>
-    <th>first</th><td>#{@dictionaery.translate('first','lietal').capitalize}</td>
     <th>last</th><td>#{@dictionaery.translate('last','lietal').capitalize}</td>
+    <th>long</th><td>#{@dictionaery.translate('long','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>long</th><td>#{@dictionaery.translate('long','lietal').capitalize}</td>
-    <th>great</th><td>#{@dictionaery.translate('great','lietal').capitalize}</td>
     <th>little</th><td>#{@dictionaery.translate('little','lietal').capitalize}</td>
     <th>own</th><td>#{@dictionaery.translate('own','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>other</th><td>#{@dictionaery.translate('other','lietal').capitalize}</td>
     <th>old</th><td>#{@dictionaery.translate('old','lietal').capitalize}</td>
-    <th>right</th><td>#{@dictionaery.translate('right','lietal').capitalize}</td>
     <th>big</th><td>#{@dictionaery.translate('big','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>high</th><td>#{@dictionaery.translate('high','lietal').capitalize}</td>
+  </tr>
+  <tr>
     <th>different</th><td>#{@dictionaery.translate('different','lietal').capitalize}</td>
     <th>small</th><td>#{@dictionaery.translate('small','lietal').capitalize}</td>
     <th>large</th><td>#{@dictionaery.translate('large','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>next</th><td>#{@dictionaery.translate('next','lietal').capitalize}</td>
-    <th>early</th><td>#{@dictionaery.translate('early','lietal').capitalize}</td>
-    <th>young</th><td>#{@dictionaery.translate('young','lietal').capitalize}</td>
     <th>important</th><td>#{@dictionaery.translate('important','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>few</th><td>#{@dictionaery.translate('few','lietal').capitalize}</td>
-    <th>public</th><td>#{@dictionaery.translate('public','lietal').capitalize}</td>
+    <th>next</th><td>#{@dictionaery.translate('next','lietal').capitalize}</td>
+    <th>young</th><td>#{@dictionaery.translate('young','lietal').capitalize}</td>
     <th>bad</th><td>#{@dictionaery.translate('bad','lietal').capitalize}</td>
-    <th>same</th><td>#{@dictionaery.translate('same','lietal').capitalize}</td>
+    <th>few</th><td>#{@dictionaery.translate('few','lietal').capitalize}</td>
   </tr>
 </table>
 
@@ -292,27 +270,15 @@ class Lietl
 <table>
   <tr>
     <th>to</th><td>#{@dictionaery.translate('to','lietal').capitalize}</td>
-    <th>of</th><td>#{@dictionaery.translate('of','lietal').capitalize}</td>
     <th>in</th><td>#{@dictionaery.translate('in','lietal').capitalize}</td>
     <th>for</th><td>#{@dictionaery.translate('for','lietal').capitalize}</td>
+    <th>from</th><td>#{@dictionaery.translate('from','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>on</th><td>#{@dictionaery.translate('on','lietal').capitalize}</td>
     <th>with</th><td>#{@dictionaery.translate('with','lietal').capitalize}</td>
     <th>at</th><td>#{@dictionaery.translate('at','lietal').capitalize}</td>
     <th>by</th><td>#{@dictionaery.translate('by','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>from</th><td>#{@dictionaery.translate('from','lietal').capitalize}</td>
-    <th>up</th><td>#{@dictionaery.translate('up','lietal').capitalize}</td>
-    <th>about</th><td>#{@dictionaery.translate('about','lietal').capitalize}</td>
-    <th>into</th><td>#{@dictionaery.translate('into','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>over</th><td>#{@dictionaery.translate('over','lietal').capitalize}</td>
-    <th>after</th><td>#{@dictionaery.translate('after','lietal').capitalize}</td>
-    <th>above</th><td>#{@dictionaery.translate('above','lietal').capitalize}</td>
-    <th>under</th><td>#{@dictionaery.translate('under','lietal').capitalize}</td>
   </tr>
 </table>
 
