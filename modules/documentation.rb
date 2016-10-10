@@ -8,9 +8,9 @@ class Lietl
     def result
 
       return "
-<h2>Sounds</h2>
+<h2>Phonology</h2>
 
-<p>{{Lietal}} uses #{@dictionaery.vowels.length} vowels and #{@dictionaery.consonants.length} consonants.</p>
+<p>{{Lietal}} uses mainly #{@dictionaery.vowels.length} vowels and #{@dictionaery.consonants.length} consonants.</p>
 <h3>#{@dictionaery.vowels.length} Vowels</h3>
 <table>
   <tr>
@@ -20,7 +20,7 @@ class Lietl
   </tr>
 </table>
 <h3>#{@dictionaery.consonants.length} Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for <i>x</i> that is more akin to the english <i>j</i> or <i>g</i>.</p>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for <i>x</i> that is more akin to the english <i>j</i>.</p>
 <table>
   <tr>
     <th>k</th><td>basi<b>c</b></td>
@@ -38,8 +38,22 @@ class Lietl
     <th>v</th><td><b>v</b>acant</td>
   </tr>
 </table>
+<h3>Adultspeak</h3>
+<p>Adultspeak is a phonetic style, used in this documentation, that shortens the spelling of most divieths(4 letters, or 2 syllables words) to a single syllable by merging sounds and changing letters order.</p>
+<table>
+  <tr>
+    <th>e</th><td>n<b>e</b>ver</td>
+    <th>u</th><td><b>oo</b>long</td>
+    <th></th><td></td>
+  </tr>
+  <tr>
+    <th>z</th><td><b>z</b>ero</td>
+    <th>r</th><td>ee<b>r</b>y</td>
+    <th>f</th><td><b>f</b>ault</td>
+  </tr>
+</table>
 
-<h2>Aebeth</h2>
+<h2>The Aebeth</h2>
 
 <p>The sounds are combined into syllables that are elemental particles of the language, and are called Aeths. There are 27 Aeths, they are better remembered by looking at them as a square or cube. The following table lists them alongside their approximated english equivalent word.</p>
 <table>
@@ -108,6 +122,7 @@ class Lietl
 <h2>Particles</h2>
 
 <h3>Question Words</h3>
+<p>All generic question words in Lietal are created by using the {*Do*} aeth, creating constructs in the shape of {_\"Could it be that-?\"_}.</p>
 <table>
   <tr>
     <th>Who</th><td>#{@dictionaery.translate('who','lietal').capitalize}</td>
@@ -138,6 +153,7 @@ class Lietl
 </table>
 
 <h3>Tenses</h3>
+<p>Tenses words are used like particles in a sentence, {_#{@dictionaery.translate('I','lietal').capitalize} #{@dictionaery.translate('past','lietal')} #{@dictionaery.translate('to see','lietal')} #{@dictionaery.translate('you','lietal')}_}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required.</p>
 <table>
   <tr>
     <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>

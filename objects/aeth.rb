@@ -30,7 +30,13 @@ class Aeth
 		if c1.like(c2) then c2 = "" end
 		if v1.like(v2) then v2 = "" end
 
+		if v1.like("i") && v2.like("a") then v1 = "e" ; v2 = "" end
+		if v1.like("a") && v2.like("o") then v1 = "u" ; v2 = "" end
+
 		if ae_1.consonant_vector < ae_2.consonant_vector
+			if c2.like("x") then c2 = "z" end
+			if c2.like("d") then c2 = "r" end
+			if c2.like("b") then c2 = "f" end
 			return "#{c1}#{c2}#{v1}#{v2}"
 		elsif ae_1.consonant_vector > ae_2.consonant_vector
 			return "#{c1}#{v1}#{v2}#{c2}"
