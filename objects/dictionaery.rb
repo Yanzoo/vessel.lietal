@@ -42,10 +42,10 @@ class Dictionaery
 
 	end
 
-	def translate word,lang
+	def translate word,lang = lietal
 		
 		aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
-		if !aeth then return "??" end
+		if !aeth then return "#{word}" end
 
 		return lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase
 

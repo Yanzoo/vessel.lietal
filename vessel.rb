@@ -17,6 +17,33 @@ class Lietl
 
   end
 
+  class Actions
+
+    include ActionCollection
+
+    def translate q = nil
+
+      if !q then return "Missing text to translate." end
+
+      path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+
+      load_folder("#{path}/objects/*")
+
+      d = Dictionaery.new(path)
+
+      s = []
+      q.split(" ").each do |word|
+        s.push(d.translate(word,"lietal"))
+      end
+
+      return s.join(" ").capitalize
+
+    end
+
+  end
+
+  def actions ; return Actions.new(self,self) end
+
   class PassiveActions
 
     include ActionCollection
