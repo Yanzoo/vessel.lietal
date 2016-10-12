@@ -21,7 +21,7 @@ class Lietl
   </tr>
 </table>
 <h3>#{@dictionaery.consonants.length} Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for <i>x</i> that is more akin to the english <i>j</i>.</p>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for <i>x</i> that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
 <table>
   <tr>
     <th>k</th><td>basi<b>c</b></td>
@@ -151,10 +151,15 @@ class Lietl
     <th>Yous</th><td>#{@dictionaery.translate('yous','lietal').capitalize}</td>
     <th>They</th><td>#{@dictionaery.translate('they','lietal').capitalize}</td>
   </tr>
+  <tr>
+    <th>My</th><td>#{@dictionaery.translate('my','lietal').capitalize}</td>
+    <th>Your</th><td>#{@dictionaery.translate('your','lietal').capitalize}</td>
+    <th>Their</th><td>#{@dictionaery.translate('their','lietal').capitalize}</td>
+  </tr>
 </table>
 
 <h3>Tenses</h3>
-<p>Tenses words are used like particles in a sentence, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required.</p>
+<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required, this example requires {_I_} to be used. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
 <table>
   <tr>
     <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>
@@ -162,14 +167,14 @@ class Lietl
     <th>Future</th><td>#{@dictionaery.translate('future','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>Conditional Past</th><td>#{@dictionaery.translate('conditional_past','lietal').capitalize}</td>
-    <th>Conditional Present</th><td>#{@dictionaery.translate('conditional_present','lietal').capitalize}</td>
-    <th>Conditional Future</th><td>#{@dictionaery.translate('conditional_future','lietal').capitalize}</td>
+    <th>Potential Past</th><td>#{@dictionaery.translate('potential_past','lietal').capitalize}</td>
+    <th>Potential Present</th><td>#{@dictionaery.translate('potential_present','lietal').capitalize}</td>
+    <th>Potential Future</th><td>#{@dictionaery.translate('potential_future','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>Failed Past</th><td>#{@dictionaery.translate('impossible_past','lietal').capitalize}</td>
-    <th>Failed Present</th><td>#{@dictionaery.translate('impossible_present','lietal').capitalize}</td>
-    <th>Failed Future</th><td>#{@dictionaery.translate('impossible_future','lietal').capitalize}</td>
+    <th>Modal Past</th><td>#{@dictionaery.translate('modal_past','lietal').capitalize}</td>
+    <th>Modal Present</th><td>#{@dictionaery.translate('modal_present','lietal').capitalize}</td>
+    <th>Modal Future</th><td>#{@dictionaery.translate('modal_future','lietal').capitalize}</td>
   </tr>
 </table>
 
@@ -206,9 +211,9 @@ class Lietl
 <h3>Verbs</h3>
 <table>
   <tr>
-    <th>to be</th><td>#{@dictionaery.translate('to_be','lietal').capitalize}</td>
+    <th>to take</th><td>#{@dictionaery.translate('to_take','lietal').capitalize}</td>
+    <th>to come</th><td>#{@dictionaery.translate('to_come','lietal').capitalize}</td>
     <th>to have</th><td>#{@dictionaery.translate('to_have','lietal').capitalize}</td>
-    <th>to do</th><td>#{@dictionaery.translate('to_do','lietal').capitalize}</td>
     <th>to say</th><td>#{@dictionaery.translate('to_say','lietal').capitalize}</td>
   </tr>
   <tr>
@@ -216,12 +221,6 @@ class Lietl
     <th>to go</th><td>#{@dictionaery.translate('to_go','lietal').capitalize}</td>
     <th>to know</th><td>#{@dictionaery.translate('to_know','lietal').capitalize}</td>
     <th>to find</th><td>#{@dictionaery.translate('to_find','lietal').capitalize}</td>
-  </tr>
-  <tr>
-    <th>to take</th><td>#{@dictionaery.translate('to_take','lietal').capitalize}</td>
-    <th>to see</th><td>#{@dictionaery.translate('to_see','lietal').capitalize}</td>
-    <th>to come</th><td>#{@dictionaery.translate('to_come','lietal').capitalize}</td>
-    <th>to think</th><td>#{@dictionaery.translate('to_think','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>to look</th><td>#{@dictionaery.translate('to_look','lietal').capitalize}</td>
@@ -241,26 +240,27 @@ class Lietl
 <table>
   <tr>
     <th>good</th><td>#{@dictionaery.translate('good','lietal').capitalize}</td>
+    <th>bad</th><td>#{@dictionaery.translate('bad','lietal').capitalize}</td>
     <th>new</th><td>#{@dictionaery.translate('new','lietal').capitalize}</td>
     <th>last</th><td>#{@dictionaery.translate('last','lietal').capitalize}</td>
     <th>long</th><td>#{@dictionaery.translate('long','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>little</th><td>#{@dictionaery.translate('little','lietal').capitalize}</td>
-    <th>own</th><td>#{@dictionaery.translate('own','lietal').capitalize}</td>
-    <th>old</th><td>#{@dictionaery.translate('old','lietal').capitalize}</td>
+    <th>small</th><td>#{@dictionaery.translate('small','lietal').capitalize}</td>
+    <th>large</th><td>#{@dictionaery.translate('large','lietal').capitalize}</td>
     <th>big</th><td>#{@dictionaery.translate('big','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>different</th><td>#{@dictionaery.translate('different','lietal').capitalize}</td>
-    <th>small</th><td>#{@dictionaery.translate('small','lietal').capitalize}</td>
-    <th>large</th><td>#{@dictionaery.translate('large','lietal').capitalize}</td>
+    <th>old</th><td>#{@dictionaery.translate('old','lietal').capitalize}</td>    
+    <th>own</th><td>#{@dictionaery.translate('own','lietal').capitalize}</td>
     <th>important</th><td>#{@dictionaery.translate('important','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>next</th><td>#{@dictionaery.translate('next','lietal').capitalize}</td>
     <th>young</th><td>#{@dictionaery.translate('young','lietal').capitalize}</td>
-    <th>bad</th><td>#{@dictionaery.translate('bad','lietal').capitalize}</td>
+    <th>Many</th><td>#{@dictionaery.translate('many','lietal').capitalize}</td>
     <th>few</th><td>#{@dictionaery.translate('few','lietal').capitalize}</td>
   </tr>
 </table>
@@ -290,12 +290,12 @@ class Lietl
     <th>Goodbye</th><td>#{@dictionaery.translate('Goodbye','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>I understand</th><td>#{@dictionaery.translate('Yes - I to_understand','lietal').capitalize}</td>
+    <th>I understand</th><td>#{@dictionaery.translate('I to_understand','lietal').capitalize}</td>
     <th>No, I don't understand</th><td>#{@dictionaery.translate('No - I negative to_understand','lietal').capitalize}</td>
   </tr>
   <tr>
-    <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('Please to me with Lietal to_say','lietal').capitalize}</td>
-    <th>Please say that again</th><td>#{@dictionaery.translate('Please to_say again','lietal').capitalize}</td>
+    <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('Please with Lietal to_say','lietal').capitalize}</td>
+    <th>Please say that again</th><td>#{@dictionaery.translate('Please again to_say','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_understand','lietal').capitalize}</td>

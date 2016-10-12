@@ -69,6 +69,7 @@ SISI
 SITI
   DEF : Your
 SIDI
+  DEF : Their
 SILI
   DEF : My
 SIPI
@@ -116,9 +117,7 @@ TITA
 TIDA
 TILA
 TIPA
-  DEF : Yous
 TIBA
-  DEF : You
 TIVA
 TIKO
 TIXO
@@ -147,9 +146,7 @@ DITA
 DIDA
 DILA
 DIPA
-  DEF : They
 DIBA
-  DEF : He_She
 DIVA
 DIKO
 DIXO
@@ -182,9 +179,7 @@ LITA
 LIDA
 LILA
 LIPA
-  DEF : We
 LIBA
-  DEF : I
 LIVA
 LIKO
 LIXO
@@ -462,8 +457,11 @@ PAKI
 PAXI
 PASI
 PATI
+  DEF : Yous
 PADI
+  DEF : They
 PALI
+  DEF : We
 PAPI
 PABI
 PAVI
@@ -489,8 +487,11 @@ BAKI
 BAXI
 BASI
 BATI
+  DEF : You
 BADI
+  DEF : He_She
 BALI
+  DEF : I
 BAPI
 BABI
 BAVI
@@ -700,11 +701,11 @@ DOKI
 DOXI
 DOSI
 DOTI
-  DEF : Conditional_Future
+  DEF : Potential_Future
 DODI
-  DEF : Conditional_Present
+  DEF : Potential_Present
 DOLI
-  DEF : Conditional_Past
+  DEF : Potential_Past
 DOPI
   DEF : When
 DOBI
@@ -738,11 +739,11 @@ LOKI
 LOXI
 LOSI
 LOTI
-  DEF : Impossible_Future
+  DEF : Modal_future
 LODI
-  DEF : Impossible_Present
+  DEF : Modal_present
 LOLI
-  DEF : Impossible_Past
+  DEF : Modal_past
 LOPI
 LOBI
 LOVI
