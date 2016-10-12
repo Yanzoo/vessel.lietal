@@ -67,8 +67,10 @@ SIKI
 SIXI
 SISI
 SITI
+  DEF : Your
 SIDI
 SILI
+  DEF : My
 SIPI
 SIBI
 SIVI
@@ -147,7 +149,7 @@ DILA
 DIPA
   DEF : They
 DIBA
-  DEF : He/She
+  DEF : He_She
 DIVA
 DIKO
 DIXO
@@ -222,7 +224,7 @@ PIPO
 PIBO
 PIVO
 BIKI
-  DEF : Mother/Father
+  DEF : Mother_Father
 BIXI
   DEF : Person
 BISI
@@ -321,8 +323,10 @@ XABI
 XAVI
 XAKA
   DEF : Language
+  ALT : Word
 XAXA
 XASA
+  DEF : Name
 XATA
 XADA
 XALA
@@ -386,6 +390,8 @@ TADA
 TALA
 TAPA
 TABA
+  DEF : Again
+  ALT : More
 TAVA
 TAKO
 TAXO
@@ -536,13 +542,13 @@ VAPO
 VABO
 VAVO
 KO
-  DEF : To make
-  ALT : To do
+  DEF : To_make
+  ALT : To_do
 KOKI
-  DEF : To take
+  DEF : To_take
 KOXI
 KOSI
-  DEF : To give
+  DEF : To_give
 KOTI
 KODI
 KOLI
@@ -553,13 +559,13 @@ KOKA
 KOXA
 KOSA
 KOTA
-  DEF : To join
-  ALT : To use
+  DEF : To_join
+  ALT : To_use
 KODA
-  DEF : To merge
+  DEF : To_merge
 KOLA
-  DEF : To split
-  ALT : To divide
+  DEF : To_split
+  ALT : To_divide
 KOPA
 KOBA
 KOVA
@@ -567,65 +573,67 @@ KOKO
 KOXO
 KOSO
 KOTO
-  DEF : To ensure
+  DEF : To_ensure
 KODO
-  DEF : To help
-  ALT : To try
+  DEF : To_help
+  ALT : To_try
 KOLO
-  DEF : To deny
+  DEF : To_deny
 KOPO
-  DEF : To convince
+  DEF : To_convince
 KOBO
-  DEF : To confuse
+  DEF : To_confuse
 KOVO
 XO
-  DEF : To see
-  ALT : To look
+  DEF : To_see
+  ALT : To_look
 XOKI
 XOXI
 XOSI
 XOTI
-  DEF : To say
+  DEF : To_say
 XODI
 XOLI
 XOPI
 XOBI
 XOVI
 XOKA
+  DEF : To_know
+  DEF : To_understand
 XOXA
-  DEF : To feel
+  DEF : To_feel
 XOSA
-  DEF : To touch
+  DEF : To_touch
 XOTA
 XODA
 XOLA
 XOPA
 XOBA
-  DEF : To find
+  DEF : To_find
 XOVA
 XOKO
 XOXO
 XOSO
 XOTO
-  DEF : To know  
+  DEF : To_know  
 XODO
-  DEF : To think
+  DEF : To_think
 XOLO
-  DEF : To wish
-  ALT : To want
+  DEF : To_wish
+  ALT : To_want
 XOPO
 XOBO
 XOVO
 SO
-  DEF : To be
+  DEF : To_be
 SOKI
-  DEF : To have
+  DEF : To_have
 SOXI
 SOSI
-  DEF : To go
-  ALT : To come
+  DEF : To_go
+  ALT : To_come
 SOTI
-  DEF : To leave
+  DEF : To_leave
 SODI
 SOLI
 SOPI
@@ -685,16 +693,18 @@ TOLO
 TOPO
 TOBO
 TOVO
+DO
+  DEF : Possible
 DOKI
   DEF : Where
 DOXI
 DOSI
 DOTI
-  DEF : Conditional Future
+  DEF : Conditional_Future
 DODI
-  DEF : Conditional Present
+  DEF : Conditional_Present
 DOLI
-  DEF : Conditional Past
+  DEF : Conditional_Past
 DOPI
   DEF : When
 DOBI
@@ -708,7 +718,7 @@ DOTA
 DODA
 DOLA
 DOPA
-  DEF : How many
+  DEF : How_many
 DOBA
   DEF : Which
 DOVA
@@ -716,22 +726,23 @@ DOKO
   DEF : How
 DOXO
 DOSO
-  DEF : How are you
+  DEF : How_are_you
 DOTO
 DODO
 DOLO
 DOPO
+  DEF : Please
 DOBO
 DOVO
 LOKI
 LOXI
 LOSI
 LOTI
-  DEF : Impossible Future
+  DEF : Impossible_Future
 LODI
-  DEF : Impossible Present
+  DEF : Impossible_Present
 LOLI
-  DEF : Impossible Past
+  DEF : Impossible_Past
 LOPI
 LOBI
 LOVI
@@ -753,12 +764,17 @@ LOLO
 LOPO
 LOBO
 LOVO
+PO
+  DEF : Positive
+  ALT : Yes
 POKI
 POXI
 POSI
 POTI
+  DEF : Goodbye
 PODI
 POLI
+  DEF : Hello
 POPI
 POBI
 POVI
@@ -809,6 +825,9 @@ BOLO
 BOPO
 BOBO
 BOVO
+VO
+  DEF : Negative
+  ALT : No
 VOKI
 VOXI
 VOSI

@@ -5,14 +5,14 @@
 ~ The Aebeth
 +-------------------+-------------------+-------------------+
 | ki Parent         | ti Outward        | pi Complex        |
-| xi Self           | di Stable         | bi Akin           |
+| xi Instance       | di Stable         | bi Akin           |
 | si Child          | li Inward         | vi Simple         |
 +-------------------+-------------------+-------------------+
 | ka Psychologic    | ta With           | pa Multiple       |
 | xa Physionomic    | da United         | ba One            |
 | sa Physic         | la Without        | va None           |
 +-------------------+-------------------+-------------------+
-| ko To make        | to Certain        | po Agree          |
+| ko To make        | to Certain        | po Positive       |
 | xo To see         | do Possible       | bo Ambivalent     |
-| so To be          | lo Impossible     | vo Disagree       |
+| so To be          | lo Impossible     | vo Negative       |
 +-------------------+-------------------+-------------------+

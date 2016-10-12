@@ -42,12 +42,19 @@ class Dictionaery
 
 	end
 
-	def translate word,lang = lietal
+	def translate sentence,lang = lietal
 		
-		aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
-		if !aeth then return "#{word}" end
-
-		return lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase
+		s = []
+		sentence.split(" ").each do |word|
+			aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
+			if !aeth
+				s.push("#{word}")
+			else
+				s.push(lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase)
+			end
+		end
+		
+		return s.join(" ")
 
 	end
 

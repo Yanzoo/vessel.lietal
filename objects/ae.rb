@@ -82,7 +82,7 @@ class Ae
 
     h = {}
     h["Dimensional"] = {}
-    h["Dimensional"]["Traverse"] = "Parent", "Self", "Child"
+    h["Dimensional"]["Traverse"] = "Parent", "Instance", "Child"
     h["Dimensional"]["Direction"] = "Outward","Stable","Inward"
     h["Dimensional"]["Complexion"] = "Complex","Akin","Simple"
     h["Objectional"] = {}
@@ -92,7 +92,7 @@ class Ae
     h["Subjectional"] = {}
     h["Subjectional"]["Interaction"] = "To make","To see","To be"
     h["Subjectional"]["Modality"] = "Certain","Possible","Impossible"
-    h["Subjectional"]["Alignment"] = "Agree","Ambivalent","Disagree"
+    h["Subjectional"]["Alignment"] = "Positive","Ambivalent","Negative"
 
     return h
     
