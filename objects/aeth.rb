@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 class Aeth
 
 	attr_accessor :english
@@ -44,6 +47,12 @@ class Aeth
 		else
 			return "#{c1}#{v1}#{c2}#{v2}"
 		end	
+
+	end
+
+	def to_svg
+
+		return Septambres.new(lietal).svg
 
 	end
 

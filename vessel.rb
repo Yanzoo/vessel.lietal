@@ -35,6 +35,15 @@ class Lietl
 
     end
 
+    def print q = nil
+
+      path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+      load_folder("#{path}/objects/*")
+
+      return Septambres.new(q).to_svg
+
+    end
+
   end
 
   def actions ; return Actions.new(self,self) end

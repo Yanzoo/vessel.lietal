@@ -308,6 +308,8 @@ class Lietl
 </table>
 "
 
+# [Question - Subject] [Adjective - Topic] [Tense - Verb]
+
     end
 
   end
