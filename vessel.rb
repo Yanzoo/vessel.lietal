@@ -31,12 +31,7 @@ class Lietl
 
       d = Dictionaery.new(path)
 
-      s = []
-      q.split(" ").each do |word|
-        s.push(d.translate(word,"lietal"))
-      end
-
-      return s.join(" ").capitalize
+      return d.translate(q,"lietal").capitalize
 
     end
 
