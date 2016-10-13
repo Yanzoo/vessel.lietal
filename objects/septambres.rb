@@ -13,6 +13,24 @@ class Point
 
   end
 
+  def to_s
+
+    return "#{x} #{y}"
+
+  end
+
+  def to target
+
+    return Point.new(target.x - @x, target.y - @y)
+
+  end
+
+  def offset x,y
+
+    return Point.new(@x + x,@y + y)
+
+  end
+
 end
 
 class Rect
@@ -34,6 +52,9 @@ class Rect
   attr_accessor :middle_bottom_left
   attr_accessor :middle_bottom_right
   attr_accessor :middle_bottom_center
+  attr_accessor :middle_top_left
+  attr_accessor :middle_top_right
+  attr_accessor :middle_top_center
 
   def initialize x,y,w,h
 
@@ -54,6 +75,9 @@ class Rect
     @middle_bottom_left = Point.new(@x,@y + (@h*0.75))
     @middle_bottom_right = Point.new(@x + @w,@y + (@h*0.75))
     @middle_bottom_center = Point.new(@x + (@w/2),@y + (@h*0.75))
+    @middle_top_left = Point.new(@x,@y + (@h*0.25))
+    @middle_top_right = Point.new(@x + @w,@y + (@h*0.25))
+    @middle_top_center = Point.new(@x + (@w/2),@y + (@h*0.25))
 
   end
 
@@ -66,7 +90,7 @@ class Septambres
   attr_accessor :radius
   attr_accessor :spacing
 
-  def initialize lietal = nil, settings = {"width" => 150,"height" => 150,"margin" => 10,"radius" => 10}
+  def initialize lietal = nil, settings = {"width" => 100,"height" => 100,"margin" => 4,"radius" => 10}
 
     @lietal  = lietal
     @width   = settings['width']
@@ -80,14 +104,20 @@ class Septambres
 
     h = {}
 
-    h['di'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center]
-    h['ti'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center],[f.middle_left,f.middle_right]
-    h['li'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center],[f.middle_left,f.middle_right],[f.middle_bottom_left,f.middle_bottom_right]
-
-    h['ba'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
-    h['ta'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
-    h['xo'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
-
+    h['di'] = "
+    M #{f.bottom_left}
+    l #{f.bottom_left.to(f.bottom_right)}
+    l #{f.bottom_right.to(f.bottom_center.offset(@radius,0))}
+    A #{@radius},#{@radius} 0 0 1 #{f.bottom_center.offset(0,-@radius)}
+    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} "
+    
+    h['ti'] = "
+    M #{f.bottom_left}
+    l #{f.bottom_left.to(f.bottom_right)}
+    l #{f.bottom_right.to(f.bottom_center.offset(@radius,0))}
+    A #{@radius},#{@radius} 0 0 1 #{f.bottom_center.offset(0,-@radius)}
+    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} "
+    
     return h[name]
 
   end
@@ -104,10 +134,10 @@ class Septambres
 
     center = @width/2
     middle = @height/2
-    right_column = center + (@margin/2)
-    bottom_column = middle + (@margin/2)
-    column_width = (@width - (3*@margin))/2
-    column_height = (@height - (3*@margin))/2
+    right_column = center
+    bottom_column = middle
+    column_width = (@width - (2*@margin))/2
+    column_height = (@height - (2*@margin))/2
 
     if template == 0
       f = Rect.new(@margin,@margin,@width - (2*@margin),@height - (2*@margin))
@@ -123,30 +153,19 @@ class Septambres
 
     letter = make_letter(letter_name,f)
 
-    draw = ""
-
-    letter.each do |stroke|
-      stroke_str = "M #{stroke.first.x} #{stroke.first.y} "
-      prev = stroke.first
-      stroke.each do |point|
-        target = Point.new(point.x - prev.x, point.y - prev.y)
-        stroke_str += "l #{target.x} #{target.y} "
-        prev = point
-      end
-      draw += "<path d='#{stroke_str}' stroke='black' stroke-width='6' stroke-linecap='round' fill='none'/>\n"
-    end
-
-    return draw
+    return "<path d='#{make_letter(letter_name,f)}' stroke='black' fill='none'/>\n"
 
   end
 
   def to_svg
 
-    return "<svg width='#{@width}px' height='#{@height}px'>
-      #{draw('di',1)}
-      #{draw('ti',3)}
-      #{draw('li',4)}
+    return "<svg width='#{@width}px' height='#{@height}px' style='stroke-width: 4px; stroke-linecap:square'>
+      #{draw('ti',0)}
       </svg>"
+      #{draw('di',3)}
+      #{draw('di',4)}
+      #{draw('ka',3)}
+      #{draw('sa',4)}
 
   end
 
