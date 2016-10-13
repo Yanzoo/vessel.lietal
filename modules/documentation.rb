@@ -123,7 +123,7 @@ class Lietl
 <h2>Particles</h2>
 
 <h3>Question Words</h3>
-<p>All generic question words in Lietal are created by using the {*Do*} aeth, creating constructs in the shape of {_\"Could it be that-?\"_}.</p>
+<p>All generic question words in Lietal are created by using the {*Do*} aeth, creating constructs in the shape of {_\"Could it be that-?\"_}. They are used at the beginning of a sentence.</p>
 <table>
   <tr>
     <th>Who</th><td>#{@dictionaery.translate('who','lietal').capitalize}</td>
@@ -140,6 +140,7 @@ class Lietl
 </table>
 
 <h3>Pronouns</h3>
+<p>In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required.</p>
 <table>
   <tr>
     <th>I</th><td>#{@dictionaery.translate('I','lietal').capitalize}</td>
@@ -159,7 +160,7 @@ class Lietl
 </table>
 
 <h3>Tenses</h3>
-<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}_}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required, this example requires {_I_} to be used. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
+<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}_}, or {*I saw you*}. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
 <table>
   <tr>
     <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>
