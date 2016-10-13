@@ -298,7 +298,7 @@ class Lietl
   </tr>
   <tr>
     <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_understand','lietal').capitalize}</td>
-    <th>Yes, a little</th><td>#{@dictionaery.translate('Yes - little to_understand','lietal').capitalize}</td>
+    <th>Yes, I understand a little</th><td>#{@dictionaery.translate('Yes - little to_understand','lietal').capitalize}</td>
   </tr>
   <tr>
     <th>What is your name?</th><td>#{@dictionaery.translate('what your name to_be','lietal').capitalize}</td>
