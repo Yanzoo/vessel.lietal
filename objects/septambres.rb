@@ -24,8 +24,16 @@ class Rect
 
   attr_accessor :top_left
   attr_accessor :top_right
+  attr_accessor :top_center
   attr_accessor :bottom_left
   attr_accessor :bottom_right
+  attr_accessor :bottom_center
+  attr_accessor :middle_left
+  attr_accessor :middle_right
+  attr_accessor :middle_center
+  attr_accessor :middle_bottom_left
+  attr_accessor :middle_bottom_right
+  attr_accessor :middle_bottom_center
 
   def initialize x,y,w,h
 
@@ -36,8 +44,16 @@ class Rect
 
     @top_left = Point.new(@x,@y)
     @top_right = Point.new(@x + @w,@y)
+    @top_center = Point.new(@x + (@w/2),@y)
     @bottom_left = Point.new(@x,@y + @h)
     @bottom_right = Point.new(@x + @w,@y + @h)
+    @bottom_center = Point.new(@x + (@w/2),@y + @h)
+    @middle_left = Point.new(@x,@y + (@h/2))
+    @middle_right = Point.new(@x + @w,@y + (@h/2))
+    @middle_center = Point.new(@x + (@w/2),@y + (@h/2))
+    @middle_bottom_left = Point.new(@x,@y + (@h*0.75))
+    @middle_bottom_right = Point.new(@x + @w,@y + (@h*0.75))
+    @middle_bottom_center = Point.new(@x + (@w/2),@y + (@h*0.75))
 
   end
 
@@ -63,6 +79,10 @@ class Septambres
   def make_letter name, f
 
     h = {}
+
+    h['di'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center]
+    h['ti'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center],[f.middle_left,f.middle_right]
+    h['li'] = [f.bottom_left,f.bottom_right],[f.bottom_center,f.top_center],[f.middle_left,f.middle_right],[f.middle_bottom_left,f.middle_bottom_right]
 
     h['ba'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
     h['ta'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
@@ -105,13 +125,6 @@ class Septambres
 
     draw = ""
 
-    # Guides
-
-    draw += "<circle cx='#{f.top_left.x}px' cy='#{f.top_left.y}' r='2' fill='white'></circle>"
-    draw += "<circle cx='#{f.top_right.x}px' cy='#{f.top_right.y}' r='2' fill='white'></circle>"
-    draw += "<circle cx='#{f.bottom_left.x}px' cy='#{f.bottom_left.y}' r='2' fill='white'></circle>"
-    draw += "<circle cx='#{f.bottom_right.x}px' cy='#{f.bottom_right.y}' r='2' fill='white'></circle>"
-
     letter.each do |stroke|
       stroke_str = "M #{stroke.first.x} #{stroke.first.y} "
       prev = stroke.first
@@ -120,7 +133,7 @@ class Septambres
         stroke_str += "l #{target.x} #{target.y} "
         prev = point
       end
-      draw += "<path d='#{stroke_str}' stroke='black' stroke-width='2' fill='none'/>\n"
+      draw += "<path d='#{stroke_str}' stroke='black' stroke-width='6' stroke-linecap='round' fill='none'/>\n"
     end
 
     return draw
@@ -129,11 +142,10 @@ class Septambres
 
   def to_svg
 
-    system("clear")
-    return "<svg width='#{@width}px' height='#{@height}px' style='background:red'>
-      #{draw('ba',1)}
-      #{draw('ta',3)}
-      #{draw('xo',4)}
+    return "<svg width='#{@width}px' height='#{@height}px'>
+      #{draw('di',1)}
+      #{draw('ti',3)}
+      #{draw('li',4)}
       </svg>"
 
   end
