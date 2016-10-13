@@ -11,18 +11,20 @@ class Lietl
 
 <h2>Phonology</h2>
 
-<p>{{Lietal}} uses mainly #{@dictionaery.vowels.length} vowels and #{@dictionaery.consonants.length} consonants.</p>
-<h3>#{@dictionaery.vowels.length} Vowels</h3>
+<h3>#{@dictionaery.vowels.length} Vowels, #{@dictionaery.consonants.length} Consonants</h3>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
 <table>
+  <tr>
+    <th colspan='2'>Vowels</th>
+  </tr>
   <tr>
     <th>i</th><td>l<b>ea</b>ves</td>
     <th>a</th><td>hex<b>a</b>gram</td>
     <th>o</th><td><b>au</b>tomobile</td>
   </tr>
-</table>
-<h3>#{@dictionaery.consonants.length} Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
-<table>
+  <tr>
+    <th colspan='2'>Consonants</th>
+  </tr>
   <tr>
     <th>k</th><td>basi<b>c</b></td>
     <th>x</th><td><b>ge</b>ography</td>
