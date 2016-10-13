@@ -38,7 +38,7 @@ class Lietl
 
     end
 
-    def to_json q = nil
+    def json q = nil
 
       path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
       load_folder("#{path}/objects/*")
