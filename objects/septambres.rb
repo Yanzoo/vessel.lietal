@@ -85,7 +85,7 @@ class Septambres
   attr_accessor :radius
   attr_accessor :spacing
 
-  def initialize lietal = nil, settings = {"width" => 100,"height" => 100,"margin" => 20,"radius" => 10,"stroke" => 10}
+  def initialize lietal = nil, settings = {"width" => 200,"height" => 200,"margin" => 20,"radius" => 20,"stroke" => 10}
 
     @lietal  = lietal
     @width   = settings['width']
@@ -186,7 +186,7 @@ class Septambres
     return "<svg width='#{@width}px' height='#{@height}px' style='stroke-width: #{@stroke}px; stroke-linecap:square; stroke:black; fill:none'>
       #{draw('ki',1)}
       #{draw('di',3)}
-      #{draw('li',4)}
+      #{draw('ki',4)}
       </svg>"
       #{draw('ka',3)}
       #{draw('sa',4)}

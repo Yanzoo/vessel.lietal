@@ -21,7 +21,7 @@ class Lietl
   </tr>
 </table>
 <h3>#{@dictionaery.consonants.length} Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for <i>x</i> that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
 <table>
   <tr>
     <th>k</th><td>basi<b>c</b></td>
@@ -159,7 +159,7 @@ class Lietl
 </table>
 
 <h3>Tenses</h3>
-<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required, this example requires {_I_} to be used. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
+<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}_}, or {*I saw you*}. In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required, this example requires {_I_} to be used. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
 <table>
   <tr>
     <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>
@@ -242,7 +242,6 @@ class Lietl
     <th>good</th><td>#{@dictionaery.translate('good','lietal').capitalize}</td>
     <th>bad</th><td>#{@dictionaery.translate('bad','lietal').capitalize}</td>
     <th>new</th><td>#{@dictionaery.translate('new','lietal').capitalize}</td>
-    <th>last</th><td>#{@dictionaery.translate('last','lietal').capitalize}</td>
     <th>long</th><td>#{@dictionaery.translate('long','lietal').capitalize}</td>
   </tr>
   <tr>
