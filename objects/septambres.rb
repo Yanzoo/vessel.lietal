@@ -46,15 +46,9 @@ class Rect
   attr_accessor :bottom_left
   attr_accessor :bottom_right
   attr_accessor :bottom_center
-  attr_accessor :middle_left
-  attr_accessor :middle_right
-  attr_accessor :middle_center
-  attr_accessor :middle_bottom_left
-  attr_accessor :middle_bottom_right
-  attr_accessor :middle_bottom_center
-  attr_accessor :middle_top_left
-  attr_accessor :middle_top_right
-  attr_accessor :middle_top_center
+  attr_accessor :center_left
+  attr_accessor :center_right
+  attr_accessor :center
 
   def initialize x,y,w,h
 
@@ -69,15 +63,16 @@ class Rect
     @bottom_left = Point.new(@x,@y + @h)
     @bottom_right = Point.new(@x + @w,@y + @h)
     @bottom_center = Point.new(@x + (@w/2),@y + @h)
-    @middle_left = Point.new(@x,@y + (@h/2))
-    @middle_right = Point.new(@x + @w,@y + (@h/2))
-    @middle_center = Point.new(@x + (@w/2),@y + (@h/2))
-    @middle_bottom_left = Point.new(@x,@y + (@h*0.75))
-    @middle_bottom_right = Point.new(@x + @w,@y + (@h*0.75))
-    @middle_bottom_center = Point.new(@x + (@w/2),@y + (@h*0.75))
-    @middle_top_left = Point.new(@x,@y + (@h*0.25))
-    @middle_top_right = Point.new(@x + @w,@y + (@h*0.25))
-    @middle_top_center = Point.new(@x + (@w/2),@y + (@h*0.25))
+    @center_left = Point.new(@x,@y + (@h/2))
+    @center_right = Point.new(@x + @w,@y + (@h/2))
+    @center_center = Point.new(@x + (@w/2),@y + (@h/2))
+    @center_bottom_left = Point.new(@x,@y + (@h*0.75))
+    @center_bottom_right = Point.new(@x + @w,@y + (@h*0.75))
+    @center_bottom_center = Point.new(@x + (@w/2),@y + (@h*0.75))
+    @center_top_left = Point.new(@x,@y + (@h*0.25))
+    @center_top_right = Point.new(@x + @w,@y + (@h*0.25))
+    @center_top_center = Point.new(@x + (@w/2),@y + (@h*0.25))
+    @center = Point.new(@x + (@w/2),@y + (@h/2))
 
   end
 
@@ -90,13 +85,14 @@ class Septambres
   attr_accessor :radius
   attr_accessor :spacing
 
-  def initialize lietal = nil, settings = {"width" => 100,"height" => 100,"margin" => 4,"radius" => 10}
+  def initialize lietal = nil, settings = {"width" => 100,"height" => 100,"margin" => 20,"radius" => 10,"stroke" => 10}
 
     @lietal  = lietal
     @width   = settings['width']
     @height  = settings['height']
     @margin  = settings['margin']
     @radius  = settings['radius']
+    @stroke  = settings['stroke']
 
   end
 
@@ -104,19 +100,42 @@ class Septambres
 
     h = {}
 
-    h['di'] = "
+    r = "#{@radius},#{@radius}"
+    clockwise = "0 0 1"
+    counterwise = "1 0 0"
+
+    h['di'] = ["
     M #{f.bottom_left}
     l #{f.bottom_left.to(f.bottom_right)}
     l #{f.bottom_right.to(f.bottom_center.offset(@radius,0))}
-    A #{@radius},#{@radius} 0 0 1 #{f.bottom_center.offset(0,-@radius)}
-    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} "
+    A #{r} #{clockwise} #{f.bottom_center.offset(0,-@radius)}
+    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)}"]
     
-    h['ti'] = "
+    h['ti'] = ["
     M #{f.bottom_left}
     l #{f.bottom_left.to(f.bottom_right)}
     l #{f.bottom_right.to(f.bottom_center.offset(@radius,0))}
-    A #{@radius},#{@radius} 0 0 1 #{f.bottom_center.offset(0,-@radius)}
-    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} "
+    A #{r} #{clockwise} #{f.bottom_center.offset(0,-@radius)}
+    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} 
+    l #{f.top_center.to(f.center.offset(0,-@radius))}
+    A #{r} #{counterwise} #{f.center.offset(@radius,0)}
+    l #{f.center.offset(@radius,0).to(f.center_right)}"]
+
+    h['li'] = ["
+    M #{f.bottom_left}
+    l #{f.bottom_left.to(f.bottom_right)}
+    l #{f.bottom_right.to(f.bottom_center.offset(@radius,0))}
+    A #{r} #{clockwise} #{f.bottom_center.offset(0,-@radius)}
+    l #{f.bottom_center.offset(0,-@radius).to(f.top_center)} "]
+
+    h['ki'] = ["
+    M #{f.bottom_left}
+    l #{f.bottom_left.to(f.top_left)}
+    l #{f.top_left.to(f.top_right.offset(-@radius,0))}
+    A #{r} #{clockwise} #{f.top_right.offset(0,@radius)}
+    l #{f.top_right.offset(0,@radius).to(f.bottom_right.offset(0,-@radius))}
+    A #{r} #{counterwise} #{f.bottom_right.offset(@radius,0)}"]
+
     
     return h[name]
 
@@ -134,10 +153,10 @@ class Septambres
 
     center = @width/2
     middle = @height/2
-    right_column = center
-    bottom_column = middle
-    column_width = (@width - (2*@margin))/2
-    column_height = (@height - (2*@margin))/2
+    right_column = center + (@margin/2)
+    bottom_column = middle + (@margin/2)
+    column_width = (@width - (3*@margin))/2
+    column_height = (@height - (3*@margin))/2
 
     if template == 0
       f = Rect.new(@margin,@margin,@width - (2*@margin),@height - (2*@margin))
@@ -153,17 +172,22 @@ class Septambres
 
     letter = make_letter(letter_name,f)
 
-    return "<path d='#{make_letter(letter_name,f)}' stroke='black' fill='none'/>\n"
+    html = ""
+    letter.each do |path|
+      html += "<path d='#{path}'/>\n"
+    end
+
+    return html
 
   end
 
   def to_svg
 
-    return "<svg width='#{@width}px' height='#{@height}px' style='stroke-width: 4px; stroke-linecap:square'>
-      #{draw('ti',0)}
-      </svg>"
+    return "<svg width='#{@width}px' height='#{@height}px' style='stroke-width: #{@stroke}px; stroke-linecap:square; stroke:black; fill:none'>
+      #{draw('ki',1)}
       #{draw('di',3)}
-      #{draw('di',4)}
+      #{draw('li',4)}
+      </svg>"
       #{draw('ka',3)}
       #{draw('sa',4)}
 
