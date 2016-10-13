@@ -9,12 +9,6 @@ class Lietl
 
     attr_accessor :dictionaery
 
-    def result
-
-      return "WAT"
-
-    end
-
   end
 
   class Actions
@@ -41,6 +35,20 @@ class Lietl
       load_folder("#{path}/objects/*")
 
       return Septambres.new("bata").to_svg
+
+    end
+
+    def to_json q = nil
+
+      path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+      load_folder("#{path}/objects/*")
+      d = En.new("dictionaery",path).to_h
+      d.each do |aeth,content|
+        d[aeth]['ADL'] = Aeth.new(aeth).adultspeak
+      end
+
+      require 'json'
+      return d.to_json
 
     end
 

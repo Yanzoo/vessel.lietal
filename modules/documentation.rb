@@ -15,7 +15,7 @@ class Lietl
 <p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
 <table>
   <tr>
-    <th colspan='2'>Vowels</th>
+    <th colspan='6'>Vowels</th>
   </tr>
   <tr>
     <th>i</th><td>l<b>ea</b>ves</td>
@@ -23,7 +23,7 @@ class Lietl
     <th>o</th><td><b>au</b>tomobile</td>
   </tr>
   <tr>
-    <th colspan='2'>Consonants</th>
+    <th colspan='6'>Consonants</th>
   </tr>
   <tr>
     <th>k</th><td>basi<b>c</b></td>
