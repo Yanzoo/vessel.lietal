@@ -40,7 +40,7 @@ class Lietl
       path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
       load_folder("#{path}/objects/*")
 
-      return Septambres.new(q).to_svg
+      return Septambres.new("bata").to_svg
 
     end
 

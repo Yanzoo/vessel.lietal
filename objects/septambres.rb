@@ -15,6 +15,34 @@ class Point
 
 end
 
+class Rect
+
+  attr_accessor :x
+  attr_accessor :y
+  attr_accessor :w
+  attr_accessor :h
+
+  attr_accessor :top_left
+  attr_accessor :top_right
+  attr_accessor :bottom_left
+  attr_accessor :bottom_right
+
+  def initialize x,y,w,h
+
+    @x = x
+    @y = y
+    @w = w
+    @h = h
+
+    @top_left = Point.new(@x,@y)
+    @top_right = Point.new(@x + @w,@y)
+    @bottom_left = Point.new(@x,@y + @h)
+    @bottom_right = Point.new(@x + @w,@y + @h)
+
+  end
+
+end
+
 class Septambres
 
   attr_accessor :width
@@ -22,87 +50,90 @@ class Septambres
   attr_accessor :radius
   attr_accessor :spacing
 
-  def initialize lietal = nil
+  def initialize lietal = nil, settings = {"width" => 150,"height" => 150,"margin" => 10,"radius" => 10}
 
-    @width   = 100
-    @height  = 150
-    @spacing = 10
-    @radius  = 10
-
-    @guides  = guides
+    @lietal  = lietal
+    @width   = settings['width']
+    @height  = settings['height']
+    @margin  = settings['margin']
+    @radius  = settings['radius']
 
   end
 
-  def guides
+  def make_letter name, f
 
     h = {}
 
-    mt_grid_height = (@height * 0.25) + (@spacing/2)
-    mt_grid_width = @width - (2 * @spacing) / 4
+    h['ba'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
+    h['ta'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
+    h['xo'] = [f.top_left,f.top_right,f.bottom_right,f.bottom_left,f.top_left],[f.bottom_left,f.bottom_right]
 
-    h["TL"] = Point.new(@spacing,@spacing)
-    h["TC"] = Point.new(@width / 2,@spacing)
-    h["TR"] = Point.new(@width - @spacing,@spacing)
-    h["CL"] = Point.new(@spacing,height / 2)
-    h["CC"] = Point.new(@width / 2,height / 2)
-    h["CR"] = Point.new(@width - @spacing,height / 2)
-    h["BL"] = Point.new(@spacing,@height - @spacing)
-    h["BC"] = Point.new(@width / 2,@height - @spacing)
-    h["BR"] = Point.new(@width - @spacing,@height - @spacing)
-
-    h["MTL"] = Point.new(@spacing,mt_grid_height)
-    h["MTC"] = Point.new(@width / 2,mt_grid_height)
-    h["MTR"] = Point.new(@width - @spacing,mt_grid_height)
-
-    h["MBL"] = Point.new(@spacing,(@height * 0.75) - (@spacing/2))
-    h["MBC"] = Point.new(@width / 2,(@height * 0.75) - (@spacing/2))
-    h["MBR"] = Point.new(@width - @spacing,(@height * 0.75) - (@spacing/2))
-
-    return h
+    return h[name]
 
   end
 
-  def letter_ba
+  def draw letter_name, template
 
-    return [@guides['TL'],@guides['TR']],[@guides['BL'],@guides['BR']]
+    # Templates
 
-  end
+    # +-------+  +---+---+  +---+---+
+    # |       |  |   |   |  |   | 3 |
+    # |   0   |  | 1 | 2 |  | 1 +---+
+    # |       |  |   |   |  |   | 4 |
+    # +-------+  +---+---+  +---+---+
 
-  def draw letter
+    center = @width/2
+    middle = @height/2
+    right_column = center + (@margin/2)
+    bottom_column = middle + (@margin/2)
+    column_width = (@width - (3*@margin))/2
+    column_height = (@height - (3*@margin))/2
+
+    if template == 0
+      f = Rect.new(@margin,@margin,@width - (2*@margin),@height - (2*@margin))
+    elsif template == 1
+      f = Rect.new(@margin,@margin,column_width,@height - (2*@margin))
+    elsif template == 2
+      f = Rect.new(right_column,@margin,column_width,@height - (2*@margin))
+    elsif template == 3
+      f = Rect.new(right_column,@margin,column_width,column_height)
+    elsif template == 4
+      f = Rect.new(right_column,bottom_column,column_width,column_height)
+    end
+
+    letter = make_letter(letter_name,f)
 
     draw = ""
 
+    # Guides
+
+    draw += "<circle cx='#{f.top_left.x}px' cy='#{f.top_left.y}' r='2' fill='white'></circle>"
+    draw += "<circle cx='#{f.top_right.x}px' cy='#{f.top_right.y}' r='2' fill='white'></circle>"
+    draw += "<circle cx='#{f.bottom_left.x}px' cy='#{f.bottom_left.y}' r='2' fill='white'></circle>"
+    draw += "<circle cx='#{f.bottom_right.x}px' cy='#{f.bottom_right.y}' r='2' fill='white'></circle>"
+
     letter.each do |stroke|
-      draw += "M #{stroke.first.x} #{stroke.first.y} "
+      stroke_str = "M #{stroke.first.x} #{stroke.first.y} "
+      prev = stroke.first
       stroke.each do |point|
-        offset = point.x - stroke.first.x, point.y - stroke.first.y
-        draw += "l #{offset.first} #{offset.last} "
+        target = Point.new(point.x - prev.x, point.y - prev.y)
+        stroke_str += "l #{target.x} #{target.y} "
+        prev = point
       end
+      draw += "<path d='#{stroke_str}' stroke='black' stroke-width='2' fill='none'/>\n"
     end
 
-    return "<path d='#{draw}' stroke='black' stroke-width='2' fill='none'/>"
+    return draw
 
   end
-
-  def print_guides
-
-    g = ""
-
-    @guides.each do |k,point|
-      g += "<circle cx='#{point.x}px' cy='#{point.y}' r='2' fill='white'></circle>"
-    end
-
-    return g
-
-  end
-
-
 
   def to_svg
+
     system("clear")
     return "<svg width='#{@width}px' height='#{@height}px' style='background:red'>
-      #{print_guides}
-      #{draw(letter_ba)}
+      #{draw('ba',1)}
+      #{draw('ta',3)}
+      #{draw('xo',4)}
       </svg>"
 
   end
