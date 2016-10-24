@@ -1,6 +1,8 @@
 #!/bin/env ruby
 # encoding: utf-8
 
+$instance_path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+
 class Lietl
 
   include Vessel
@@ -42,7 +44,7 @@ class Lietl
 
       path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
       load_folder("#{path}/objects/*")
-      d = En.new("dictionaery",path).to_h
+      d = Memory_Hash.new("dictionaery",path).to_h
       d.each do |aeth,content|
         d[aeth]['ADL'] = Aeth.new(aeth).adultspeak
       end

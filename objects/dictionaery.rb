@@ -11,7 +11,7 @@ class Dictionaery
 
 		@vowels = ["i","a","o"]
 		@consonants = ["k","x","s","t","d","l","p","b","v"]
-		@en = En.new("dictionaery",path)
+		@en = Memory_Hash.new("dictionaery",path)
 
 	end
 
