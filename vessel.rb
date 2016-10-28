@@ -1,9 +1,49 @@
 #!/bin/env ruby
 # encoding: utf-8
 
+class VesselLietal
+
+  include Vessel
+
+  def initialize id = 0
+
+    super
+
+    @name = "Lietal"
+    @path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+
+    install(:default,:serve)
+
+  end
+
+end
+
+class ActionServe
+
+  include Action
+
+  def act q = "Home"
+
+    load_folder("#{@host.path}/objects/*")
+
+    p "#{@host.path}/objects/*"
+
+    docs = Documentation.new(@host.path)
+    dict = Dictionaery.new(@host.path)
+
+    docs.dictionaery = dict
+
+    return docs.to_s
+
+  end
+
+end
+
+=begin
+
 $instance_path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
 
-class Lietl
+class Lietal
 
   include Vessel
 
@@ -83,3 +123,5 @@ class Lietl
   def passive_actions ; return PassiveActions.new(self,self) end
 
 end
+
+=end
