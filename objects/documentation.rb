@@ -18,8 +18,8 @@ class Documentation
 
 <h2>Phonology</h2>
 
-<h3>#{@dictionaery.vowels.length} Vowels, #{@dictionaery.consonants.length} Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}.</p>
+<h3>Vowels & Consonants</h3>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
 <table>
 <tr>
   <th colspan='6'>Vowels</th>
