@@ -49,7 +49,7 @@ class Documentation
   <th>v</th><td><b>v</b>acant</td>
 </tr>
 <tr>
-  <th colspan='6'>Consonants</th>
+  <th colspan='6'>Adultspeak</th>
 </tr>
 <tr>
   <th>e</th><td>n<b>e</b>ver</td>
