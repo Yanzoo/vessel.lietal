@@ -19,7 +19,8 @@ class Documentation
 <h2>Phonology</h2>
 
 <h3>Vowels & Consonants</h3>
-<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_} when . When a word begins with a {_x_} letter, the written word will use {_j_}. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
+<p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_}. When a word begins with a {_x_} letter, the written word will use {_j_}. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
+<p>Adultspeak is the phonetic style used in this documentation, it shortens the spelling of most divieth(4 letters, or 2 syllables words) to a single syllable by merging sounds and changing letters order.</p>
 <table>
 <tr>
   <th colspan='6'>Vowels</th>
@@ -47,10 +48,9 @@ class Documentation
   <th>b</th><td><b>b</b>eetle</td>
   <th>v</th><td><b>v</b>acant</td>
 </tr>
-</table>
-<h3>Adultspeak</h3>
-<p>Adultspeak is a phonetic style, used in this documentation, that shortens the spelling of most divieths(4 letters, or 2 syllables words) to a single syllable by merging sounds and changing letters order.</p>
-<table>
+<tr>
+  <th colspan='6'>Consonants</th>
+</tr>
 <tr>
   <th>e</th><td>n<b>e</b>ver</td>
   <th>u</th><td><b>oo</b>long</td>
@@ -149,7 +149,7 @@ class Documentation
 </table>
 
 <h3>Pronouns</h3>
-<p>In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular, and so {*#{@dictionaery.translate('I','lietal')}*} is not required.</p>
+<p>In most cases, it is infered that a sentence beginning without a pronoun is at the first person singular.</p>
 <table>
 <tr>
   <th>I</th><td>#{@dictionaery.translate('I','lietal').capitalize}</td>
@@ -169,7 +169,7 @@ class Documentation
 </table>
 
 <h3>Tenses</h3>
-<p>Tenses words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}_}, or {*I saw you*}. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
+<p>Time words are used like adjectives onto verbs, {_#{@dictionaery.translate('I you past to_see','lietal').capitalize}_}, or {*I saw you*}. The modal tense is the tense used for {_should do_}, or {_must do_}.</p>
 <table>
 <tr>
   <th>Past</th><td>#{@dictionaery.translate('past','lietal').capitalize}</td>
@@ -262,7 +262,7 @@ class Documentation
 </tr>
 <tr>
   <th>different</th><td>#{@dictionaery.translate('different','lietal').capitalize}</td>
-  <th>old</th><td>#{@dictionaery.translate('old','lietal').capitalize}</td>    
+  <th>old</th><td>#{@dictionaery.translate('old','lietal').capitalize}</td>
   <th>own</th><td>#{@dictionaery.translate('own','lietal').capitalize}</td>
   <th>important</th><td>#{@dictionaery.translate('important','lietal').capitalize}</td>
 </tr>
