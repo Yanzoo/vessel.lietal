@@ -6,6 +6,7 @@ The lietal language toolchain.
 
 ```
 custom
+  Translate      | Translate English word into Lietal.
   Serve          | Deliver html documentation.
   Print          | List Dictionaery content as JSON.
 default

@@ -11,6 +11,12 @@ class Aeth
 		@lietal = lietal ? lietal : nil
 
 	end
+	
+	def to_s
+	  
+	  return @lietal.capitalize
+	  
+	end
 
 	def ae
 
@@ -46,7 +52,7 @@ class Aeth
 			return "#{c1}#{v1}#{v2}#{c2}"
 		else
 			return "#{c1}#{v1}#{c2}#{v2}"
-		end	
+		end
 
 	end
 
