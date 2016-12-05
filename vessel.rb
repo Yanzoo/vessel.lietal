@@ -11,9 +11,12 @@ class VesselLietal
 
     @name = "Lietal"
     @path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
+    @docs = "The lietal language toolchain."
 
-    install(:default,:serve)
-    install(:default,:print)
+    install(:custom,:serve)
+    install(:custom,:print)
+    install(:default,:document)
+    install(:default,:help)
 
   end
 
@@ -23,6 +26,15 @@ class ActionServe
 
   include Action
 
+  def initialize q = nil
+
+    super
+
+    @name = "Serve"
+    @docs = "Deliver html documentation."
+
+  end
+  
   def act q = "Home"
 
     load_folder("#{@host.path}/objects/*")
@@ -42,6 +54,15 @@ class ActionPrint
 
   include Action
 
+  def initialize q = nil
+
+    super
+
+    @name = "Print"
+    @docs = "List Dictionaery content as JSON."
+
+  end
+  
   def act q = "Home"
 
     load_folder("#{@host.path}/objects/*")
