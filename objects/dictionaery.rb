@@ -53,7 +53,7 @@ class Dictionaery
 		  word_punct = word.downcase.split(word_chars)
 			aeth = lang.like("lietal") ? find_english(word_chars) : find_lietal(word_chars)
 			if !aeth
-				s.push(word_punct[0].to_s+word_chars+word_punct[1].to_s)
+				s.push(word_punct[0].to_s+"\""+word_chars+"\""+word_punct[1].to_s)
 			else
 				s.push(lang.like("en") ? aeth.english.downcase : word_punct[0].to_s+aeth.adultspeak.downcase+word_punct[1].to_s)
 			end
