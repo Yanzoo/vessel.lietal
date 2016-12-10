@@ -5,18 +5,18 @@ The lietal language toolchain.
 ## Available actions
 
 ```
-custom
+Custom
   Translate      | Translate English word into Lietal.
   Serve          | Deliver html documentation.
   Print          | List Dictionaery content as JSON.
-default
+Generic
   Document       | Generate the Github documentation file.
   Help           | List available commands.
 ```
 
 ## Documentation
 
-Generated with [Nataniev](http://wiki.xxiivv.com/Nataniev) on **Tridesamber 3, 2016**, read the full [project documentation](htp://google.com).
+Generated with [Nataniev](http://wiki.xxiivv.com/Nataniev) on **Tridesamber 8, 2016**, view the [project site](htp://google.com).
 
 ##License
 

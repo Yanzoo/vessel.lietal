@@ -49,11 +49,13 @@ class Dictionaery
 		
 		s = []
 		sentence.split(" ").each do |word|
-			aeth = lang.like("lietal") ? find_english(word) : find_lietal(word)
+		  word_chars = word.downcase.gsub(/[^a-z0-9_\s]/i, '')
+		  word_punct = word.downcase.split(word_chars)
+			aeth = lang.like("lietal") ? find_english(word_chars) : find_lietal(word_chars)
 			if !aeth
-				s.push("#{word}")
+				s.push(word_punct[0].to_s+word_chars+word_punct[1].to_s)
 			else
-				s.push(lang.like("en") ? aeth.english.downcase : aeth.adultspeak.downcase)
+				s.push(lang.like("en") ? aeth.english.downcase : word_punct[0].to_s+aeth.adultspeak.downcase+word_punct[1].to_s)
 			end
 		end
 		

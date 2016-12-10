@@ -12,14 +12,12 @@ class VesselLietal
     @name = "Lietal"
     @path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
     @docs = "The lietal language toolchain."
-
-    load_folder("#{@path}/actions/*")
     
     install(:custom,:translate)
     install(:custom,:serve)
     install(:custom,:print)
-    install(:default,:document)
-    install(:default,:help)
+    install(:generic,:document)
+    install(:generic,:help)
 
   end
 
