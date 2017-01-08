@@ -18,6 +18,18 @@ class Aeth
 	  
 	end
 
+	def parts
+
+		a = []
+		i = 0
+		while i < (@lietal.length/2)
+			a.push(@lietal[i*2,2])
+			i += 1
+		end
+		return a
+
+	end
+
 	def ae
 
 		return Ae.new(lietal[0,2])
@@ -58,7 +70,7 @@ class Aeth
 
 	def to_svg
 
-		return Septambres.new(lietal).svg
+		return Septambres.new(self).to_svg
 
 	end
 

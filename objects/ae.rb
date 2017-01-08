@@ -13,11 +13,21 @@ class Ae
     @vowel     = key[1,1].downcase
     @consonant = key[0,1].downcase
 
+    @depths     = { "k" =>  1, "x" =>  1, "s" =>  1,
+                    "t" =>  0, "d" =>  0, "l" =>  0,
+                    "p" => -1, "b" => -1, "v" => -1}
+
+    @heights = { "i" => 1, "a" => 0, "o" => -1}
+
+    @widths     = { "k" => -1, "x" =>  0, "s" =>  1,
+                    "t" => -1, "d" =>  0, "l" =>  1,
+                    "p" => -1, "b" =>  0, "v" =>  1}
+
   end
 
   def form
 
-    return "? #{@key} #{category} #{type} #{vector_name(vector)} -> #{value}"
+    return "#{@key} #{category} #{type} #{vector_name(vector)} -> #{value}(#{x},#{y},#{z})"
 
   end
 
@@ -62,6 +72,12 @@ class Ae
     
   end
 
+  def vectors_capitals
+
+    return 
+
+  end
+
   def vector_name vector
 
     a = ["Superior", "Central", "Inferior"]
@@ -71,13 +87,31 @@ class Ae
 
   def vowel_vector
 
-    return vectors_normal[@vowel]
+    return vectors[@vowel]
 
   end
 
   def consonant_vector
 
     return vectors_normal[@consonant]
+    
+  end
+
+  def x
+
+    return @widths[@consonant]
+
+  end
+
+  def y
+
+    return @heights[@vowel]
+
+  end
+
+  def z
+
+    return @depths[@consonant]
     
   end
 
