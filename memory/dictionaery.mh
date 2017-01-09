@@ -36,6 +36,8 @@ KIVO
 XIKI
 XIXI
 XISI
+  DEF : Time
+  ALT : Entropy
 XITI
 XIDI
 XILI
@@ -104,7 +106,6 @@ TIDI
   ALT : After
 TILI
 TIPI
-  DEF : Time
 TIBI
 TIVI
 TIKA
