@@ -20,7 +20,6 @@ class Documentation
 
 <h3>Vowels & Consonants</h3>
 <p>For the most part, Lietal letters are voiced similarly to their english equivalents, except for {_x_} that is more akin to a light english {_j_}. When a word begins with a {_x_} letter, the written word will use {_j_}. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
-<p>Adultspeak is the phonetic style used in this documentation, it shortens the spelling of most divieth(4 letters, or 2 syllables words) to a single syllable by merging sounds and changing letters order.</p>
 <table>
 <tr>
   <th colspan='6'>Vowels</th>
@@ -47,19 +46,6 @@ class Documentation
   <th>p</th><td><b>d</b>evice</td>
   <th>b</th><td><b>b</b>eetle</td>
   <th>v</th><td><b>v</b>acant</td>
-</tr>
-<tr>
-  <th colspan='6'>Adultspeak</th>
-</tr>
-<tr>
-  <th>e</th><td>n<b>e</b>ver</td>
-  <th>u</th><td><b>oo</b>long</td>
-  <th></th><td></td>
-</tr>
-<tr>
-  <th>z</th><td><b>z</b>ero</td>
-  <th>r</th><td>ee<b>r</b>y</td>
-  <th>f</th><td><b>f</b>ault</td>
 </tr>
 </table>
 
@@ -295,7 +281,7 @@ class Documentation
 <h3>Common Sentences</h3>
 <table>
 <tr>
-  <th>Welcome</th><td>#{@dictionaery.translate('Hello','lietal').capitalize}</td>
+  <th>Welcome</th><td>#{@dictionaery.translate('Welcome','lietal').capitalize}</td>
   <th>Goodbye</th><td>#{@dictionaery.translate('Goodbye','lietal').capitalize}</td>
 </tr>
 <tr>

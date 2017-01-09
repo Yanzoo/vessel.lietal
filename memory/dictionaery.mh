@@ -631,6 +631,7 @@ SO
 SOKI
   DEF : To_have
 SOXI
+  DEF : Goodbye
 SOSI
   DEF : To_go
   ALT : To_come
@@ -640,6 +641,7 @@ SODI
 SOLI
 SOPI
 SOBI
+  DEF : Welcome
 SOVI
 SOKA
 SOXA
@@ -773,10 +775,8 @@ POKI
 POXI
 POSI
 POTI
-  DEF : Goodbye
 PODI
 POLI
-  DEF : Hello
 POPI
 POBI
 POVI
