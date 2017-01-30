@@ -1,0 +1,52 @@
+~ NAME : Dictionaery
+~ NOTE : *
+~ AUTH : Devine Lu Linvega
+
+ENTROPY
+  KEY : N
+  VECTOR
+    Future
+    Present
+    Past
+
+INTERACTION
+  KEY : T
+  VECTOR
+    To do
+    To see
+    To be
+
+RELATION
+  KEY : R
+  VECTOR
+    With
+    As one
+    Without
+
+POSITION
+  KEY : D
+  VECTOR
+    Outward
+    Position
+    Inward
+
+MODALITY
+  KEY : M
+  VECTOR
+    Certainty
+    Possibility
+    Impossibility
+
+ALIGNMENT
+  KEY : L
+  VECTOR
+    Positive
+    Neutral
+    Negative
+
+STATE
+  KEY : V
+  VECTOR
+    Psychologic
+    Phisionomic
+    Physic

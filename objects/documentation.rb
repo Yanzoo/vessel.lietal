@@ -5,6 +5,7 @@ class Documentation
 
   attr_accessor :path
   attr_accessor :dictionaery
+  attr_accessor :aebeth
 
   def initialize path
 
@@ -14,6 +15,36 @@ class Documentation
 
   def to_s
     
+    html = ""
+
+    html += "<p>This draft introduces new concepts, such as the consonant keys and vowel values in an attempt to remove redundancies in the previous itteration.</p>"
+
+    html += "
+<h2>Aeths</h2>
+<p>An aeth, is a core lietal syllable made of a consonant and a vowel, or a <i>key</i> and a <i>value</i>. The list of all known Aeths, is called the <b>Aebeth</b>. </p>
+#{@aebeth.aeth('Entropy')}
+<p>The #{@aebeth.aeth('Entropy').name} aeth has the #{@aebeth.aeth('Entropy').key} key, the i ending vowel indicates that the value of the aeth's vector is 1, making the word \"#{@aebeth.aeth('Entropy').vector[1]}\".</p>
+<table>
+  <tr>
+    <th>Vectors</th><th>Value</th><th>Bool</th><th>Value</th>
+  </tr>
+  <tr><th>-i</th><td>1</td><th>-e</th><td>True</td></tr>
+  <tr><th>-a</th><td>0</td><th>-y</th><td><i>Default*</i></td></tr>
+  <tr><th>-o</th><td>-1</td><th>-u</th><td>False</td></tr>  
+  </tr>
+</table>
+"
+
+    html += "<h2>The Aebeth</h2>"
+
+    html += @aebeth.to_s
+
+
+
+
+    return html
+
+
     return "
 
 <h2>Phonology</h2>

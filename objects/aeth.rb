@@ -3,67 +3,48 @@
 
 class Aeth
 
-	attr_accessor :english
-	attr_accessor :lietal
+	attr_accessor :name
+	attr_accessor :data
 
-	def initialize lietal = nil
+	def initialize name, data
 
-		@lietal = lietal ? lietal : nil
+		@name = name.capitalize
+		@data = data
 
 	end
-	
+
+	def key
+
+		return @data["KEY"]
+
+	end
+
+	def vector
+
+		return {1 => @data["VECTOR"][0],0 => @data["VECTOR"][1],-1 => @data["VECTOR"][2]}
+
+	end
+
+	def bool
+
+		return {true => @data["BOOL"][0], false => @data["BOOL"][1]}
+
+	end
+
 	def to_s
-	  
-	  return @lietal.capitalize
-	  
-	end
 
-	def parts
-
-		a = []
-		i = 0
-		while i < (@lietal.length/2)
-			a.push(@lietal[i*2,2])
-			i += 1
+		html = "#{name}\n"
+		if vector
+			html += "  Vector\n"
+			html += "    #{key}i  "+vector[1]+"\n"
+			html += "    #{key}a  "+vector[0]+"\n"
+			html += "    #{key}o  "+vector[-1]+"\n"
 		end
-		return a
+		html += "  Default\n"
+		html += "    #{key}y  #{name}\n"
 
-	end
-
-	def ae
-
-		return Ae.new(lietal[0,2])
-
-	end
-
-	def adultspeak
-
-		if lietal.length < 4 then return lietal end
-			
-		ae_1 = Ae.new(lietal[0,2])
-		ae_2 = Ae.new(lietal[2,2])
-
-		c1 = ae_1.consonant
-		c2 = ae_2.consonant
-		v1 = ae_1.vowel
-		v2 = ae_2.vowel
-
-		if c1.like(c2) then c2 = "" end
-		if v1.like(v2) then v2 = "" end
-
-		if ae_1.consonant_vector < ae_2.consonant_vector
-			return "#{c1}#{c2}#{v1}#{v2}"
-		elsif ae_1.consonant_vector > ae_2.consonant_vector
-			return "#{c1}#{v1}#{v2}#{c2}"
-		else
-			return "#{c1}#{v1}#{c2}#{v2}"
-		end
-
-	end
-
-	def to_svg
-
-		return Septambres.new(self).to_svg
+		return "<code>"+html+"</code>"
+		return name+"(#{key}y:#{vector ? " Vector=["+vector[0]+","+vector[1]+","+vector[2]+"]" : ""}#{bool ? " Bool=["+bool[0]+","+bool[1]+"]" : ""})"
 
 	end
 
