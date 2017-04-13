@@ -10,35 +10,54 @@ class Vieth
 
 	end
 
-  def phonetic
+  def childspeak
+
+    if @details == {} then return "<i>Missing</i>" end
 
     _f = @details["MAIN"].split("(").first
     param,val,aeth = $aebeth.aeth_from_english(_f)
     
-    if !aeth then return "Unknown" end
+    if !aeth then return "Unknown(#{_f})" end
 
     _f_phonetic = aeth.phonetic(param,val)
 
-    _p = @details["MAIN"].split("(").last.sub(")","").strip
-    param,val,aeth = $aebeth.aeth_from_english(_p)
+    _p = @details["MAIN"].split("(").last.sub(")","").strip.split(",")
 
-    if !aeth then return "Unknown" end
+    _p_phonetic = ""
 
-    _p_phonetic = aeth.phonetic(param,val)
-
+    _p.each do |p2|
+      param,val,aeth = $aebeth.aeth_from_english(p2)
+      if !aeth then return "Unknown(#{p2})" end
+      _p_phonetic += aeth.phonetic(param,val)
+    end
+  
     return "#{_f_phonetic}#{_p_phonetic}"
 
   end
 
   def adultspeak
 
-    return phonetic+"!!"
+    _childspeak = childspeak
+
+    if _childspeak.length == 2 then return _childspeak end
+    if _childspeak.like("<i>Missing</i>") then return _childspeak end
+
+    c1 = _childspeak[0,1]
+    v1 = _childspeak[1,1]
+    c2 = _childspeak[2,1]
+    v2 = _childspeak[3,1]
+    re = _childspeak[4,4]
+
+    if c1 == c2 then c2 = "" end
+    if v1 == v2 then v2 = "" end
+
+    return "#{c1}#{v1}#{v2}#{c2}#{re}"
 
   end
 
   def to_s is_adultspeak = nil
 
-    return @details["MAIN"] ? (is_adultspeak ? adultspeak(phonetic) : phonetic) : "Unknown"
+    return adultspeak
 
   end
 

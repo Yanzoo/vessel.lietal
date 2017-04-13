@@ -15,7 +15,7 @@ class Dictionaery
 
 	def lietal l
 
-		return @en[l.upcase] ? @en[l.upcase].to_s : Vieth.new("unknown").to_s
+		return @en[l.upcase] ? @en[l.upcase] : Vieth.new("unknown(#{l})")
 
 	end
 

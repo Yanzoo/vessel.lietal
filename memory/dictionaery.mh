@@ -29,3 +29,95 @@ WHICH
   
 WHERE
   MAIN : possible(hierarchy)
+
+~ Pronouns
+
+I
+  MAIN : single(inward)
+
+YOU
+  MAIN : single(outward)
+
+WE
+  MAIN : multiple(inward)
+
+YOUS
+  MAIN : multiple(outward)
+  
+HE_SHE
+  MAIN : single(position)
+
+THEY
+  MAIN : multiple(position)
+
+MY
+  MAIN : children(inward)
+
+YOUR
+  MAIN : children(outward)
+
+THEIR
+  MAIN : children(position)
+  
+~ Tenses
+
+PAST
+  MAIN : complex(inward)
+
+PRESENT
+  MAIN : complex(position)
+
+FUTURE
+  MAIN : complex(outward)
+
+POTENTIAL_PAST
+  MAIN : complex(possible,inward)
+
+POTENTIAL_PRESENT
+  MAIN : complex(possible,position)
+
+POTENTIAL_FUTURE
+  MAIN : complex(possible,outward)
+
+~ Vocabulary
+
+~ Verbs
+
+TO_TAKE
+  MAIN : to_make(inward)
+
+TO_HOLD
+  MAIN : to_make(position)
+
+TO_GIVE
+  MAIN : to_make(outward)
+
+TO_LISTEN
+  MAIN : to_see(inward)
+
+TO_SEE
+  MAIN : to_see(position)
+
+TO_SHOW
+  MAIN : to_see(outward)
+
+TO_BECOME
+  MAIN : to_see(outward)
+
+TO_WRITE
+  MAIN : to_make(psychologic)
+
+TO_DRAW
+  MAIN : to_make(phisionomic)
+
+TO_BUILD
+  MAIN : to_make(physic)
+
+TO_CLIMB
+  MAIN : to_make(parent)
+
+TO_GO
+  MAIN : to_make(location)
+
+TO_COME
+  MAIN : to_make(children)

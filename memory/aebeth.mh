@@ -8,7 +8,7 @@ HIERARCHY
   KEY : K
   VECTOR
     Parent
-    Self
+    Location
     Children
   BOOL
     ?
@@ -60,7 +60,7 @@ COUNTER
   KEY : L 
   VECTOR
     More
-    One
+    Single
     Less
   BOOL
     Multiple
@@ -91,9 +91,9 @@ ALIGNMENT
 INTERACTION
   KEY : F
   VECTOR
-    To make
-    To see
-    To be
+    To_make
+    To_see
+    To_be
   BOOL
     Active
     Inactive
