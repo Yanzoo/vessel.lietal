@@ -2,12 +2,30 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
-DIMENSION
-  POINT : Position, Position
-  PLANE : Position, Position
-  POLY : Position, Position, Position
+~ Expressions
 
-PERSON
-  STATE
-  POSITION
+HELLO
+  MAIN : positive(inward)
 
+BYE
+  MAIN : positive(outward)
+
+~ Question Words
+
+WHEN
+  MAIN : possible(complex)
+
+WHO
+  MAIN : possible(akin)
+
+WHAT
+  MAIN : possible(simple)
+
+HOW
+  MAIN : possible(interaction)
+
+WHICH
+  MAIN : possible(counter)
+  
+WHERE
+  MAIN : possible(hierarchy)

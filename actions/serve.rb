@@ -16,11 +16,15 @@ class ActionServe
   
   def act q = ""
 
-    load_folder("#{@host.path}/objects/*")  
+    load_folder "#{@host.path}/objects/*"
+
+    $dictionaery = Dictionaery.new(@host.path)
+    $aebeth = Aebeth.new(@host.path)
 
     documentation = Documentation.new(@host.path)
-    documentation.dictionaery = Dictionaery.new(@host.path)
-    documentation.aebeth = Aebeth.new(@host.path)
+    documentation.dictionaery = $dictionaery
+    documentation.aebeth = $aebeth
+
     return documentation.to_s
 
   end

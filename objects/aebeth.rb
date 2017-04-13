@@ -11,6 +11,15 @@ class Aebeth
 
 	end
 
+	def aeth_from_english en
+
+		@h.each do |name,aeth|
+			if aeth.has_meaning(en) then return aeth.has_meaning(en) end
+		end
+		return nil
+
+	end
+
 	def aeth ae
 
 		if @h[ae.upcase] then return @h[ae.upcase] end
@@ -19,19 +28,32 @@ class Aebeth
 
 	end
 
-	def to_s
+	def table
 
-		html = ""
-		html += "<tr><th>Key</th><th>Aeth</th><th colspan='3'>Vectors</th></tr>"
-		@h.each do |name,aeth|
-			html += "<tr><th>#{aeth.key}</th><th>#{aeth.name}</th>"
-			if aeth.vector
-				html += "<td><b>#{aeth.key}i</b> #{aeth.vector[1]}</td><td>#{aeth.vector[0]}</td><td>#{aeth.vector[-1]}</td>"
-			end
-			html += "</tr>"
-		end
-
-		return "<table>#{html}</table>"
+		return "
+		<style>
+		.aebeth td { border-bottom:0px}
+		.aebeth table td, .aebeth table th { border-bottom:0px; padding:5px}
+		.aebeth table { margin-bottom:0px; font-size:14px;}
+		.aebeth table tr:first-child { border-bottom:1px solid black;}
+		</style>
+		<table class='aebeth'>
+		<tr>
+			<td>#{@h['HIERARCHY'].table}</td>
+			<td>#{@h['STATE'].table}</td>
+			<td>#{@h['STRUCTURE'].table}</td>
+		</tr>
+		<tr>
+			<td>#{@h['DIRECTION'].table}</td>
+			<td>#{@h['RELATION'].table}</td>
+			<td>#{@h['COUNTER'].table}</td>
+		</tr>
+		<tr>
+			<td>#{@h['MODALITY'].table}</td>
+			<td>#{@h['ALIGNMENT'].table}</td>
+			<td>#{@h['INTERACTION'].table}</td>
+		</tr>
+		</table>"
 
 	end
 

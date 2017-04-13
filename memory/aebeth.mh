@@ -2,51 +2,98 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
-ENTROPY
-  KEY : N
-  VECTOR
-    Future
-    Present
-    Past
+~ HIGH
 
-INTERACTION
-  KEY : T
+HIERARCHY
+  KEY : K
   VECTOR
-    To do
-    To see
-    To be
-
-RELATION
-  KEY : R
-  VECTOR
-    With
-    As one
-    Without
-
-POSITION
-  KEY : D
-  VECTOR
-    Outward
-    Position
-    Inward
-
-MODALITY
-  KEY : M
-  VECTOR
-    Certainty
-    Possibility
-    Impossibility
-
-ALIGNMENT
-  KEY : L
-  VECTOR
-    Positive
-    Neutral
-    Negative
+    Parent
+    Self
+    Children
+  BOOL
+    ?
+    ?
 
 STATE
-  KEY : V
+  KEY : T
   VECTOR
     Psychologic
     Phisionomic
     Physic
+  BOOL
+    ?
+    ?
+
+STRUCTURE
+  KEY : D
+  VECTOR
+    Complex
+    Akin
+    Simple
+  BOOL
+    ?
+    ?
+
+~ MID
+
+DIRECTION
+  KEY : R
+  VECTOR
+    Outward
+    Position
+    Inward
+  BOOL
+    ?
+    ?
+
+RELATION
+  KEY : S
+  VECTOR
+    With
+    United
+    Without
+  BOOL
+    ?
+    ?
+
+COUNTER
+  KEY : L 
+  VECTOR
+    More
+    One
+    Less
+  BOOL
+    Multiple
+    Null
+
+~ LOW
+
+MODALITY
+  KEY : J
+  VECTOR
+    Certain
+    Possible
+    Impossible
+  BOOL
+    ?
+    ?
+
+ALIGNMENT
+  KEY : V 
+  VECTOR
+    Positive
+    Neutral
+    Negative
+  BOOL
+    ?
+    ?
+
+INTERACTION
+  KEY : F
+  VECTOR
+    To make
+    To see
+    To be
+  BOOL
+    Active
+    Inactive
