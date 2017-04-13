@@ -11,8 +11,8 @@ HIERARCHY
     Location
     Children
   BOOL
-    ?
-    ?
+    Connected
+    Disconnected
 
 STATE
   KEY : T
@@ -43,8 +43,8 @@ DIRECTION
     Position
     Inward
   BOOL
-    ?
-    ?
+    Mobile
+    Immobile
 
 RELATION
   KEY : S
@@ -53,8 +53,8 @@ RELATION
     United
     Without
   BOOL
-    ?
-    ?
+    Related
+    Unrelated
 
 COUNTER
   KEY : L 

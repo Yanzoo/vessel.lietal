@@ -42,16 +42,26 @@ class Vieth
     if _childspeak.length == 2 then return _childspeak end
     if _childspeak.like(@word) then return _childspeak end
 
-    c1 = _childspeak[0,1]
-    v1 = _childspeak[1,1]
-    c2 = _childspeak[2,1]
-    v2 = _childspeak[3,1]
-    re = _childspeak[4,4]
+    if _childspeak.length == 4 then return adultspeak_segement(_childspeak) end
+    if _childspeak.length == 6 then return adultspeak_segement(_childspeak[0,4])+_childspeak[4,2] end
+    if _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
+
+    return "??"
+
+  end
+
+  def adultspeak_segement seg
+
+    c1 = seg[0,1]
+    v1 = seg[1,1]
+    c2 = seg[2,1]
+    v2 = seg[3,1]
+    re = seg[4,4]
 
     if c1 == c2 then c2 = "" end
     if v1 == v2 then v2 = "'" end
 
-    return "#{c1}#{v1}#{v2}#{c2}#{re}"
+    return "#{c1}#{v1}#{v2}#{c2}"
 
   end
 

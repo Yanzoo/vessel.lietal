@@ -97,6 +97,15 @@ NEGATIVE_PRESENT
 NEGATIVE_FUTURE
   MAIN : complex(impossible,outward)
 
+NEGATIVE_POTENTIAL_PAST
+  MAIN : complex(impossible,possible,inward)
+
+NEGATIVE_POTENTIAL_PRESENT
+  MAIN : complex(impossible,possible,position)
+
+NEGATIVE_POTENTIAL_FUTURE
+  MAIN : complex(impossible,possible,outward)
+
 ~ Vocabulary
 
 TIME
@@ -128,6 +137,21 @@ PART
 
 NAME
   MAIN : psychologic(structure)
+
+TOMORROW
+  MAIN : complex(single,more)
+
+TODAY
+  MAIN : complex(single)
+
+YESTERDAY
+  MAIN : complex(single,less)
+
+HOME
+  MAIN : parent(to_be)
+
+BOOK
+  MAIN : physic(phisionomic,psychologic)
 
 ~ Verbs
 
@@ -184,6 +208,9 @@ TO_SEE
 
 TO_BE
   MAIN : to_be()
+
+TO_READ
+  MAIN : to_see(phisionomic,psychologic)
 
 ~ Prepositions
 

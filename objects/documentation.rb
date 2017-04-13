@@ -62,6 +62,9 @@ class Documentation
   <tr><th>Who</th><td>#{@dictionaery.translate('who',:lietal).childspeak}</td><td>#{@dictionaery.translate('who',:lietal).adultspeak}</td></tr>
 </table>
 
+<h3>Typography</h3>
+<p>Lietal is designed to be written with the {{Shortscript|Shorthand}}.</p>
+
 <h2>The Aebeth</h2>
 <p>The elemental particles of the language are the 9 core {_Aeths_}, atoms or building blocks of the {{Lietal}} word building.</p>
 #{@aebeth.table}
@@ -117,6 +120,11 @@ class Documentation
   <th>Negative Future</th><td>#{@dictionaery.translate('negative_future',:lietal)}</td>
   <th>Negative Present</th><td>#{@dictionaery.translate('negative_present',:lietal)}</td>
   <th>Negative Past</th><td>#{@dictionaery.translate('negative_past',:lietal)}</td> 
+</tr>
+<tr>
+  <th>Neg. Pot. Future</th><td>#{@dictionaery.translate('negative_potential_future',:lietal)}</td>
+  <th>Neg. Pot. Present</th><td>#{@dictionaery.translate('negative_potential_present',:lietal)}</td>
+  <th>Neg. Pot. Past</th><td>#{@dictionaery.translate('negative_potential_past',:lietal)}</td> 
 </tr>
 </table>
 
@@ -208,6 +216,17 @@ class Documentation
   <th>My name is Lucas</th><td>#{@dictionaery.translate('my name Lucas',:lietal)}</td>
 </tr>
 </table>
+
+<h3>Building A Sentence</h3>
+<p>Let's look at this example.</p>
+<code><comment># Will you read the book at home tomorrow?</comment>
+tomorrow - home at book read will?
+#{@dictionaery.translate('tomorrow - home at book to_read potential_future',:lietal)}?</code>
+
+<p>And its answer.</p>
+<code><comment># No, I won't be able to, maybe today.</comment>
+no I read won't be able to. today maybe.
+#{@dictionaery.translate('no to_read negative_potential_future',:lietal)}. #{@dictionaery.translate('today potential_future',:lietal)}.</code>
 "
     return html
 
