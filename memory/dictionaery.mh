@@ -10,6 +10,15 @@ HELLO
 BYE
   MAIN : positive(outward)
 
+YES
+  MAIN : positive()
+
+NO
+  MAIN : negative()
+
+PLEASE
+  MAIN : possible(positive)
+
 ~ Question Words
 
 WHEN
@@ -79,7 +88,46 @@ POTENTIAL_PRESENT
 POTENTIAL_FUTURE
   MAIN : complex(possible,outward)
 
+NEGATIVE_PAST
+  MAIN : complex(impossible,inward)
+
+NEGATIVE_PRESENT
+  MAIN : complex(impossible,position)
+
+NEGATIVE_FUTURE
+  MAIN : complex(impossible,outward)
+
 ~ Vocabulary
+
+TIME
+  MAIN : outward(complex)
+
+LIFE
+  MAIN : outward(akin)
+
+AUTOMATION
+  MAIN : outward(simple)
+
+HAND
+  MAIN : phisionomic(to_make)
+
+EYE
+  MAIN : phisionomic(to_see)
+
+HEART
+  MAIN : phisionomic(to_be)
+
+EVENT
+  MAIN : children(complex)
+
+ORGAN
+  MAIN : children(akin)
+
+PART
+  MAIN : children(simple)
+
+NAME
+  MAIN : psychologic(structure)
 
 ~ Verbs
 
@@ -113,11 +161,81 @@ TO_DRAW
 TO_BUILD
   MAIN : to_make(physic)
 
-TO_CLIMB
+TO_GO
   MAIN : to_make(parent)
 
-TO_GO
+TO_STAY
   MAIN : to_make(location)
 
 TO_COME
   MAIN : to_make(children)
+
+TO_UNDERSTAND
+  MAIN : to_see(psychologic)
+
+TO_SAY
+  MAIN : to_see(outward)
+
+TO_SAY
+  MAIN : to_make()
+
+TO_SEE
+  MAIN : to_see()
+
+TO_BE
+  MAIN : to_be()
+
+~ Prepositions
+
+ON
+  MAIN : parent()
+
+AT
+  MAIN : location()
+
+IN
+  MAIN : children()
+
+WILL
+  MAIN : certain()
+
+CAN
+  MAIN : possible()
+
+CANNOT
+  MAIN : impossible()
+
+TOWARD
+  MAIN : outward()
+
+TO
+  MAIN : position()
+
+FROM
+  MAIN : inward()
+
+AGAIN
+  MAIN : more(single)
+
+WITH
+  MAIN : with()
+
+~ Ajectives
+
+LARGE
+  MAIN : phisionomic(outward)
+
+NORMAL
+  MAIN : phisionomic(position)
+
+SMALL
+  MAIN : phisionomic(inward)
+
+MORE
+  MAIN : more()
+
+LESS
+  MAIN : less()
+
+FEW
+  MAIN : phisionomic(less)

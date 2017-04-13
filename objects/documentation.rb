@@ -16,7 +16,8 @@ class Documentation
   def to_s
     
     html = "
-<h2>Phonology</h2>
+<h2>Basics</h2>
+<h3>Phonology</h3>
 <p>For the most part, Lietal letters are voiced similarly to their english equivalents. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
 <table>
 <tr>
@@ -50,6 +51,15 @@ class Documentation
   <th>v</th><td><b>v</b>acant</td>
   <th>f</th><td><b>f</b>estival</td>
 </tr>
+</table>
+
+<h3>Morphology</h3>
+<p>Lietal constructs, or words, are condensed into adultspeak, a phonetically compressed form of their larger childspeak equivalent.</p>
+
+<table>
+  <tr><td></td><th>Childspeak</th><th>Adultspeak</th></tr>
+  <tr><th>When</th><td>#{@dictionaery.translate('when',:lietal).childspeak}</td><td>#{@dictionaery.translate('when',:lietal).adultspeak}</td></tr>
+  <tr><th>Who</th><td>#{@dictionaery.translate('who',:lietal).childspeak}</td><td>#{@dictionaery.translate('who',:lietal).adultspeak}</td></tr>
 </table>
 
 <h2>The Aebeth</h2>
@@ -94,14 +104,19 @@ class Documentation
 <h3>Tenses</h3>
 <table>
 <tr>
-  <th>Past</th><td>#{@dictionaery.translate('past',:lietal)}</td>
-  <th>Present</th><td>#{@dictionaery.translate('present',:lietal)}</td>
   <th>Future</th><td>#{@dictionaery.translate('future',:lietal)}</td>
+  <th>Present</th><td>#{@dictionaery.translate('present',:lietal)}</td>
+  <th>Past</th><td>#{@dictionaery.translate('past',:lietal)}</td>
 </tr>
 <tr>
-  <th>Potential Past</th><td>#{@dictionaery.translate('potential_past',:lietal)}</td>
-  <th>Potential Present</th><td>#{@dictionaery.translate('potential_present',:lietal)}</td>
   <th>Potential Future</th><td>#{@dictionaery.translate('potential_future',:lietal)}</td>
+  <th>Potential Present</th><td>#{@dictionaery.translate('potential_present',:lietal)}</td>
+  <th>Potential Past</th><td>#{@dictionaery.translate('potential_past',:lietal)}</td>
+</tr>
+<tr>
+  <th>Negative Future</th><td>#{@dictionaery.translate('negative_future',:lietal)}</td>
+  <th>Negative Present</th><td>#{@dictionaery.translate('negative_present',:lietal)}</td>
+  <th>Negative Past</th><td>#{@dictionaery.translate('negative_past',:lietal)}</td> 
 </tr>
 </table>
 
@@ -109,35 +124,27 @@ class Documentation
 <table>
 <tr>
   <th>time</th><td>#{@dictionaery.translate('time',:lietal)}</td>
-  <th>person</th><td>#{@dictionaery.translate('person',:lietal)}</td>
-  <th>way</th><td>#{@dictionaery.translate('way',:lietal)}</td>
-  <th>thing</th><td>#{@dictionaery.translate('thing',:lietal)}</td>
-</tr>
-<tr>
   <th>life</th><td>#{@dictionaery.translate('life',:lietal)}</td>
-  <th>hand</th><td>#{@dictionaery.translate('hand',:lietal)}</td>
+  <th>automation</th><td>#{@dictionaery.translate('automation',:lietal)}</td>
+</tr>
+<tr>
+  <th>event</th><td>#{@dictionaery.translate('event',:lietal)}</td>
+  <th>organ</th><td>#{@dictionaery.translate('organ',:lietal)}</td>
   <th>part</th><td>#{@dictionaery.translate('part',:lietal)}</td>
-  <th>child</th><td>#{@dictionaery.translate('child',:lietal)}</td>
 </tr>
 <tr>
+  <th>hand</th><td>#{@dictionaery.translate('hand',:lietal)}</td>
   <th>eye</th><td>#{@dictionaery.translate('eye',:lietal)}</td>
-  <th>place</th><td>#{@dictionaery.translate('place',:lietal)}</td>
-  <th>work</th><td>#{@dictionaery.translate('work',:lietal)}</td>
-  <th>world</th><td>#{@dictionaery.translate('world',:lietal)}</td>
-</tr>
-<tr>
-  <th>language</th><td>#{@dictionaery.translate('language',:lietal)}</td>
-  <th>number</th><td>#{@dictionaery.translate('number',:lietal)}</td>
-  <th>group</th><td>#{@dictionaery.translate('group',:lietal)}</td>
-  <th>fact</th><td>#{@dictionaery.translate('fact',:lietal)}</td>
+  <th>heart</th><td>#{@dictionaery.translate('heart',:lietal)}</td>
 </tr>
 </table>
 
 <h3>Verbs</h3>
+<p>Verbs are generally built from the <i>#{@aebeth.aeth('interaction').phonetic(:default)}</i> family.</p>
 <table>
 <tr>
-  <th>to climb</th><td>#{@dictionaery.translate('to_climb',:lietal)}</td>
-  <th>to go</th><td>#{@dictionaery.translate('to_go',:lietal)}</td>
+  <th>to climb</th><td>#{@dictionaery.translate('to_go',:lietal)}</td>
+  <th>to go</th><td>#{@dictionaery.translate('to_stay',:lietal)}</td>
   <th>to come</th><td>#{@dictionaery.translate('to_come',:lietal)}</td>
 </tr>
 <tr>
@@ -157,102 +164,52 @@ class Documentation
 </tr>
 </table>
 
-<h3>Adjectives</h3>
-<table>
-<tr>
-  <th>good</th><td>#{@dictionaery.translate('good',:lietal)}</td>
-  <th>bad</th><td>#{@dictionaery.translate('bad',:lietal)}</td>
-  <th>new</th><td>#{@dictionaery.translate('new',:lietal)}</td>
-  <th>long</th><td>#{@dictionaery.translate('long',:lietal)}</td>
-</tr>
-<tr>
-  <th>little</th><td>#{@dictionaery.translate('little',:lietal)}</td>
-  <th>small</th><td>#{@dictionaery.translate('small',:lietal)}</td>
-  <th>large</th><td>#{@dictionaery.translate('large',:lietal)}</td>
-  <th>big</th><td>#{@dictionaery.translate('big',:lietal)}</td>
-</tr>
-<tr>
-  <th>different</th><td>#{@dictionaery.translate('different',:lietal)}</td>
-  <th>old</th><td>#{@dictionaery.translate('old',:lietal)}</td>
-  <th>own</th><td>#{@dictionaery.translate('own',:lietal)}</td>
-  <th>important</th><td>#{@dictionaery.translate('important',:lietal)}</td>
-</tr>
-<tr>
-  <th>next</th><td>#{@dictionaery.translate('next',:lietal)}</td>
-  <th>young</th><td>#{@dictionaery.translate('young',:lietal)}</td>
-  <th>Many</th><td>#{@dictionaery.translate('many',:lietal)}</td>
-  <th>few</th><td>#{@dictionaery.translate('few',:lietal)}</td>
-</tr>
-</table>
-
 <h3>Prepositions</h3>
 <table>
 <tr>
-  <th>to</th><td>#{@dictionaery.translate('to',:lietal)}</td>
+  <th>on</th><td>#{@dictionaery.translate('on',:lietal)}</td>
+  <th>at</th><td>#{@dictionaery.translate('at',:lietal)}</td>
   <th>in</th><td>#{@dictionaery.translate('in',:lietal)}</td>
-  <th>for</th><td>#{@dictionaery.translate('for',:lietal)}</td>
+</tr>
+<tr>
+  <th>toward</th><td>#{@dictionaery.translate('toward',:lietal)}</td>
+  <th>to</th><td>#{@dictionaery.translate('to',:lietal)}</td>
   <th>from</th><td>#{@dictionaery.translate('from',:lietal)}</td>
 </tr>
 <tr>
-  <th>on</th><td>#{@dictionaery.translate('on',:lietal)}</td>
-  <th>with</th><td>#{@dictionaery.translate('with',:lietal)}</td>
-  <th>at</th><td>#{@dictionaery.translate('at',:lietal)}</td>
-  <th>by</th><td>#{@dictionaery.translate('by',:lietal)}</td>
+  <th>will</th><td>#{@dictionaery.translate('will',:lietal)}</td>
+  <th>can</th><td>#{@dictionaery.translate('can',:lietal)}</td>
+  <th>in</th><td>#{@dictionaery.translate('cannot',:lietal)}</td>
 </tr>
 </table>
-"
-
-    return html
-
-
-    return "
-
-
-<tr>
-  <th>to help</th><td>#{@dictionaery.translate('to_help',:lietal)}</td>
-  <th>to feel</th><td>#{@dictionaery.translate('to_feel',:lietal)}</td>
-  <th>to try</th><td>#{@dictionaery.translate('to_try',:lietal)}</td>
-  <th>to leave</th><td>#{@dictionaery.translate('to_leave',:lietal)}</td>
-  <th>to come</th><td>#{@dictionaery.translate('to_come',:lietal)}</td>
-  <th>to have</th><td>#{@dictionaery.translate('to_have',:lietal)}</td>
-  <th>to go</th><td>#{@dictionaery.translate('to_go',:lietal)}</td>
-  <th>to know</th><td>#{@dictionaery.translate('to_know',:lietal)}</td>
-  <th>to find</th><td>#{@dictionaery.translate('to_find',:lietal)}</td>
-  <th>to look</th><td>#{@dictionaery.translate('to_look',:lietal)}</td>
-  <th>to want</th><td>#{@dictionaery.translate('to_want',:lietal)}</td>
-  <th>to use</th><td>#{@dictionaery.translate('to_use',:lietal)}</td>
-</tr>
-
-<h2>Vocabulary</h2>
-
 
 <h2>Grammar</h2>
 
 <h3>Common Sentences</h3>
 <table>
 <tr>
-  <th>Welcome</th><td>#{@dictionaery.translate('Welcome',:lietal)}</td>
-  <th>Goodbye</th><td>#{@dictionaery.translate('Goodbye',:lietal)}</td>
+  <th>Welcome</th><td>#{@dictionaery.translate('Hello',:lietal)}</td>
+  <th>Goodbye</th><td>#{@dictionaery.translate('Bye',:lietal)}</td>
 </tr>
 <tr>
-  <th>I understand</th><td>#{@dictionaery.translate('I to_understand',:lietal)}</td>
-  <th>No, I don't understand</th><td>#{@dictionaery.translate('No - I negative to_understand',:lietal)}</td>
+  <th>Yes, I understand</th><td>#{@dictionaery.translate('Yes - to_understand',:lietal)}</td>
+  <th>No, I don't understand</th><td>#{@dictionaery.translate('No - to_understand negative_present',:lietal)}</td>
 </tr>
 <tr>
-  <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('Please with Lietal to_say',:lietal)}</td>
-  <th>Please say that again</th><td>#{@dictionaery.translate('Please again to_say',:lietal)}</td>
+  <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('with Lietal to_say',:lietal)}</td>
+  <th>Please, say that again</th><td>#{@dictionaery.translate('Please - again to_say',:lietal)}</td>
 </tr>
 <tr>
   <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_understand',:lietal)}</td>
-  <th>Yes, I understand a little</th><td>#{@dictionaery.translate('Yes - little to_understand',:lietal)}</td>
+  <th>I speak a little</th><td>#{@dictionaery.translate('few to_say',:lietal)}</td>
 </tr>
 <tr>
-  <th>What is your name?</th><td>#{@dictionaery.translate('what your name to_be',:lietal)}</td>
-  <th>My name is Lucas</th><td>#{@dictionaery.translate('my name Lucas to_be',:lietal)}</td>
+  <th>What is your name?</th><td>#{@dictionaery.translate('what your name',:lietal)}</td>
+  <th>My name is Lucas</th><td>#{@dictionaery.translate('my name Lucas',:lietal)}</td>
 </tr>
 </table>
 "
-# [Question - Subject] [Adjective - Topic] [Tense - Verb]
+    return html
 
   end
 

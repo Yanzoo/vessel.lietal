@@ -12,12 +12,12 @@ class Vieth
 
   def childspeak
 
-    if @details == {} then return "<i>Missing</i>" end
+    if @details == {} then return @word end
 
     _f = @details["MAIN"].split("(").first
     param,val,aeth = $aebeth.aeth_from_english(_f)
     
-    if !aeth then return "Unknown(#{_f})" end
+    if !aeth then return @word end
 
     _f_phonetic = aeth.phonetic(param,val)
 
@@ -27,7 +27,7 @@ class Vieth
 
     _p.each do |p2|
       param,val,aeth = $aebeth.aeth_from_english(p2)
-      if !aeth then return "Unknown(#{p2})" end
+      if !aeth then return @word end
       _p_phonetic += aeth.phonetic(param,val)
     end
   
@@ -40,7 +40,7 @@ class Vieth
     _childspeak = childspeak
 
     if _childspeak.length == 2 then return _childspeak end
-    if _childspeak.like("<i>Missing</i>") then return _childspeak end
+    if _childspeak.like(@word) then return _childspeak end
 
     c1 = _childspeak[0,1]
     v1 = _childspeak[1,1]
@@ -49,7 +49,7 @@ class Vieth
     re = _childspeak[4,4]
 
     if c1 == c2 then c2 = "" end
-    if v1 == v2 then v2 = "" end
+    if v1 == v2 then v2 = "'" end
 
     return "#{c1}#{v1}#{v2}#{c2}#{re}"
 

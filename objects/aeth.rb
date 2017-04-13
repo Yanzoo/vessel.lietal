@@ -37,6 +37,12 @@ class Aeth
 
 	end
 
+	def phonetic param
+
+		return "#{key}"
+
+	end
+
 	def table
 
 		return "
@@ -53,7 +59,7 @@ class Aeth
 
 	def to_s
 
-		return name+"(#{key}y:#{vector ? " Vector=["+vector[0]+","+vector[1]+","+vector[2]+"]" : ""}#{bool ? " Bool=["+bool[0]+","+bool[1]+"]" : ""})"
+		return @name
 
 	end
 
@@ -70,7 +76,7 @@ class Aeth
 
 	end
 
-	def phonetic param,val
+	def phonetic param,val = 0
 
     h = {
       :vector => {1 => "i",0 => "a",-1 => "o"},

@@ -15,7 +15,7 @@ class Dictionaery
 
 	def lietal l
 
-		return @en[l.upcase] ? @en[l.upcase] : Vieth.new("unknown(#{l})")
+		return @en[l.upcase] ? @en[l.upcase] : Vieth.new(l)
 
 	end
 
@@ -27,7 +27,16 @@ class Dictionaery
 
   def translate word,lang
 
-    return lang == :lietal ? lietal(word) : english(word)
+    if lang == :lietal
+      if !word.include?(" ") then return lietal(word) end
+      s = ""
+      word.split(" ").each do |w|
+        s += lietal(w).to_s+" "
+      end
+      return s.strip
+    end
+
+    return english(word)
 
   end
 
