@@ -147,11 +147,14 @@ TODAY
 YESTERDAY
   MAIN : complex(single,less)
 
-HOME
-  MAIN : parent(to_be)
+HOUSE
+  MAIN : physic(location,to_be)
 
 BOOK
   MAIN : physic(phisionomic,psychologic)
+
+DOCUMENTATION
+  MAIN : phisionomic(parent,psychologic)
 
 ~ Verbs
 
@@ -243,6 +246,9 @@ AGAIN
 
 WITH
   MAIN : with()
+
+NEAR
+  MAIN : with(location)
 
 ~ Ajectives
 

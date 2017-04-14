@@ -17,6 +17,8 @@ class Documentation
     
     html = "
 <h2>Basics</h2>
+<code><comment>Welcome to the Lietal documentation.</comment>
+#{@dictionaery.translate('hello lietal in documentation to_be',:lietal)}.</code>
 <h3>Phonology</h3>
 <p>For the most part, Lietal letters are voiced similarly to their english equivalents. Written from left to right with implicit neutrality, words and groups of word are both ruled by the same grammatical logics. </p>
 <table>
@@ -54,12 +56,19 @@ class Documentation
 </table>
 
 <h3>Morphology</h3>
-<p>Lietal constructs, or words, are condensed into adultspeak, a phonetically compressed form of their larger childspeak equivalent.</p>
+<p>Lietal constructs are built of phonemes(aeths), and are named {_childspeak_}. They are rythmical and syllabic, but take quite a long time to say. The childspeak is condensed into {_adultspeak_}, a phonetically compressed form of their larger childspeak equivalent. This documentation is written in adultspeak.</p>
 
+<code><comment>            Will you read the book at house tomorrow?</comment>
+<b>childspeak</b> #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,false)}?
+<b>adultspeak</b> #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,true)}?
+<comment>            No, I won't be able to, maybe today.</comment>
+<b>childspeak</b> #{@dictionaery.translate('no to_read negative_potential_future',:lietal,false)}. #{@dictionaery.translate('today potential_future',:lietal, false)}.
+<b>adultspeak</b> #{@dictionaery.translate('no to_read negative_potential_future',:lietal,true)}. #{@dictionaery.translate('today potential_future',:lietal, true)}.</code>
 <table>
   <tr><td></td><th>Childspeak</th><th>Adultspeak</th></tr>
   <tr><th>When</th><td>#{@dictionaery.translate('when',:lietal).childspeak}</td><td>#{@dictionaery.translate('when',:lietal).adultspeak}</td></tr>
   <tr><th>Who</th><td>#{@dictionaery.translate('who',:lietal).childspeak}</td><td>#{@dictionaery.translate('who',:lietal).adultspeak}</td></tr>
+  <tr><th>House</th><td>#{@dictionaery.translate('house',:lietal).childspeak}</td><td>#{@dictionaery.translate('house',:lietal).adultspeak}</td></tr>
 </table>
 
 <h3>Typography</h3>
@@ -72,6 +81,10 @@ class Documentation
 <h2>Vocabulary</h2>
 
 <h3>Question Words</h3>
+<p>Question words are always used at the beginning of a sentence.</p>
+<code><comment>Where are you?</comment>
+<b>#{@dictionaery.translate('where',:lietal)}</b> #{@dictionaery.translate('you to_be',:lietal)}?
+</code>
 <table>
 <tr>
   <th>When</th><td>#{@dictionaery.translate('when',:lietal)}</td>
@@ -86,6 +99,10 @@ class Documentation
 </table>
 
 <h3>Pronouns</h3>
+<p>Pronouns are often ommited when possible, by default, a sentence is expected to be at the first person if a pronoun has not already been declared.</p>
+<code><comment>I give you the book.</comment>
+#{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('you',:lietal)}</b> #{@dictionaery.translate('to to_give',:lietal)} 
+</code>
 <table>
 <tr>
   <th>I</th><td>#{@dictionaery.translate('I',:lietal)}</td>
@@ -105,6 +122,10 @@ class Documentation
 </table>
 
 <h3>Tenses</h3>
+<p>A Lietal sentence is, by default, at the present tense. The present tense marker is used to contrast against an already defined tense. Tenses markers are used at the end of the sentence.</p>
+<code><comment>I was blind, but now I see.</comment>
+#{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('negative_past',:lietal)}</b>, #{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('present',:lietal)}</b>.
+</code>
 <table>
 <tr>
   <th>Future</th><td>#{@dictionaery.translate('future',:lietal)}</td>
@@ -128,27 +149,11 @@ class Documentation
 </tr>
 </table>
 
-<h3>Nouns</h3>
-<table>
-<tr>
-  <th>time</th><td>#{@dictionaery.translate('time',:lietal)}</td>
-  <th>life</th><td>#{@dictionaery.translate('life',:lietal)}</td>
-  <th>automation</th><td>#{@dictionaery.translate('automation',:lietal)}</td>
-</tr>
-<tr>
-  <th>event</th><td>#{@dictionaery.translate('event',:lietal)}</td>
-  <th>organ</th><td>#{@dictionaery.translate('organ',:lietal)}</td>
-  <th>part</th><td>#{@dictionaery.translate('part',:lietal)}</td>
-</tr>
-<tr>
-  <th>hand</th><td>#{@dictionaery.translate('hand',:lietal)}</td>
-  <th>eye</th><td>#{@dictionaery.translate('eye',:lietal)}</td>
-  <th>heart</th><td>#{@dictionaery.translate('heart',:lietal)}</td>
-</tr>
-</table>
-
 <h3>Verbs</h3>
-<p>Verbs are generally built from the <i>#{@aebeth.aeth('interaction').phonetic(:default)}</i> family.</p>
+<p>Verbs are used at the end of a sentence, right before the tense marker. They are not conjugated. Verbs are generally built from the <i>#{@aebeth.aeth('interaction').phonetic(:default)}</i> family.</p>
+<code><comment>I took the book, we can now go to school.</comment>
+#{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('to_take',:lietal)}</b> #{@dictionaery.translate('past',:lietal)}, #{@dictionaery.translate('we school toward',:lietal)} <b>#{@dictionaery.translate('to_go',:lietal)}</b> #{@dictionaery.translate('potential_present',:lietal)}.
+</code>
 <table>
 <tr>
   <th>to climb</th><td>#{@dictionaery.translate('to_go',:lietal)}</td>
@@ -173,6 +178,10 @@ class Documentation
 </table>
 
 <h3>Prepositions</h3>
+<p>Lietal prepositions are aeths used as particles, placed after the word that they affect.</p>
+<code><comment>I'm going to the house by the lake, near the city.</comment>
+#{@dictionaery.translate('house',:lietal)} <b>#{@dictionaery.translate('toward',:lietal)}</b> #{@dictionaery.translate('lake at city near to_go',:lietal)}
+</code>
 <table>
 <tr>
   <th>on</th><td>#{@dictionaery.translate('on',:lietal)}</td>
@@ -188,6 +197,25 @@ class Documentation
   <th>will</th><td>#{@dictionaery.translate('will',:lietal)}</td>
   <th>can</th><td>#{@dictionaery.translate('can',:lietal)}</td>
   <th>in</th><td>#{@dictionaery.translate('cannot',:lietal)}</td>
+</tr>
+</table>
+
+<h3>Nouns</h3>
+<table>
+<tr>
+  <th>time</th><td>#{@dictionaery.translate('time',:lietal)}</td>
+  <th>life</th><td>#{@dictionaery.translate('life',:lietal)}</td>
+  <th>automation</th><td>#{@dictionaery.translate('automation',:lietal)}</td>
+</tr>
+<tr>
+  <th>event</th><td>#{@dictionaery.translate('event',:lietal)}</td>
+  <th>organ</th><td>#{@dictionaery.translate('organ',:lietal)}</td>
+  <th>part</th><td>#{@dictionaery.translate('part',:lietal)}</td>
+</tr>
+<tr>
+  <th>hand</th><td>#{@dictionaery.translate('hand',:lietal)}</td>
+  <th>eye</th><td>#{@dictionaery.translate('eye',:lietal)}</td>
+  <th>heart</th><td>#{@dictionaery.translate('heart',:lietal)}</td>
 </tr>
 </table>
 
@@ -216,17 +244,6 @@ class Documentation
   <th>My name is Lucas</th><td>#{@dictionaery.translate('my name Lucas',:lietal)}</td>
 </tr>
 </table>
-
-<h3>Building A Sentence</h3>
-<p>Let's look at this example.</p>
-<code><comment># Will you read the book at home tomorrow?</comment>
-tomorrow - home at book read will?
-#{@dictionaery.translate('tomorrow - home at book to_read potential_future',:lietal)}?</code>
-
-<p>And its answer.</p>
-<code><comment># No, I won't be able to, maybe today.</comment>
-no I read won't be able to. today maybe.
-#{@dictionaery.translate('no to_read negative_potential_future',:lietal)}. #{@dictionaery.translate('today potential_future',:lietal)}.</code>
 "
     return html
 

@@ -43,7 +43,7 @@ class Vieth
     if _childspeak.like(@word) then return _childspeak end
 
     if _childspeak.length == 4 then return adultspeak_segement(_childspeak) end
-    if _childspeak.length == 6 then return adultspeak_segement(_childspeak[0,4])+_childspeak[4,2] end
+    if _childspeak.length == 6 then return adultspeak_segement(_childspeak[0,4])+_childspeak[5,1]+_childspeak[4,1] end
     if _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
 
     return "??"
@@ -65,9 +65,9 @@ class Vieth
 
   end
 
-  def to_s is_adultspeak = nil
+  def to_s is_adultspeak = true
 
-    return adultspeak
+    return is_adultspeak ? adultspeak : childspeak
 
   end
 

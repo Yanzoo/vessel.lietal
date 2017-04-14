@@ -25,13 +25,13 @@ class Dictionaery
 
   end
 
-  def translate word,lang
+  def translate word,lang,is_adultspeak = true
 
     if lang == :lietal
       if !word.include?(" ") then return lietal(word) end
       s = ""
       word.split(" ").each do |w|
-        s += lietal(w).to_s+" "
+        s += lietal(w).to_s(is_adultspeak)+" "
       end
       return s.strip
     end
