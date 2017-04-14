@@ -200,9 +200,6 @@ TO_UNDERSTAND
 TO_SAY
   MAIN : to_see(outward)
 
-TO_SAY
-  MAIN : to_make()
-
 TO_SEE
   MAIN : to_see()
 
