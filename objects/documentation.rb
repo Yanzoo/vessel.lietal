@@ -14,7 +14,10 @@ class Documentation
   end
 
   def to_s
-    
+      
+    # Will you read the book at home tomorrow?
+    # No, I won't be able to, maybe today.
+
     html = "
 <h2>Basics</h2>
 <code><comment>Welcome to the Lietal documentation.</comment>
@@ -56,14 +59,20 @@ class Documentation
 </table>
 
 <h3>Morphology</h3>
-<p>Lietal constructs are built of phonemes(aeths), and are named {_childspeak_}. They are rythmical and syllabic, but take quite a long time to say. The childspeak is condensed into {_adultspeak_}, a phonetically compressed form of their larger childspeak equivalent. This documentation is written in adultspeak.</p>
+<p>Lietal constructs are built of phonemes(aeths), and are named {_childspeak_}. They are rythmical and syllabic, but take quite a long time to say. </p>
 
-<code><comment>            Will you read the book at house tomorrow?</comment>
-<b>childspeak</b> #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,false)}?
-<b>adultspeak</b> #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,true)}?
-<comment>            No, I won't be able to, maybe today.</comment>
-<b>childspeak</b> #{@dictionaery.translate('no to_read negative_potential_future',:lietal,false)}. #{@dictionaery.translate('today potential_future',:lietal, false)}.
-<b>adultspeak</b> #{@dictionaery.translate('no to_read negative_potential_future',:lietal,true)}. #{@dictionaery.translate('today potential_future',:lietal, true)}.</code>
+<code><comment># Childspeak</comment>
+#{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,false)}?
+#{@dictionaery.translate('no to_read negative_potential_future',:lietal,false)}. #{@dictionaery.translate('today potential_future',:lietal, false)}.
+</code>
+
+<p>The childspeak is condensed into {_adultspeak_}, a phonetically compressed form of their larger childspeak equivalent. This documentation is written in adultspeak.</p>
+
+<code><comment># Adultspeak</comment>
+#{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,true)}?
+#{@dictionaery.translate('no to_read negative_potential_future',:lietal,true)}. #{@dictionaery.translate('today potential_future',:lietal, true)}.
+</code>
+
 <table>
   <tr><td></td><th>Childspeak</th><th>Adultspeak</th></tr>
   <tr><th>When</th><td>#{@dictionaery.translate('when',:lietal).childspeak}</td><td>#{@dictionaery.translate('when',:lietal).adultspeak}</td></tr>
