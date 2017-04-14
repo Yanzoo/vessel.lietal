@@ -208,7 +208,7 @@ class Documentation
   <th>Please, say that again</th><td>#{@dictionaery.translate('Please - again to_say',:lietal)}</td>
 </tr>
 <tr>
-  <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_understand',:lietal)}</td>
+  <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_say',:lietal)}</td>
   <th>I speak a little</th><td>#{@dictionaery.translate('few to_say',:lietal)}</td>
 </tr>
 <tr>
