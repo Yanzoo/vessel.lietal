@@ -174,7 +174,7 @@ class Documentation
 
   \"#{@dictionaery.translate('good idea to_be',:lietal)},\" #{@dictionaery.translate('mother his_her to_say past',:lietal)}.<br /><br />
 
-  #{@dictionaery.translate('grandmother at to_hold small red hood for pretty basket to_combine past',:lietal)}.
+  #{@dictionaery.translate('grandmother at to_hold small red hood pretty basket to_combine past',:lietal)}.
   #{@dictionaery.translate('when basket ready to_be',:lietal)},
   #{@dictionaery.translate('red cloak to_wear',:lietal)} - #{@dictionaery.translate('mother bye kiss to_give',:lietal)}.<br /></br/>
   <b>\"#{@dictionaery.translate('to_remember imperative_present',:lietal)}, #{@dictionaery.translate('grandmother house at directly to_go',:lietal)}\"</b>, #{@dictionaery.translate('mother to_warn',:lietal)}. \"#{@dictionaery.translate('path under time to_waste imperative_negative_present',:lietal)}! #{@dictionaery.translate('woods dangerous to_be',:lietal)}.\"<br />
