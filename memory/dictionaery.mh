@@ -5,105 +5,149 @@
 ~ Expressions
 
 HELLO
+  TYPE : Expression
   MAIN : positive(inward)
 
 BYE
+  TYPE : Expression
   MAIN : positive(outward)
 
 YES
+  TYPE : Expression
   MAIN : positive()
 
 NO
+  TYPE : Expression
   MAIN : negative()
 
 PLEASE
+  TYPE : Expression
   MAIN : possible(positive)
 
 ~ Question Words
 
 WHEN
+  TYPE : Question Word
   MAIN : possible(complex)
 
 WHO
+  TYPE : Question Word
   MAIN : possible(akin)
 
 WHAT
+  TYPE : Question Word
   MAIN : possible(simple)
 
 HOW
+  TYPE : Question Word
   MAIN : possible(interaction)
 
 WHICH
+  TYPE : Question Word
   MAIN : possible(counter)
   
 WHERE
+  TYPE : Question Word
   MAIN : possible(hierarchy)
 
 ~ Pronouns
 
 I
+  TYPE : Pronoun
   MAIN : single(inward)
 
 YOU
+  TYPE : Pronoun
   MAIN : single(outward)
 
 WE
+  TYPE : Pronoun
   MAIN : multiple(inward)
 
 YOUS
+  TYPE : Pronoun
   MAIN : multiple(outward)
   
 HE_SHE
+  TYPE : Pronoun
   MAIN : single(position)
 
 THEY
+  TYPE : Pronoun
   MAIN : multiple(position)
 
 MY
+  TYPE : Pronoun
   MAIN : children(inward)
 
 YOUR
+  TYPE : Pronoun
   MAIN : children(outward)
 
 THEIR
+  TYPE : Pronoun
   MAIN : children(position)
   
 ~ Tenses
 
 PAST
+  TYPE : Time Marker
   MAIN : complex(inward)
 
 PRESENT
+  TYPE : Time Marker
   MAIN : complex(position)
 
 FUTURE
+  TYPE : Time Marker
   MAIN : complex(outward)
 
+IMPERATIVE_PAST
+  TYPE : Time Marker
+  MAIN : complex(certain,inward)
+
+IMPERATIVE_PRESENT
+  TYPE : Time Marker
+  MAIN : complex(certain,position)
+
+IMPERATIVE_FUTURE
+  TYPE : Time Marker
+  MAIN : complex(certain,outward)
+
 POTENTIAL_PAST
+  TYPE : Time Marker
   MAIN : complex(possible,inward)
 
 POTENTIAL_PRESENT
+  TYPE : Time Marker
   MAIN : complex(possible,position)
 
 POTENTIAL_FUTURE
+  TYPE : Time Marker
   MAIN : complex(possible,outward)
 
 NEGATIVE_PAST
+  TYPE : Time Marker
   MAIN : complex(impossible,inward)
 
 NEGATIVE_PRESENT
+  TYPE : Time Marker
   MAIN : complex(impossible,position)
 
 NEGATIVE_FUTURE
+  TYPE : Time Marker
   MAIN : complex(impossible,outward)
 
 NEGATIVE_POTENTIAL_PAST
+  TYPE : Time Marker
   MAIN : complex(impossible,possible,inward)
 
 NEGATIVE_POTENTIAL_PRESENT
+  TYPE : Time Marker
   MAIN : complex(impossible,possible,position)
 
 NEGATIVE_POTENTIAL_FUTURE
+  TYPE : Time Marker
   MAIN : complex(impossible,possible,outward)
 
 ~ Vocabulary
@@ -158,6 +202,18 @@ DOCUMENTATION
 
 ~ Verbs
 
+TO_ADD 
+  MAIN : to_make(more)
+
+TO_REMOVE
+  MAIN : to_make(less)
+
+TO_COMBINE
+  MAIN : to_make(with)
+
+TO_DIVIDE
+  MAIN : to_make(without)
+
 TO_TAKE
   MAIN : to_make(inward)
 
@@ -177,7 +233,7 @@ TO_SHOW
   MAIN : to_see(outward)
 
 TO_BECOME
-  MAIN : to_see(outward)
+  MAIN : to_be(outward)
 
 TO_WRITE
   MAIN : to_make(psychologic)
@@ -189,13 +245,13 @@ TO_BUILD
   MAIN : to_make(physic)
 
 TO_GO
-  MAIN : to_make(parent)
+  MAIN : to_be(outward)
 
 TO_STAY
-  MAIN : to_make(location)
+  MAIN : to_be(position)
 
 TO_COME
-  MAIN : to_make(children)
+  MAIN : to_be(inward)
 
 TO_UNDERSTAND
   MAIN : to_see(psychologic)
@@ -215,42 +271,54 @@ TO_READ
 ~ Prepositions
 
 ON
+  TYPE : Preposition
   MAIN : parent()
 
 AT
+  TYPE : Preposition
   MAIN : location()
 
 IN
+  TYPE : Preposition
   MAIN : children()
 
 WILL
+  TYPE : Preposition
   MAIN : certain()
 
 CAN
+  TYPE : Preposition
   MAIN : possible()
 
 CANNOT
+  TYPE : Preposition
   MAIN : impossible()
 
 TOWARD
+  TYPE : Preposition
   MAIN : outward()
 
 TO
+  TYPE : Preposition
   MAIN : position()
 
 FROM
+  TYPE : Preposition
   MAIN : inward()
 
 AGAIN
+  TYPE : Preposition
   MAIN : more(single)
 
 WITH
+  TYPE : Preposition
   MAIN : with()
 
 NEAR
+  TYPE : Preposition
   MAIN : with(location)
 
-~ Ajectives
+~ Adjectives
 
 LARGE
   MAIN : phisionomic(outward)

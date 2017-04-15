@@ -80,9 +80,6 @@ class Documentation
   <tr><th>House</th><td>#{@dictionaery.translate('house',:lietal).childspeak}</td><td>#{@dictionaery.translate('house',:lietal).adultspeak}</td></tr>
 </table>
 
-<h3>Typography</h3>
-<p>Lietal is designed to be written with the {{Shortscript|Shorthand}}.</p>
-
 <h2>The Aebeth</h2>
 <p>The elemental particles of the language are the 9 core {_Aeths_}, atoms or building blocks of the {{Lietal}} word building.</p>
 #{@aebeth.table}
@@ -91,7 +88,7 @@ class Documentation
 
 <h3>Question Words</h3>
 <p>Question words are always used at the beginning of a sentence.</p>
-<code><comment>Where are you?</comment>
+<code><comment><b>Where</b> are you?</comment>
 <b>#{@dictionaery.translate('where',:lietal)}</b> #{@dictionaery.translate('you to_be',:lietal)}?
 </code>
 <table>
@@ -109,7 +106,7 @@ class Documentation
 
 <h3>Pronouns</h3>
 <p>Pronouns are often ommited when possible, by default, a sentence is expected to be at the first person if a pronoun has not already been declared.</p>
-<code><comment>I give you the book.</comment>
+<code><comment>I give <b>you</b> the book.</comment>
 #{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('you',:lietal)}</b> #{@dictionaery.translate('to to_give',:lietal)} 
 </code>
 <table>
@@ -132,7 +129,7 @@ class Documentation
 
 <h3>Tenses</h3>
 <p>A Lietal sentence is, by default, at the present tense. The present tense marker is used to contrast against an already defined tense. Tenses markers are used at the end of the sentence.</p>
-<code><comment>I was blind, but now I see.</comment>
+<code><comment>I <b>was</b> blind, but <b>now</b> I see.</comment>
 #{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('negative_past',:lietal)}</b>, #{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('present',:lietal)}</b>.
 </code>
 <table>
@@ -156,11 +153,16 @@ class Documentation
   <th>Neg. Pot. Present</th><td>#{@dictionaery.translate('negative_potential_present',:lietal)}</td>
   <th>Neg. Pot. Past</th><td>#{@dictionaery.translate('negative_potential_past',:lietal)}</td> 
 </tr>
+<tr>
+  <th>Imperative Future</th><td>#{@dictionaery.translate('imperative_future',:lietal)}</td>
+  <th>Imperative Present</th><td>#{@dictionaery.translate('imperative_present',:lietal)}</td>
+  <th>Imperative Past</th><td>#{@dictionaery.translate('imperative_past',:lietal)}</td>
+</tr>
 </table>
 
 <h3>Verbs</h3>
 <p>Verbs are used at the end of a sentence, right before the tense marker. They are not conjugated. Verbs are generally built from the <i>#{@aebeth.aeth('interaction').phonetic(:default)}</i> family.</p>
-<code><comment>I took the book, we can now go to school.</comment>
+<code><comment>I <b>took</b> the book, we can now <b>go</b> to school.</comment>
 #{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('to_take',:lietal)}</b> #{@dictionaery.translate('past',:lietal)}, #{@dictionaery.translate('we school toward',:lietal)} <b>#{@dictionaery.translate('to_go',:lietal)}</b> #{@dictionaery.translate('potential_present',:lietal)}.
 </code>
 <table>
@@ -188,7 +190,7 @@ class Documentation
 
 <h3>Prepositions</h3>
 <p>Lietal prepositions are aeths used as particles, placed after the word that they affect.</p>
-<code><comment>I'm going to the house by the lake, near the city.</comment>
+<code><comment>I'm going <b>to</b> the house by the lake, near the city.</comment>
 #{@dictionaery.translate('house',:lietal)} <b>#{@dictionaery.translate('toward',:lietal)}</b> #{@dictionaery.translate('lake at city near to_go',:lietal)}
 </code>
 <table>
@@ -241,16 +243,16 @@ class Documentation
   <th>No, I don't understand</th><td>#{@dictionaery.translate('No - to_understand negative_present',:lietal)}</td>
 </tr>
 <tr>
-  <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('with Lietal to_say',:lietal)}</td>
-  <th>Please, say that again</th><td>#{@dictionaery.translate('Please - again to_say',:lietal)}</td>
+  <th>Speak to me in Lietal</th><td>#{@dictionaery.translate('Lietal with to_say imperative_present',:lietal)}</td>
+  <th>Please, say that again</th><td>#{@dictionaery.translate('Please again to_say',:lietal)}</td>
 </tr>
 <tr>
-  <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('what Lietal to_say',:lietal)}</td>
-  <th>I speak a little</th><td>#{@dictionaery.translate('few to_say',:lietal)}</td>
+  <th>Do you speak Lietal?</th><td>#{@dictionaery.translate('Lietal to_say potential_present',:lietal)}?</td>
+  <th>Yes, I speak a little</th><td>#{@dictionaery.translate('yes - few to_say potential_present',:lietal)}</td>
 </tr>
 <tr>
-  <th>What is your name?</th><td>#{@dictionaery.translate('what your name',:lietal)}</td>
-  <th>My name is Lucas</th><td>#{@dictionaery.translate('my name Lucas',:lietal)}</td>
+  <th>What is your name?</th><td>#{@dictionaery.translate('what name to_be',:lietal)}?</td>
+  <th>My name is Lucas</th><td>#{@dictionaery.translate('name Lucas to_be',:lietal)}</td>
 </tr>
 </table>
 "

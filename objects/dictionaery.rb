@@ -40,4 +40,19 @@ class Dictionaery
 
   end
 
+  def to_s
+
+    html = ""
+    @en.sort.each do |name,w|
+      html += "
+      <tr>
+        <th>#{w.word.capitalize.gsub('_',' ')} <span style='color:#999; font-size:12px'>#{w.type}</span></th>
+        <td>#{w} <span style='font-size:12px; color:#999'>#{(if w.childspeak != w.adultspeak then w.childspeak end)}</span></td>
+        <td style='font-size:12px'>#{w.to_deconstruction}</td>
+      </tr>"
+    end
+    return "<table>#{html}</table>"
+
+  end
+
 end

@@ -3,14 +3,37 @@
 
 class Vieth
 
+  attr_accessor :word
+  attr_accessor :childspeak
+  attr_accessor :adultspeak
+
 	def initialize word,details = {}
 
     @word = word
     @details = details
 
+
 	end
 
+  def root
+
+    if @root then return @root end
+
+    a,b,@root = $aebeth.aeth_from_english(@details["MAIN"].split("(").first)
+
+    return @root
+
+  end
+
+  def type
+
+    return @details["TYPE"] ? @details["TYPE"] : root
+
+  end
+
   def childspeak
+
+    if @childspeak then return @childspeak end
 
     if @details == {} then return @word end
 
@@ -30,8 +53,10 @@ class Vieth
       if !aeth then return @word end
       _p_phonetic += aeth.phonetic(param,val)
     end
+
+    @childspeak = "#{_f_phonetic}#{_p_phonetic}"
   
-    return "#{_f_phonetic}#{_p_phonetic}"
+    return @childspeak
 
   end
 
@@ -68,6 +93,18 @@ class Vieth
   def to_s is_adultspeak = true
 
     return is_adultspeak ? adultspeak : childspeak
+
+  end
+
+  def to_def
+
+    return "<b>#{@word.capitalize.gsub('_',' ')}</b> <i style='color:#999'>#{adultspeak}</i>"
+
+  end
+
+  def to_deconstruction
+
+    return "<span style='font-family:\"input_mono_medium\"'>#{@details['MAIN']}</span>"
 
   end
 

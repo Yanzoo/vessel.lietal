@@ -17,8 +17,11 @@ class ActionTranslate
   def act q = ""
     
     load_folder("#{@host.path}/objects/*")
+
+    $dictionaery = Dictionaery.new(@host.path)
+    $aebeth = Aebeth.new(@host.path)
     
-    return Dictionaery.new(@host.path).translate(q,"lietal")
+    return Dictionaery.new(@host.path).translate(q,:lietal)
 
   end
 

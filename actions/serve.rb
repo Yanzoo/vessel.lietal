@@ -21,11 +21,16 @@ class ActionServe
     $dictionaery = Dictionaery.new(@host.path)
     $aebeth = Aebeth.new(@host.path)
 
-    documentation = Documentation.new(@host.path)
-    documentation.dictionaery = $dictionaery
-    documentation.aebeth = $aebeth
+    if q.downcase == "documentation"
+      documentation = Documentation.new(@host.path)
+      documentation.dictionaery = $dictionaery
+      documentation.aebeth = $aebeth
+      return documentation.to_s
+    else
+      return $dictionaery.to_s
+    end
 
-    return documentation.to_s
+    
 
   end
 
