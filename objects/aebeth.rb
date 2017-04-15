@@ -34,7 +34,7 @@ class Aebeth
 		<style>
 		.aebeth td { border-bottom:0px}
 		.aebeth table td, .aebeth table th { border-bottom:0px; padding:5px}
-		.aebeth table { margin-bottom:0px; font-size:14px;}
+		.aebeth table { margin-bottom:0px;}
 		.aebeth table tr:first-child { border-bottom:1px solid black;}
 		</style>
 		<table class='aebeth'>

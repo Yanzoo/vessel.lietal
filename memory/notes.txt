@@ -2,7 +2,7 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
-~ The Aebeth
+~ The Old Traumae Aebeth
 +-------------------+-------------------+-------------------+
 | ki Parent         | ti Outward        | pi Complex        |
 | xi Instance       | di Stable         | bi Akin           |

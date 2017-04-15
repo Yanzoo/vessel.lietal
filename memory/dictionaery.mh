@@ -56,6 +56,10 @@ I
   TYPE : Pronoun
   MAIN : single(inward)
 
+HE_SHE
+  TYPE : Pronoun
+  MAIN : single(position)
+
 YOU
   TYPE : Pronoun
   MAIN : single(outward)
@@ -64,29 +68,37 @@ WE
   TYPE : Pronoun
   MAIN : multiple(inward)
 
-YOUS
-  TYPE : Pronoun
-  MAIN : multiple(outward)
-  
-HE_SHE
-  TYPE : Pronoun
-  MAIN : single(position)
-
 THEY
   TYPE : Pronoun
   MAIN : multiple(position)
 
+YOUS
+  TYPE : Pronoun
+  MAIN : multiple(outward)
+
 MY
   TYPE : Pronoun
-  MAIN : children(inward)
+  MAIN : children(single,inward)
+
+HIS_HER
+  TYPE : Pronoun
+  MAIN : children(single,position)
 
 YOUR
   TYPE : Pronoun
-  MAIN : children(outward)
+  MAIN : children(single,outward)
+
+OUR
+  TYPE : Pronoun
+  MAIN : children(multiple,inward)
 
 THEIR
   TYPE : Pronoun
-  MAIN : children(position)
+  MAIN : children(multiple,position)
+
+YOUSR
+  TYPE : Pronoun
+  MAIN : children(multiple,outward)
   
 ~ Tenses
 
@@ -102,17 +114,17 @@ FUTURE
   TYPE : Time Marker
   MAIN : complex(outward)
 
-IMPERATIVE_PAST
+NEGATIVE_PAST
   TYPE : Time Marker
-  MAIN : complex(certain,inward)
+  MAIN : complex(impossible,inward)
 
-IMPERATIVE_PRESENT
+NEGATIVE_PRESENT
   TYPE : Time Marker
-  MAIN : complex(certain,position)
+  MAIN : complex(impossible,position)
 
-IMPERATIVE_FUTURE
+NEGATIVE_FUTURE
   TYPE : Time Marker
-  MAIN : complex(certain,outward)
+  MAIN : complex(impossible,outward)
 
 POTENTIAL_PAST
   TYPE : Time Marker
@@ -126,31 +138,67 @@ POTENTIAL_FUTURE
   TYPE : Time Marker
   MAIN : complex(possible,outward)
 
-NEGATIVE_PAST
-  TYPE : Time Marker
-  MAIN : complex(impossible,inward)
-
-NEGATIVE_PRESENT
-  TYPE : Time Marker
-  MAIN : complex(impossible,position)
-
-NEGATIVE_FUTURE
-  TYPE : Time Marker
-  MAIN : complex(impossible,outward)
-
-NEGATIVE_POTENTIAL_PAST
+POTENTIAL_NEGATIVE_PAST
   TYPE : Time Marker
   MAIN : complex(impossible,possible,inward)
 
-NEGATIVE_POTENTIAL_PRESENT
+POTENTIAL_NEGATIVE_PRESENT
   TYPE : Time Marker
   MAIN : complex(impossible,possible,position)
 
-NEGATIVE_POTENTIAL_FUTURE
+POTENTIAL_NEGATIVE_FUTURE
   TYPE : Time Marker
   MAIN : complex(impossible,possible,outward)
 
+IMPERATIVE_PAST
+  TYPE : Time Marker
+  MAIN : complex(certain,inward)
+
+IMPERATIVE_PRESENT
+  TYPE : Time Marker
+  MAIN : complex(certain,position)
+
+IMPERATIVE_FUTURE
+  TYPE : Time Marker
+  MAIN : complex(certain,outward)
+
+IMPERATIVE_NEGATIVE_PAST
+  TYPE : Time Marker
+  MAIN : complex(certain,impossible,inward)
+
+IMPERATIVE_NEGATIVE_PRESENT
+  TYPE : Time Marker
+  MAIN : complex(certain,impossible,position)
+
+IMPERATIVE_NEGATIVE_FUTURE
+  TYPE : Time Marker
+  MAIN : complex(certain,impossible,outward)
+
 ~ Vocabulary
+
+KISS
+  MAIN : akin(positive,phisionomic)
+
+BASKET
+  MAIN : simple(physic,united)
+
+MORNING
+  MAIN : outward(complex)
+
+NIGHT
+  MAIN : inward(complex)
+
+PATH
+  MAIN : united(location)
+
+HOOD
+  MAIN : simple(physic,parent)
+
+WOODS
+  MAIN : location(akin,simple)
+
+IDEA
+  MAIN : children(psychologic)
 
 TIME
   MAIN : outward(complex)
@@ -200,7 +248,43 @@ BOOK
 DOCUMENTATION
   MAIN : phisionomic(parent,psychologic)
 
+PARENT
+  MAIN : akin(parent)
+
+MOTHER
+  MAIN : akin(inward,parent)
+
+FATHER
+  MAIN : akin(outward,parent)
+
+GRANDPARENT
+  MAIN : akin(parent,parent)
+
+GRANDMOTHER
+  MAIN : akin(parent,inward,parent)
+
+GRANDFATHER
+  MAIN : akin(parent,outward,parent)
+
+WOMAN
+  MAIN : akin(inward)
+
+MAN
+  MAIN : akin(outward)
+
+SPEED
+  MAIN : counter(position)
+
 ~ Verbs
+
+TO_GO
+  MAIN : to_be(outward)
+
+TO_STAY
+  MAIN : to_be(position)
+
+TO_COME
+  MAIN : to_be(inward)
 
 TO_ADD 
   MAIN : to_make(more)
@@ -244,20 +328,17 @@ TO_DRAW
 TO_BUILD
   MAIN : to_make(physic)
 
-TO_GO
-  MAIN : to_be(outward)
-
-TO_STAY
-  MAIN : to_be(position)
-
-TO_COME
-  MAIN : to_be(inward)
-
 TO_UNDERSTAND
   MAIN : to_see(psychologic)
 
 TO_SAY
   MAIN : to_see(outward)
+
+TO_WARN
+  MAIN : to_see(outward,possible,negative)
+
+TO_WASTE
+  MAIN : to_make(null)
 
 TO_SEE
   MAIN : to_see()
@@ -266,6 +347,21 @@ TO_BE
   MAIN : to_be()
 
 TO_READ
+  MAIN : to_see(phisionomic,psychologic)
+
+TO_REMEMBER
+  MAIN : to_see(complex,inward)
+
+TO_WEAR
+  MAIN : to_be(phisionomic,children)
+
+TO_WALK
+  MAIN : to_be(outward,less,position)
+
+TO_ASK
+  MAIN : to_see(inward,possible)
+
+TO_NAME
   MAIN : to_see(phisionomic,psychologic)
 
 ~ Prepositions
@@ -281,6 +377,10 @@ AT
 IN
   TYPE : Preposition
   MAIN : children()
+
+UNDER
+  TYPE : Preposition
+  MAIN : children(physic)
 
 WILL
   TYPE : Preposition
@@ -318,6 +418,63 @@ NEAR
   TYPE : Preposition
   MAIN : with(location)
 
+OUTSIDE
+  TYPE : Preposition
+  MAIN : parent(location)
+
+MANY
+  TYPE : Preposition
+  MAIN : multiple()
+
+WHENEVER
+  TYPE : Preposition
+  MAIN : united(complex,single)
+  
+EVERYONE
+  TYPE : Preposition
+  MAIN : united(akin,single)
+
+EVERYTHING
+  TYPE : Preposition
+  MAIN : united(simple,single)
+
+~ Color
+
+COLOR
+  MAIN : counter(to_see)
+
+VIOLET
+  TYPE : Color
+  MAIN : counter(to_see,multiple)
+
+BLUE
+  TYPE : Color
+  MAIN : counter(to_see,less,parent)
+
+GREEN
+  TYPE : Color
+  MAIN : counter(to_see,less)
+
+YELLOW
+  TYPE : Color
+  MAIN : counter(to_see,less,children)
+
+RED
+  TYPE : Color
+  MAIN : counter(to_see,less)
+
+WHITE
+  TYPE : Color
+  MAIN : counter(to_see,with)
+
+GREY
+  TYPE : Color
+  MAIN : counter(to_see,united)
+
+BLACK
+  TYPE : Color
+  MAIN : counter(to_see,without)
+
 ~ Adjectives
 
 LARGE
@@ -337,3 +494,21 @@ LESS
 
 FEW
   MAIN : phisionomic(less)
+
+GOOD
+  MAIN : positive()
+
+PRETTY
+  MAIN : positive(phisionomic)
+
+FAST
+  MAIN : more(position)
+
+SLOW
+  MAIN : less(position)
+
+DANGEROUS
+  MAIN : negative(to_make,phisionomic)
+
+DIRECTLY
+  MAIN : certain(position)

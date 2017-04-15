@@ -12,7 +12,6 @@ class Vieth
     @word = word
     @details = details
 
-
 	end
 
   def root
@@ -27,7 +26,7 @@ class Vieth
 
   def type
 
-    return @details["TYPE"] ? @details["TYPE"] : root
+    return @details["TYPE"] ? @details["TYPE"] : root.to_s
 
   end
 

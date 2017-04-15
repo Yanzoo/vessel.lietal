@@ -1,6 +1,9 @@
 #!/bin/env ruby
 # encoding: utf-8
 
+  # Will you read the book at home tomorrow?
+  # No, I won't be able to, maybe today.
+
 class Documentation
 
   attr_accessor :path
@@ -15,10 +18,7 @@ class Documentation
 
   def to_s
       
-    # Will you read the book at home tomorrow?
-    # No, I won't be able to, maybe today.
-
-    html = "
+    return "
 <h2>Basics</h2>
 <code><comment>Welcome to the Lietal documentation.</comment>
 #{@dictionaery.translate('hello lietal in documentation to_be',:lietal)}.</code>
@@ -63,14 +63,14 @@ class Documentation
 
 <code><comment># Childspeak</comment>
 #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,false)}?
-#{@dictionaery.translate('no to_read negative_potential_future',:lietal,false)}. #{@dictionaery.translate('today potential_future',:lietal, false)}.
+#{@dictionaery.translate('no to_read potential_negative_future',:lietal,false)}. #{@dictionaery.translate('today potential_future',:lietal, false)}.
 </code>
 
 <p>The childspeak is condensed into {_adultspeak_}, a phonetically compressed form of their larger childspeak equivalent. This documentation is written in adultspeak.</p>
 
 <code><comment># Adultspeak</comment>
 #{@dictionaery.translate('tomorrow - house at book to_read potential_future',:lietal,true)}?
-#{@dictionaery.translate('no to_read negative_potential_future',:lietal,true)}. #{@dictionaery.translate('today potential_future',:lietal, true)}.
+#{@dictionaery.translate('no to_read potential_negative_future',:lietal,true)}. #{@dictionaery.translate('today potential_future',:lietal, true)}.
 </code>
 
 <table>
@@ -91,144 +91,39 @@ class Documentation
 <code><comment><b>Where</b> are you?</comment>
 <b>#{@dictionaery.translate('where',:lietal)}</b> #{@dictionaery.translate('you to_be',:lietal)}?
 </code>
-<table>
-<tr>
-  <th>When</th><td>#{@dictionaery.translate('when',:lietal)}</td>
-  <th>Who</th><td>#{@dictionaery.translate('who',:lietal)}</td>
-  <th>What</th><td>#{@dictionaery.translate('what',:lietal)}</td>
-</tr>
-<tr>
-  <th>Where</th><td>#{@dictionaery.translate('where',:lietal)}</td>
-  <th>Which</th><td>#{@dictionaery.translate('which',:lietal)}</td>
-  <th>How</th><td>#{@dictionaery.translate('how',:lietal)}</td>
-</tr>
-</table>
+#{$dictionaery.collect('question word')}
 
 <h3>Pronouns</h3>
 <p>Pronouns are often ommited when possible, by default, a sentence is expected to be at the first person if a pronoun has not already been declared.</p>
 <code><comment>I give <b>you</b> the book.</comment>
 #{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('you',:lietal)}</b> #{@dictionaery.translate('to to_give',:lietal)} 
 </code>
-<table>
-<tr>
-  <th>I</th><td>#{@dictionaery.translate('I',:lietal)}</td>
-  <th>You</th><td>#{@dictionaery.translate('you',:lietal)}</td>
-  <th>He/She</th><td>#{@dictionaery.translate('he_she',:lietal)}</td>
-</tr>
-<tr>
-  <th>We</th><td>#{@dictionaery.translate('we',:lietal)}</td>
-  <th>Yous</th><td>#{@dictionaery.translate('yous',:lietal)}</td>
-  <th>They</th><td>#{@dictionaery.translate('they',:lietal)}</td>
-</tr>
-<tr>
-  <th>My</th><td>#{@dictionaery.translate('my',:lietal)}</td>
-  <th>Your</th><td>#{@dictionaery.translate('your',:lietal)}</td>
-  <th>Their</th><td>#{@dictionaery.translate('their',:lietal)}</td>
-</tr>
-</table>
+#{$dictionaery.collect('pronoun')}
 
 <h3>Tenses</h3>
 <p>A Lietal sentence is, by default, at the present tense. The present tense marker is used to contrast against an already defined tense. Tenses markers are used at the end of the sentence.</p>
 <code><comment>I <b>was</b> blind, but <b>now</b> I see.</comment>
 #{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('negative_past',:lietal)}</b>, #{@dictionaery.translate('to_see',:lietal)} <b>#{@dictionaery.translate('present',:lietal)}</b>.
 </code>
-<table>
-<tr>
-  <th>Future</th><td>#{@dictionaery.translate('future',:lietal)}</td>
-  <th>Present</th><td>#{@dictionaery.translate('present',:lietal)}</td>
-  <th>Past</th><td>#{@dictionaery.translate('past',:lietal)}</td>
-</tr>
-<tr>
-  <th>Potential Future</th><td>#{@dictionaery.translate('potential_future',:lietal)}</td>
-  <th>Potential Present</th><td>#{@dictionaery.translate('potential_present',:lietal)}</td>
-  <th>Potential Past</th><td>#{@dictionaery.translate('potential_past',:lietal)}</td>
-</tr>
-<tr>
-  <th>Negative Future</th><td>#{@dictionaery.translate('negative_future',:lietal)}</td>
-  <th>Negative Present</th><td>#{@dictionaery.translate('negative_present',:lietal)}</td>
-  <th>Negative Past</th><td>#{@dictionaery.translate('negative_past',:lietal)}</td> 
-</tr>
-<tr>
-  <th>Neg. Pot. Future</th><td>#{@dictionaery.translate('negative_potential_future',:lietal)}</td>
-  <th>Neg. Pot. Present</th><td>#{@dictionaery.translate('negative_potential_present',:lietal)}</td>
-  <th>Neg. Pot. Past</th><td>#{@dictionaery.translate('negative_potential_past',:lietal)}</td> 
-</tr>
-<tr>
-  <th>Imperative Future</th><td>#{@dictionaery.translate('imperative_future',:lietal)}</td>
-  <th>Imperative Present</th><td>#{@dictionaery.translate('imperative_present',:lietal)}</td>
-  <th>Imperative Past</th><td>#{@dictionaery.translate('imperative_past',:lietal)}</td>
-</tr>
-</table>
+#{$dictionaery.collect('time marker')}
 
 <h3>Verbs</h3>
 <p>Verbs are used at the end of a sentence, right before the tense marker. They are not conjugated. Verbs are generally built from the <i>#{@aebeth.aeth('interaction').phonetic(:default)}</i> family.</p>
 <code><comment>I <b>took</b> the book, we can now <b>go</b> to school.</comment>
 #{@dictionaery.translate('book',:lietal)} <b>#{@dictionaery.translate('to_take',:lietal)}</b> #{@dictionaery.translate('past',:lietal)}, #{@dictionaery.translate('we school toward',:lietal)} <b>#{@dictionaery.translate('to_go',:lietal)}</b> #{@dictionaery.translate('potential_present',:lietal)}.
 </code>
-<table>
-<tr>
-  <th>to climb</th><td>#{@dictionaery.translate('to_go',:lietal)}</td>
-  <th>to go</th><td>#{@dictionaery.translate('to_stay',:lietal)}</td>
-  <th>to come</th><td>#{@dictionaery.translate('to_come',:lietal)}</td>
-</tr>
-<tr>
-  <th>to take</th><td>#{@dictionaery.translate('to_take',:lietal)}</td>
-  <th>to hold</th><td>#{@dictionaery.translate('to_hold',:lietal)}</td>
-  <th>to give</th><td>#{@dictionaery.translate('to_give',:lietal)}</td>
-</tr>
-<tr>
-  <th>to listen</th><td>#{@dictionaery.translate('to_listen',:lietal)}</td>
-  <th>to see</th><td>#{@dictionaery.translate('to_see',:lietal)}</td>
-  <th>to show</th><td>#{@dictionaery.translate('to_show',:lietal)}</td>
-</tr>
-<tr>
-  <th>to write</th><td>#{@dictionaery.translate('to_write',:lietal)}</td>
-  <th>to draw</th><td>#{@dictionaery.translate('to_draw',:lietal)}</td>
-  <th>to build</th><td>#{@dictionaery.translate('to_build',:lietal)}</td>
-</tr>
-</table>
+#{$dictionaery.collect('interaction')}
 
 <h3>Prepositions</h3>
 <p>Lietal prepositions are aeths used as particles, placed after the word that they affect.</p>
 <code><comment>I'm going <b>to</b> the house by the lake, near the city.</comment>
 #{@dictionaery.translate('house',:lietal)} <b>#{@dictionaery.translate('toward',:lietal)}</b> #{@dictionaery.translate('lake at city near to_go',:lietal)}
 </code>
-<table>
-<tr>
-  <th>on</th><td>#{@dictionaery.translate('on',:lietal)}</td>
-  <th>at</th><td>#{@dictionaery.translate('at',:lietal)}</td>
-  <th>in</th><td>#{@dictionaery.translate('in',:lietal)}</td>
-</tr>
-<tr>
-  <th>toward</th><td>#{@dictionaery.translate('toward',:lietal)}</td>
-  <th>to</th><td>#{@dictionaery.translate('to',:lietal)}</td>
-  <th>from</th><td>#{@dictionaery.translate('from',:lietal)}</td>
-</tr>
-<tr>
-  <th>will</th><td>#{@dictionaery.translate('will',:lietal)}</td>
-  <th>can</th><td>#{@dictionaery.translate('can',:lietal)}</td>
-  <th>in</th><td>#{@dictionaery.translate('cannot',:lietal)}</td>
-</tr>
-</table>
+#{$dictionaery.collect('Preposition',4)}
 
-<h3>Nouns</h3>
-<table>
-<tr>
-  <th>time</th><td>#{@dictionaery.translate('time',:lietal)}</td>
-  <th>life</th><td>#{@dictionaery.translate('life',:lietal)}</td>
-  <th>automation</th><td>#{@dictionaery.translate('automation',:lietal)}</td>
-</tr>
-<tr>
-  <th>event</th><td>#{@dictionaery.translate('event',:lietal)}</td>
-  <th>organ</th><td>#{@dictionaery.translate('organ',:lietal)}</td>
-  <th>part</th><td>#{@dictionaery.translate('part',:lietal)}</td>
-</tr>
-<tr>
-  <th>hand</th><td>#{@dictionaery.translate('hand',:lietal)}</td>
-  <th>eye</th><td>#{@dictionaery.translate('eye',:lietal)}</td>
-  <th>heart</th><td>#{@dictionaery.translate('heart',:lietal)}</td>
-</tr>
-</table>
+<h3>Colors</h3>
+<p>Colors are built by combining <i>#{@dictionaery.translate('speed',:lietal)}(speed)</i> and <i>#{@dictionaery.translate('color',:lietal)}(color)</i>.</p>
+#{$dictionaery.collect('Color',3)}
 
 <h2>Grammar</h2>
 
@@ -255,8 +150,41 @@ class Documentation
   <th>My name is Lucas</th><td>#{@dictionaery.translate('name Lucas to_be',:lietal)}</td>
 </tr>
 </table>
+
+<h3>Little Red Riding Hood</h3>
+<div style='background:white; padding:15px; margin-bottom:30px'>
+  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her <i>Little Red Riding Hood</i>.
+  One morning, Little Red Riding Hood asked her mother if she could go to visit her grandmother as it had been awhile since they'd seen each other.<br /><br />
+  \"That's a good idea,\" her mother said.<br /><br />
+  So they packed a nice basket for Little Red Riding Hood to take to her grandmother. When the basket was ready, the little girl put on her red cloak and kissed her mother goodbye.<br /><br />
+  <b>\"Remember, go straight to Grandma's house\"</b>, her mother cautioned. \"Don't dawdle along the way and please don't talk to strangers! The woods are dangerous.\"<br />
+</div>
+<h3>#{@dictionaery.translate('small red hood to_walk',:lietal)}</h3>
+<div style='background:white; padding:15px; margin-bottom:30px'>
+  #{@dictionaery.translate('whenever he_she outside to_be',:lietal).capitalize},
+  #{@dictionaery.translate('small woman red hood to_wear',:lietal)}, 
+  <i>#{@dictionaery.translate('small red hood to_walk',:lietal).capitalize}</i>
+  #{@dictionaery.translate('everyone to_name past',:lietal)}.
+
+  #{@dictionaery.translate('when morning',:lietal)}, 
+  #{@dictionaery.translate('small red hood to_walk',:lietal)} 
+  #{@dictionaery.translate('grandmother at to_go potential_future',:lietal)}, 
+  #{@dictionaery.translate('many time to_see potential_negative_past',:lietal)}, 
+  #{@dictionaery.translate('mother his_her to_ask',:lietal)}.<br /><br />
+
+  \"#{@dictionaery.translate('good idea to_be',:lietal)},\" #{@dictionaery.translate('mother his_her to_say past',:lietal)}.<br /><br />
+
+  #{@dictionaery.translate('grandmother at to_hold small red hood for pretty basket to_combine past',:lietal)}.
+  #{@dictionaery.translate('when basket ready to_be',:lietal)},
+  #{@dictionaery.translate('red cloak to_wear',:lietal)} - #{@dictionaery.translate('mother bye kiss to_give',:lietal)}.<br /></br/>
+  <b>\"#{@dictionaery.translate('to_remember imperative_present',:lietal)}, #{@dictionaery.translate('grandmother house at directly to_go',:lietal)}\"</b>, #{@dictionaery.translate('mother to_warn',:lietal)}. \"#{@dictionaery.translate('path under time to_waste imperative_negative_present',:lietal)}! #{@dictionaery.translate('woods dangerous to_be',:lietal)}.\"<br />
+</div>
+
+<h2>Development</h2>
+<h3>Contribute</h3>
+
+<p>You can improve this documentation by the means of {_pull requests_} on {{documentation.rb|http://github.com/XXIIVV/vessel.lietal/blob/master/objects/documentation.rb}}, and you can add new words with {{dictionaery.mh|http://github.com/XXIIVV/vessel.lietal/blob/master/memory/dictionaery.mh}}.</p>
 "
-    return html
 
   end
 

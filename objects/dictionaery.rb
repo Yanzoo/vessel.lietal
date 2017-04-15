@@ -55,4 +55,32 @@ class Dictionaery
 
   end
 
+  def collect type, width = 3
+
+    a = []
+    @en.each do |name,w|
+      if w.type.downcase != type.downcase then next end
+      a.push(w)
+    end
+
+    html = ""
+
+    i = 0
+    while i < a.length
+      html += "<tr>"
+
+      if width > 0 then html += "<th>#{a[i] ? a[i].word.capitalize.gsub('_',' ') : ''}</th><td>#{a[i] ? a[i] : ''}</td>" end
+      if width > 1 then html += "<th>#{a[i+1] ? a[i+1].word.capitalize.gsub('_',' ') : ''}</th><td>#{a[i+1] ? a[i+1] : ''}</td>" end
+      if width > 2 then html += "<th>#{a[i+2] ? a[i+2].word.capitalize.gsub('_',' ') : ''}</th><td>#{a[i+1] ? a[i+2] : ''}</td>" end
+      if width > 3 then html += "<th>#{a[i+3] ? a[i+3].word.capitalize.gsub('_',' ') : ''}</th><td>#{a[i+1] ? a[i+3] : ''}</td>" end
+      if width > 4 then html += "<th>#{a[i+4] ? a[i+4].word.capitalize.gsub('_',' ') : ''}</th><td>#{a[i+1] ? a[i+4] : ''}</td>" end
+
+      html += "</tr>"
+      i += width
+    end
+
+    return "<table>#{html}</table>"
+
+  end
+
 end
