@@ -66,7 +66,7 @@ class Vieth
     if _childspeak.length == 2 then return _childspeak end
     if _childspeak.like(@word) then return _childspeak end
 
-    if _childspeak.length == 4 then return adultspeak_segement(_childspeak) end
+    if _childspeak.length == 4 then return _childspeak end
     if _childspeak.length == 6 then return adultspeak_segement(_childspeak[0,4])+_childspeak[5,1]+_childspeak[4,1] end
     if _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
 
@@ -83,7 +83,16 @@ class Vieth
     re = seg[4,4]
 
     if c1 == c2 then c2 = "" end
-    if v1 == v2 then v2 = "'" end
+
+    if v1 == v2 
+      if v1 == "a" then v1 = "ä"
+      elsif v1 == "i" then v1 = "ï"
+      elsif v1 == "e" then v1 = "ë"
+      elsif v1 == "o" then v1 = "ö"
+      elsif v1 == "u" then v1 = "ü"
+      else v1 = "?" end
+      v2 = ""
+    end
 
     return "#{c1}#{v1}#{v2}#{c2}"
 
@@ -103,7 +112,7 @@ class Vieth
 
   def to_deconstruction
 
-    return "<span style='font-family:\"input_mono_medium\"'>#{@details['MAIN']}</span>"
+    return "#{@details['MAIN']}"
 
   end
 

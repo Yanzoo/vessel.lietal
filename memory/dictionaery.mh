@@ -32,11 +32,11 @@ WHEN
 
 WHO
   TYPE : Question Word
-  MAIN : possible(akin)
+  MAIN : possible(organic)
 
 WHAT
   TYPE : Question Word
-  MAIN : possible(simple)
+  MAIN : possible(synthetic)
 
 HOW
   TYPE : Question Word
@@ -177,10 +177,10 @@ IMPERATIVE_NEGATIVE_FUTURE
 ~ Vocabulary
 
 KISS
-  MAIN : akin(positive,phisionomic)
+  MAIN : organic(positive,phisionomic)
 
 BASKET
-  MAIN : simple(physic,united)
+  MAIN : synthetic(united,children)
 
 MORNING
   MAIN : outward(complex)
@@ -192,10 +192,10 @@ PATH
   MAIN : united(location)
 
 HOOD
-  MAIN : simple(physic,parent)
+  MAIN : synthetic(parent,phisionomic)
 
 WOODS
-  MAIN : location(akin,simple)
+  MAIN : location(organic,synthetic)
 
 IDEA
   MAIN : children(psychologic)
@@ -204,28 +204,28 @@ TIME
   MAIN : outward(complex)
 
 LIFE
-  MAIN : outward(akin)
+  MAIN : outward(organic)
 
 AUTOMATION
-  MAIN : outward(simple)
+  MAIN : outward(synthetic)
 
 HAND
-  MAIN : phisionomic(to_make)
+  MAIN : organic(to_make)
 
 EYE
-  MAIN : phisionomic(to_see)
+  MAIN : organic(to_see)
 
 HEART
-  MAIN : phisionomic(to_be)
+  MAIN : organic(to_be)
 
 EVENT
   MAIN : children(complex)
 
 ORGAN
-  MAIN : children(akin)
+  MAIN : children(organic)
 
 PART
-  MAIN : children(simple)
+  MAIN : children(synthetic)
 
 NAME
   MAIN : psychologic(structure)
@@ -249,31 +249,34 @@ DOCUMENTATION
   MAIN : phisionomic(parent,psychologic)
 
 PARENT
-  MAIN : akin(parent)
+  MAIN : organic(parent)
 
 MOTHER
-  MAIN : akin(inward,parent)
+  MAIN : organic(inward,parent)
 
 FATHER
-  MAIN : akin(outward,parent)
+  MAIN : organic(outward,parent)
 
 GRANDPARENT
-  MAIN : akin(parent,parent)
+  MAIN : organic(parent,parent)
 
 GRANDMOTHER
-  MAIN : akin(parent,inward,parent)
+  MAIN : organic(inward,parent,parent)
 
 GRANDFATHER
-  MAIN : akin(parent,outward,parent)
+  MAIN : organic(outward,parent,parent)
 
 WOMAN
-  MAIN : akin(inward)
+  MAIN : organic(inward)
 
 MAN
-  MAIN : akin(outward)
+  MAIN : organic(outward)
 
 SPEED
   MAIN : counter(position)
+
+STRANGER
+  MAIN : organic(unrelated)
 
 ~ Verbs
 
@@ -364,6 +367,9 @@ TO_ASK
 TO_NAME
   MAIN : to_see(phisionomic,psychologic)
 
+TO_TALK
+  MAIN : to_see(mobile,psychologic)
+
 ~ Prepositions
 
 ON
@@ -432,11 +438,15 @@ WHENEVER
   
 EVERYONE
   TYPE : Preposition
-  MAIN : united(akin,single)
+  MAIN : united(organic,single)
 
 EVERYTHING
   TYPE : Preposition
-  MAIN : united(simple,single)
+  MAIN : united(synthetic,single)
+
+AND
+  TYPE : Preposition
+  MAIN : with()
 
 ~ Color
 
@@ -512,3 +522,6 @@ DANGEROUS
 
 DIRECTLY
   MAIN : certain(position)
+
+ASSEMBLED
+  MAIN : united(children)

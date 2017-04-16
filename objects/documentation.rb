@@ -75,9 +75,10 @@ class Documentation
 
 <table>
   <tr><td></td><th>Childspeak</th><th>Adultspeak</th></tr>
-  <tr><th>When</th><td>#{@dictionaery.translate('when',:lietal).childspeak}</td><td>#{@dictionaery.translate('when',:lietal).adultspeak}</td></tr>
-  <tr><th>Who</th><td>#{@dictionaery.translate('who',:lietal).childspeak}</td><td>#{@dictionaery.translate('who',:lietal).adultspeak}</td></tr>
+  <tr><th>Your</th><td>#{@dictionaery.translate('your',:lietal).childspeak}</td><td>#{@dictionaery.translate('your',:lietal).adultspeak}</td></tr>
   <tr><th>House</th><td>#{@dictionaery.translate('house',:lietal).childspeak}</td><td>#{@dictionaery.translate('house',:lietal).adultspeak}</td></tr>
+  <tr><th>To Read</th><td>#{@dictionaery.translate('to_read',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_read',:lietal).adultspeak}</td></tr>
+  <tr><th>Everyone</th><td>#{@dictionaery.translate('everyone',:lietal).childspeak}</td><td>#{@dictionaery.translate('everyone',:lietal).adultspeak}</td></tr>
 </table>
 
 <h2>The Aebeth</h2>
@@ -162,23 +163,52 @@ class Documentation
 <h3>#{@dictionaery.translate('small red hood to_walk',:lietal)}</h3>
 <div style='background:white; padding:15px; margin-bottom:30px'>
   #{@dictionaery.translate('whenever he_she outside to_be',:lietal).capitalize},
-  #{@dictionaery.translate('small woman red hood to_wear',:lietal)}, 
-  <i>#{@dictionaery.translate('small red hood to_walk',:lietal).capitalize}</i>
-  #{@dictionaery.translate('everyone to_name past',:lietal)}.
-
-  #{@dictionaery.translate('when morning',:lietal)}, 
-  #{@dictionaery.translate('small red hood to_walk',:lietal)} 
-  #{@dictionaery.translate('grandmother at to_go potential_future',:lietal)}, 
-  #{@dictionaery.translate('many time to_see potential_negative_past',:lietal)}, 
-  #{@dictionaery.translate('mother his_her to_ask',:lietal)}.<br /><br />
+  #{@dictionaery.translate('he_she red hood to_wear',:lietal)}, 
+  <i>#{@dictionaery.translate('Small Red Hood To_walk',:lietal).capitalize}</i>
+  #{@dictionaery.translate('everyone he_she to_name past',:lietal)}.
+  #{@dictionaery.translate('morning at',:lietal).capitalize}, 
+  #{@dictionaery.translate('grandmother at to_go mother his_her to_ask',:lietal)}, 
+  #{@dictionaery.translate('he_she many time to_see potential_negative_past',:lietal)}.<br /><br />
 
   \"#{@dictionaery.translate('good idea to_be',:lietal)},\" #{@dictionaery.translate('mother his_her to_say past',:lietal)}.<br /><br />
 
-  #{@dictionaery.translate('grandmother at to_hold small red hood pretty basket to_combine past',:lietal)}.
-  #{@dictionaery.translate('when basket ready to_be',:lietal)},
-  #{@dictionaery.translate('red cloak to_wear',:lietal)} - #{@dictionaery.translate('mother bye kiss to_give',:lietal)}.<br /></br/>
-  <b>\"#{@dictionaery.translate('to_remember imperative_present',:lietal)}, #{@dictionaery.translate('grandmother house at directly to_go',:lietal)}\"</b>, #{@dictionaery.translate('mother to_warn',:lietal)}. \"#{@dictionaery.translate('path under time to_waste imperative_negative_present',:lietal)}! #{@dictionaery.translate('woods dangerous to_be',:lietal)}.\"<br />
+  #{@dictionaery.translate('grandmother at to_take potential_future pretty basket to_combine past',:lietal).capitalize}.
+  #{@dictionaery.translate('when basket assembled to_be',:lietal).capitalize},
+  #{@dictionaery.translate('red hood to_wear past mother bye kiss to_give',:lietal)}.<br /></br/>
+
+  <b>\"#{@dictionaery.translate('to_remember imperative_present',:lietal).capitalize}, 
+  #{@dictionaery.translate('grandmother house at directly to_go imperative_present',:lietal)}\"</b>, 
+  #{@dictionaery.translate('mother to_warn past',:lietal)}. 
+  \"#{@dictionaery.translate('path in time to_waste imperative_negative_present and stranger at to_talk imperative_negative_present',:lietal)}! 
+  #{@dictionaery.translate('woods dangerous to_be',:lietal)}.\"<br />
 </div>
+<h3>Vocabulary</h3>
+<table>
+<tr>
+  <th></th><th>Childspeak</th><th>Construction</th>
+  <th></th><th>Childspeak</th><th>Construction</th>
+</tr>
+<tr>
+  <th>Grandmother</th><td>#{@dictionaery.translate('grandmother',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('grandmother',:lietal).to_deconstruction}</td>
+  <th>Mother</th><td>#{@dictionaery.translate('mother',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('mother',:lietal).to_deconstruction}</td>
+</tr>
+<tr>
+  <th>Stranger</th><td>#{@dictionaery.translate('stranger',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('stranger',:lietal).to_deconstruction}</td>
+  <th>Woods</th><td>#{@dictionaery.translate('woods',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('woods',:lietal).to_deconstruction}</td>
+</tr>
+<tr>
+  <th>Basket</th><td>#{@dictionaery.translate('basket',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('basket',:lietal).to_deconstruction}</td>
+  <th>Cloak</th><td>#{@dictionaery.translate('hood',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('hood',:lietal).to_deconstruction}</td>
+</tr>
+<tr>
+  <th>To wear</th><td>#{@dictionaery.translate('to_wear',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('to_wear',:lietal).to_deconstruction}</td>
+  <th>To say</th><td>#{@dictionaery.translate('to_say',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('to_say',:lietal).to_deconstruction}</td>
+</tr>
+<tr>
+  <th>To warn</th><td>#{@dictionaery.translate('to_warn',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('to_warn',:lietal).to_deconstruction}</td>
+  <th>To waste</th><td>#{@dictionaery.translate('to_waste',:lietal).childspeak}</td><td style='font-size:12px'>#{@dictionaery.translate('to_waste',:lietal).to_deconstruction}</td>
+</tr>
+</table>
 
 <h2>Development</h2>
 <h3>Contribute</h3>
