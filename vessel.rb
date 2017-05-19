@@ -15,7 +15,6 @@ class VesselLietal
     
     install(:custom,:translate)
     install(:custom,:serve)
-    install(:custom,:print)
     install(:generic,:document)
     install(:generic,:help)
 

@@ -83,4 +83,10 @@ class Dictionaery
 
   end
 
+  def construction construct
+
+    return "#{construct}" 
+
+  end
+
 end
