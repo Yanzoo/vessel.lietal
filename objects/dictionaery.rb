@@ -21,7 +21,6 @@ class Dictionaery
 
   def translate word,lang = :lietal,is_adultspeak = true
 
-    p word+" -> "+lietal(word).to_s
     return @en[word.upcase] ? @en[word.upcase] : "(#{word})"
 
   end

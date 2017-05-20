@@ -118,6 +118,14 @@ class Documentation
 <p>Colors are built by combining <i>#{@dictionaery.translate('speed',:lietal)}(speed)</i> and <i>#{@dictionaery.translate('color',:lietal)}(color)</i>.</p>
 #{$dictionaery.collect('Color',3)}
 
+<h3>Numbers</h3>
+<p>Numbers are built by combining <i>#{@dictionaery.translate('counter',:lietal)}(counter)</i> and <i>#{@dictionaery.translate('relation',:lietal)}(relation)</i>. When base10 is used, eleven is not used.</p>
+#{$dictionaery.collect('Number',4)}
+<code><comment>23</comment> #{@dictionaery.construct('10.2 3')}<comment>341</comment> #{@dictionaery.construct('100.3 COLLECTION_POP.5 1')}<comment>1782</comment> #{@dictionaery.construct('1000 COLLECTION_POP.7 COLLECTION_POP.8 2')}<comment>900'780</comment> #{@dictionaery.construct('100\'000.9 100.7 COLLECTION_POP.8')}</code>
+<p>When going through a long number, one can choose to use #{@dictionaery.translate('COLLECTION_POP',:lietal)} instead of the next immediate zero.</p>
+<code><comment>29'600'000</comment> #{@dictionaery.construct('10\'000\'000.2 1\'000\'000.9 100\'000.6')}<comment>29'600'000</comment> #{@dictionaery.construct('10\'000\'000.2 COLLECTION_POP.9 COLLECTION_POP.6')}</code>
+<p>When one wants to talk about mathematics.</p>
+<code><comment>2 + 4 + 6</comment> #{@dictionaery.construct('to_add [ 2 & 4 & 6 ]')}<comment>2.64</comment> #{@dictionaery.construct('2.children 10.6 4')}<comment>2 / 6 = 3</comment> #{@dictionaery.construct('to_divide [ 2 & 6 ] ! to_be 3')}<comment>2 - 6 = -4</comment> #{@dictionaery.construct('to_substract [ 2 & 6 ] ! to_be 3.negative')}</code>
 <h2>Grammar</h2>
 
 <p>The grammar is akin to that of an object oriented programming language, look at the follow sentence and observe how even parenteses have phonetics attached.</p>
