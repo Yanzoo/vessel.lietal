@@ -1,0 +1,14 @@
+~ NAME : Lietal Red Riding Hood
+~ NOTE : *
+~ AUTH : Devine Lu Linvega
+
+ENGLISH
+  You wake up in a room, surrounded by white unbreakable walls. 
+  On a desk, lies a pencil and a sheet of blank paper. 
+  Inside the desk, notes bearing your handwritting, you have no recollection.
+
+CONSTRUCTION
+  Room.wall [ white & unbreakable ].inside ! You.to_become aware
+  Desk.on.to_be [ Paper & Pencil ]
+  Notes.to_have You.handwritting
+  You.to_remember.negative

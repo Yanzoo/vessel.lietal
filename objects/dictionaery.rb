@@ -21,7 +21,7 @@ class Dictionaery
 
   def translate word,lang = :lietal,is_adultspeak = true
 
-    return @en[word.upcase] ? @en[word.upcase] : "(#{word})"
+    return @en[word.upcase] ? @en[word.upcase] : "<unknown>#{word}</unknown>"
 
   end
 
@@ -36,7 +36,7 @@ class Dictionaery
         <td style='font-size:12px'>#{w.to_deconstruction}</td>
       </tr>"
     end
-    return "<table>#{html}</table>"
+    return "<p>The Dictionaery currently contains #{@en.length} words with translation.</p><table>#{html}</table>"
 
   end
 

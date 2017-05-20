@@ -224,7 +224,7 @@ PART
   MAIN : children(synthetic)
 
 NAME
-  MAIN : psychologic(structure)
+  MAIN : phisionomic(structure)
 
 TOMORROW
   MAIN : complex(single,multiple)
@@ -246,6 +246,9 @@ WALL
 
 BOOK
   MAIN : physic(phisionomic,psychologic)
+
+LIBRARY
+  MAIN : location(phisionomic,psychologic)
 
 DOCUMENTATION
   MAIN : phisionomic(parent,psychologic)
@@ -391,7 +394,7 @@ TO_ASK
   MAIN : to_see(inward,possible)
 
 TO_NAME
-  MAIN : to_see(phisionomic,psychologic)
+  MAIN : to_see(phisionomic,structure)
 
 TO_TALK
   MAIN : to_see(mobile,psychologic)
@@ -462,7 +465,7 @@ MULTIPLE
   TYPE : Preposition
   MAIN : multiple()
 
-NULL
+NONE
   TYPE : Preposition
   MAIN : none()
 
