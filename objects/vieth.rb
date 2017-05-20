@@ -34,12 +34,12 @@ class Vieth
 
     if @childspeak then return @childspeak end
 
-    if @details == {} then return @word end
+    if @details == {} then return "#{@word}(Issue)" end
 
     _f = @details["MAIN"].split("(").first
     param,val,aeth = $aebeth.aeth_from_english(_f)
     
-    if !aeth then return @word end
+    if !aeth then return "#{@word}(Unknown Meaning: #{_f})" end
 
     _f_phonetic = aeth.phonetic(param,val)
 
@@ -49,7 +49,7 @@ class Vieth
 
     _p.each do |p2|
       param,val,aeth = $aebeth.aeth_from_english(p2)
-      if !aeth then return @word end
+      if !aeth then return "#{@word}(Unknown Aeth:#{p2})" end
       _p_phonetic += aeth.phonetic(param,val)
     end
 

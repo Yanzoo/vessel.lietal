@@ -11,8 +11,8 @@ HIERARCHY
     Location
     Children
   BOOL
-    Connected
-    Disconnected
+    Connect
+    Disconnect
 
 STATE
   KEY : T
@@ -59,12 +59,12 @@ RELATION
 COUNTER
   KEY : L 
   VECTOR
-    More
-    Single
-    Less
-  BOOL
     Multiple
-    Null
+    Single
+    None
+  BOOL
+    Push
+    Pop
 
 ~ LOW
 
@@ -85,8 +85,8 @@ ALIGNMENT
     Neutral
     Negative
   BOOL
-    ?
-    ?
+    True
+    False
 
 INTERACTION
   KEY : F

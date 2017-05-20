@@ -8,6 +8,10 @@ HELLO
   TYPE : Expression
   MAIN : positive(inward)
 
+WELCOME
+  TYPE : Expression
+  MAIN : positive(inward)
+
 BYE
   TYPE : Expression
   MAIN : positive(outward)
@@ -57,6 +61,14 @@ I
   MAIN : single(inward)
 
 HE_SHE
+  TYPE : Pronoun
+  MAIN : single(position)
+
+HE
+  TYPE : Pronoun
+  MAIN : single(position)
+
+SHE
   TYPE : Pronoun
   MAIN : single(position)
 
@@ -114,6 +126,18 @@ FUTURE
   TYPE : Time Marker
   MAIN : complex(outward)
 
+NEGATIVE
+  TYPE : Time Marker
+  MAIN : complex(impossible)
+
+POTENTIAL
+  TYPE : Time Marker
+  MAIN : complex(possible)
+
+IMPERATIVE
+  TYPE : Time Marker
+  MAIN : complex(certain)
+
 NEGATIVE_PAST
   TYPE : Time Marker
   MAIN : complex(impossible,inward)
@@ -130,25 +154,13 @@ POTENTIAL_PAST
   TYPE : Time Marker
   MAIN : complex(possible,inward)
 
-POTENTIAL_PRESENT
-  TYPE : Time Marker
-  MAIN : complex(possible,position)
-
 POTENTIAL_FUTURE
   TYPE : Time Marker
   MAIN : complex(possible,outward)
 
-POTENTIAL_NEGATIVE_PAST
+POTENTIAL_PRESENT
   TYPE : Time Marker
-  MAIN : complex(impossible,possible,inward)
-
-POTENTIAL_NEGATIVE_PRESENT
-  TYPE : Time Marker
-  MAIN : complex(impossible,possible,position)
-
-POTENTIAL_NEGATIVE_FUTURE
-  TYPE : Time Marker
-  MAIN : complex(impossible,possible,outward)
+  MAIN : complex(possible,position)
 
 IMPERATIVE_PAST
   TYPE : Time Marker
@@ -162,17 +174,9 @@ IMPERATIVE_FUTURE
   TYPE : Time Marker
   MAIN : complex(certain,outward)
 
-IMPERATIVE_NEGATIVE_PAST
+IMPERATIVE_NEGATIVE
   TYPE : Time Marker
-  MAIN : complex(certain,impossible,inward)
-
-IMPERATIVE_NEGATIVE_PRESENT
-  TYPE : Time Marker
-  MAIN : complex(certain,impossible,position)
-
-IMPERATIVE_NEGATIVE_FUTURE
-  TYPE : Time Marker
-  MAIN : complex(certain,impossible,outward)
+  MAIN : complex(certain,impossible)
 
 ~ Vocabulary
 
@@ -191,7 +195,7 @@ NIGHT
 PATH
   MAIN : united(location)
 
-HOOD
+CLOAK
   MAIN : synthetic(parent,phisionomic)
 
 WOODS
@@ -231,16 +235,22 @@ NAME
   MAIN : psychologic(structure)
 
 TOMORROW
-  MAIN : complex(single,more)
+  MAIN : complex(single,multiple)
 
 TODAY
   MAIN : complex(single)
 
 YESTERDAY
-  MAIN : complex(single,less)
+  MAIN : complex(single,none)
 
 HOUSE
   MAIN : physic(location,to_be)
+
+ROOM
+  MAIN : synthetic(location,to_be)
+
+WALL
+  MAIN : physic(impossible,to_see)
 
 BOOK
   MAIN : physic(phisionomic,psychologic)
@@ -278,6 +288,21 @@ SPEED
 STRANGER
   MAIN : organic(unrelated)
 
+LIETAL
+  MAIN : multiple(push,phisionomic,single)
+
+CITY
+  MAIN : synthetic(position,organic,multiple)
+
+PERSON
+  MAIN : organic(single)
+
+BEINGS
+  MAIN : organic(multiple)
+
+SCHOOL
+  MAIN : position(synthetic,psychologic)
+
 ~ Verbs
 
 TO_GO
@@ -290,12 +315,15 @@ TO_COME
   MAIN : to_be(inward)
 
 TO_ADD 
-  MAIN : to_make(more)
+  MAIN : to_make(multiple)
 
 TO_REMOVE
-  MAIN : to_make(less)
+  MAIN : to_make(none)
 
 TO_COMBINE
+  MAIN : to_make(with)
+
+TO_ASSEMBLE
   MAIN : to_make(with)
 
 TO_DIVIDE
@@ -337,11 +365,14 @@ TO_UNDERSTAND
 TO_SAY
   MAIN : to_see(outward)
 
+TO_SPEAK
+  MAIN : to_see(outward)
+
 TO_WARN
   MAIN : to_see(outward,possible,negative)
 
 TO_WASTE
-  MAIN : to_make(null)
+  MAIN : to_make(none)
 
 TO_SEE
   MAIN : to_see()
@@ -359,7 +390,7 @@ TO_WEAR
   MAIN : to_be(phisionomic,children)
 
 TO_WALK
-  MAIN : to_be(outward,less,position)
+  MAIN : to_be(outward,none,position)
 
 TO_ASK
   MAIN : to_see(inward,possible)
@@ -383,6 +414,10 @@ AT
 IN
   TYPE : Preposition
   MAIN : children()
+
+INSIDE
+  TYPE : Preposition
+  MAIN : children(location)
 
 UNDER
   TYPE : Preposition
@@ -414,7 +449,7 @@ FROM
 
 AGAIN
   TYPE : Preposition
-  MAIN : more(single)
+  MAIN : multiple(single)
 
 WITH
   TYPE : Preposition
@@ -428,17 +463,33 @@ OUTSIDE
   TYPE : Preposition
   MAIN : parent(location)
 
+MULTIPLE
+  TYPE : Preposition
+  MAIN : multiple()
+
+NULL
+  TYPE : Preposition
+  MAIN : none()
+
 MANY
   TYPE : Preposition
   MAIN : multiple()
 
 WHENEVER
   TYPE : Preposition
-  MAIN : united(complex,single)
+  MAIN : united(multiple,complex)
+
+WHEREVER
+  TYPE : Preposition
+  MAIN : united(multiple,position)
   
+WHOEVER
+  TYPE : Preposition
+  MAIN : united(multiple,organic)
+
 EVERYONE
   TYPE : Preposition
-  MAIN : united(organic,single)
+  MAIN : united(multiple,organic)
 
 EVERYTHING
   TYPE : Preposition
@@ -447,6 +498,10 @@ EVERYTHING
 AND
   TYPE : Preposition
   MAIN : with()
+
+HERE
+  TYPE : Preposition
+  MAIN : location(position)
 
 ~ Color
 
@@ -459,19 +514,19 @@ VIOLET
 
 BLUE
   TYPE : Color
-  MAIN : counter(to_see,less,parent)
+  MAIN : counter(to_see,none,parent)
 
 GREEN
   TYPE : Color
-  MAIN : counter(to_see,less)
+  MAIN : counter(to_see,none)
 
 YELLOW
   TYPE : Color
-  MAIN : counter(to_see,less,children)
+  MAIN : counter(to_see,none,children)
 
 RED
   TYPE : Color
-  MAIN : counter(to_see,less)
+  MAIN : counter(to_see,none)
 
 WHITE
   TYPE : Color
@@ -496,14 +551,17 @@ NORMAL
 SMALL
   MAIN : phisionomic(inward)
 
+LITTLE
+  MAIN : phisionomic(inward)
+
 MORE
-  MAIN : more()
+  MAIN : multiple()
 
 LESS
-  MAIN : less()
+  MAIN : none()
 
 FEW
-  MAIN : phisionomic(less)
+  MAIN : phisionomic(none)
 
 GOOD
   MAIN : positive()
@@ -512,10 +570,10 @@ PRETTY
   MAIN : positive(phisionomic)
 
 FAST
-  MAIN : more(position)
+  MAIN : multiple(position)
 
 SLOW
-  MAIN : less(position)
+  MAIN : none(position)
 
 DANGEROUS
   MAIN : negative(to_make,phisionomic)
@@ -525,3 +583,35 @@ DIRECTLY
 
 ASSEMBLED
   MAIN : united(children)
+
+AWARE
+  MAIN : possible(to_see)
+
+UNBREAKABLE
+  MAIN : impossible(to_make,multiple)
+
+~ Particles
+
+TRUE
+  MAIN : true()
+
+FALSE
+  MAIN : false()
+
+RELATED
+  MAIN : related()
+
+CONNECT
+  MAIN : connect()
+
+DISCONNECT
+  MAIN : disconnect()
+
+COLLECTION_PUSH
+  MAIN : push()
+
+COLLECTION_POP
+  MAIN : pop()
+
+UNRELATED
+  MAIN : unrelated()

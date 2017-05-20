@@ -1,0 +1,28 @@
+~ NAME : Lietal Red Riding Hood
+~ NOTE : *
+~ AUTH : Devine Lu Linvega
+
+ENGLISH
+  Whenever she went out, the little girl wore a red riding cloak, 
+  so everyone in the village called her <i>Little Red Riding Hood</i>.<br />
+  One morning, Little Red Riding Hood asked her mother 
+  if she could go to visit her grandmother 
+  as it had been awhile since they'd seen each other.<br />
+  "That's a good idea", her mother said.
+  So they packed a nice basket for Little Red Riding Hood
+  to take to her grandmother. When the basket was ready, 
+  the little girl put on her red cloak and kissed her mother goodbye.<br />
+  "Remember, go straight to Grandma's house", her mother cautioned. 
+  "Don't dawdle along the way and please don't talk to strangers!"
+  "The woods are dangerous."
+
+CONSTRUCTION
+  She.to_go outside ! She.to_wear Cloak [ little & red ]
+  City.beings.to_name She Cloak [ red & to_walk ]
+  Morning ! She.to_ask Mother Potential_present ! I.to_go Grandmother.house
+  She.mother.to_say Idea [ good ]
+  [ She & She.mother ].to_assemble Basket
+  Basket [ assembled ] ! She.to_wear Cloak [ red ] & She.to_kiss_goodbye She.mother
+  She.mother.to_warn to_go directly Grandmother.house
+  [ to_go wherever | to_talk stranger ].imperative_negative
+  Woods [ dangerous ]

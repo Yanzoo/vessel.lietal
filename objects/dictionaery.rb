@@ -13,30 +13,16 @@ class Dictionaery
 
 	end
 
-	def lietal l
-
-		return @en[l.upcase] ? @en[l.upcase] : Vieth.new(l)
-
-	end
-
   def english e
 
     return "?"
 
   end
 
-  def translate word,lang,is_adultspeak = true
+  def translate word,lang = :lietal,is_adultspeak = true
 
-    if lang == :lietal
-      if !word.include?(" ") then return lietal(word) end
-      s = ""
-      word.split(" ").each do |w|
-        s += lietal(w).to_s(is_adultspeak)+" "
-      end
-      return s.strip
-    end
-
-    return english(word)
+    p word+" -> "+lietal(word).to_s
+    return @en[word.upcase] ? @en[word.upcase] : "(#{word})"
 
   end
 
@@ -83,9 +69,43 @@ class Dictionaery
 
   end
 
-  def construction construct
+  def construct construction
 
-    return "#{construct}" 
+    html = ""
+    construction.split("\n").each do |line|
+      sentence = ""
+      line.split(" ").each do |part|
+        sentence += translate_construction(part)+" "
+      end
+      sentence = sentence.strip+". "
+      html += sentence.capitalize+"\n"
+    end
+    return html
+
+  end
+
+  def translate_construction str, is_adultspeak = true
+
+    new_str = str
+    ["[",",","]",".","+"," "].each do |char|
+      new_str = new_str.gsub(char," #{char} ")
+    end
+
+    sentence = ""
+    new_str.split(" ").each do |seg|
+      if seg == "&" then seg = translate('related').to_s(is_adultspeak)
+      elsif seg == "|" then seg = translate('unrelated').to_s(is_adultspeak)
+      elsif seg == "[" then seg = translate('COLLECTION_PUSH').to_s(is_adultspeak)
+      elsif seg == "]" then seg = translate('COLLECTION_POP').to_s(is_adultspeak)
+      elsif seg == "!" then seg = translate('true').to_s(is_adultspeak)
+      elsif seg == "." then seg = "'"
+      else seg = translate(seg).to_s end
+      sentence += seg
+    end
+
+    sentence = sentence.gsub(" ' ","'")
+
+    return sentence
 
   end
 
