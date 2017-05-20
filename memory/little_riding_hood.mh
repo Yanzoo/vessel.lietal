@@ -17,12 +17,12 @@ ENGLISH
   "The woods are dangerous."
 
 CONSTRUCTION
-  She.to_go outside ! She.to_wear Cloak [ little & red ]
-  City.beings.to_name She Cloak [ red & to_walk ]
-  Morning ! She.to_ask Mother Potential_present ! I.to_go Grandmother.house
-  She.mother.to_say Idea [ good ]
-  [ She & She.mother ].to_assemble Basket
-  Basket [ assembled ] ! She.to_wear Cloak [ red ] & She.to_kiss_goodbye She.mother
-  She.mother.to_warn to_go directly Grandmother.house
+  He_She.to_go outside ! He_She.to_wear Cloak [ little & red ]
+  City.beings.to_name He_She Cloak [ red & to_walk ]
+  Morning ! He_She.to_ask Mother Potential_present ! I.to_go Grandmother.house
+  He_She.mother.to_say Idea [ good ]
+  [ He_She & He_She.mother ].to_assemble Basket
+  Basket [ assembled ] ! He_She.to_wear Cloak [ red ] & He_She.to_give He_She.mother kiss
+  He_She.mother.to_warn to_go directly Grandmother.house
   [ to_go wherever | to_talk stranger ].imperative_negative
   Woods [ dangerous ]

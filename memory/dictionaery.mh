@@ -64,14 +64,6 @@ HE_SHE
   TYPE : Pronoun
   MAIN : single(position)
 
-HE
-  TYPE : Pronoun
-  MAIN : single(position)
-
-SHE
-  TYPE : Pronoun
-  MAIN : single(position)
-
 YOU
   TYPE : Pronoun
   MAIN : single(outward)
@@ -506,6 +498,10 @@ HERE
   TYPE : Preposition
   MAIN : location(position)
 
+BETWEEN
+  TYPE : Preposition
+  MAIN : location(united)
+
 ~ Color
 
 COLOR
@@ -521,7 +517,7 @@ BLUE
 
 GREEN
   TYPE : Color
-  MAIN : counter(to_see,none)
+  MAIN : counter(to_see,single)
 
 YELLOW
   TYPE : Color

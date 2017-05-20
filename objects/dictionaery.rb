@@ -68,6 +68,12 @@ class Dictionaery
 
   end
 
+  def side_by_side sentence_target, sentence, construction_target, construction
+
+    return "<code><comment>English   </comment>#{sentence.sub(sentence_target,'<b>'+sentence_target+'</b>')}\n<comment>Lietal    </comment>#{construct(construction).sub(translate(construction_target).to_s,'<b>'+translate(construction_target).to_s+'</b>')}<comment>Construct </comment>#{construction.sub(construction_target,'<b>'+construction_target+'</b>')}</code>"
+    
+  end
+
   def construct construction
 
     html = ""
