@@ -63,9 +63,8 @@ class Vieth
 
     _childspeak = childspeak
 
-    if _childspeak.length == 4 && _childspeak[1,1] == _childspeak[3,1] then return _childspeak[0,3] end
-    if _childspeak.length == 4 && _childspeak[0,1] == _childspeak[2,1] then return _childspeak[0,2]+_childspeak[3,1] end
-    if _childspeak.length == 6 then return adultspeak_segement(_childspeak[0,4])+_childspeak[5,1]+_childspeak[4,1] end
+    if _childspeak.length == 4 && (_childspeak[1,1] == _childspeak[3,1] || _childspeak[0,1] == _childspeak[2,1]) then return adultspeak_segement(_childspeak[0,4]) end
+    if _childspeak.length == 6 then return _childspeak[0,2]+adultspeak_segement(_childspeak[2,4]) end
     if _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
 
     return _childspeak

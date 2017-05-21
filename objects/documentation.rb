@@ -121,6 +121,10 @@ class Documentation
 <p>When one wants to talk about mathematics.</p>
 <code><comment>2 + 4 + 6</comment> #{@dictionaery.construct('to_add [ 2 & 4 & 6 ]')}<comment>2.64</comment> #{@dictionaery.construct('2.children 10.6 4')}<comment>2 / 6 = 3</comment> #{@dictionaery.construct('to_divide [ 2 & 6 ] ! to_be 3')}<comment>2 - 6 = -4</comment> #{@dictionaery.construct('to_substract [ 2 & 6 ] ! to_be 3.negative')}</code>
 
+#{index.add(:vocabulary,"foreign words")}
+<p>People's names, or words without Lietal equivalence, are usually Lietalized, which is the process of spelling foreign words with lietal constructs.</p>
+#{$dictionaery.collect('Foreign',3)}
+
 #{index.add(:root,:grammar)}
 <p>The grammar is akin to that of an object oriented programming language, look at the follow sentence and observe how even parenteses have phonetics attached.</p>
 

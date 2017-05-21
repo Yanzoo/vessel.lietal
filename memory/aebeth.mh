@@ -21,8 +21,8 @@ STATE
     Phisionomic
     Physic
   BOOL
-    ?
-    ?
+    Real
+    Unreal
 
 STRUCTURE
   KEY : D
@@ -31,8 +31,8 @@ STRUCTURE
     Organic
     Synthetic
   BOOL
-    ?
-    ?
+    Order
+    Chaos
 
 ~ MID
 

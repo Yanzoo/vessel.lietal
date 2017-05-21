@@ -2,13 +2,38 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
-ENGLISH
-  You wake up in a room, surrounded by white unbreakable walls. 
-  On a desk, lies a pencil and a sheet of blank paper. 
-  Inside the desk, notes bearing your handwritting, you have no recollection.
-
-CONSTRUCTION
+MISC
   Room.wall [ white & unbreakable ].inside ! You.to_become aware
   Desk.on.to_be [ Paper & Pencil ]
   Notes.to_have You.handwritting
   You.to_remember.negative
+  --
+  You wake up in a room, surrounded by white unbreakable walls. 
+  On a desk, lies a pencil and a sheet of blank paper. 
+  Inside the desk, notes bearing your handwritting, you have no recollection.
+
+ENGLISH
+  Thousand Rooms
+  Lesson 1
+  Cat awakens.
+  Owl finds a piece of paper.
+  Bat finds a pencil.
+  Fox opens the desk.
+  Lesson 2
+  Cat claws at the walls.
+  Owl leaves a message in the desk.
+  Bat finds a second pencil.
+  Fox dismantles the desk.
+
+CONSTRUCTION
+  1000.moment
+  lesson.1
+  cat.to_become aware
+  owl.to_find paper
+  bat.to_find pencil
+  fox.to_open desk
+  lesson.2
+  cat.to_claw wall
+  owl.to_insert desk.inside message
+  bat.to_find 2.pencil
+  fox.to_divide desk

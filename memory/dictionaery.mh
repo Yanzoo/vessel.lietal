@@ -181,6 +181,9 @@ BASKET
 MORNING
   MAIN : outward(complex)
 
+MOMENT
+  MAIN : synthetic(complex)
+
 NIGHT
   MAIN : inward(complex)
 
@@ -242,13 +245,13 @@ ROOM
   MAIN : synthetic(location,to_be)
 
 WALL
-  MAIN : physic(impossible,to_see)
+  MAIN : synthetic(impossible,interaction)
 
 BOOK
-  MAIN : physic(phisionomic,psychologic)
+  MAIN : physic(synthetic,psychologic)
 
 LIBRARY
-  MAIN : location(phisionomic,psychologic)
+  MAIN : location(synthetic,psychologic)
 
 DOCUMENTATION
   MAIN : phisionomic(parent,psychologic)
@@ -283,9 +286,6 @@ SPEED
 STRANGER
   MAIN : organic(unrelated)
 
-LIETAL
-  MAIN : multiple(push,phisionomic,single)
-
 CITY
   MAIN : synthetic(position,organic,multiple)
 
@@ -297,6 +297,18 @@ BEINGS
 
 SCHOOL
   MAIN : position(synthetic,psychologic)
+
+DESK
+  MAIN : physic(order,synthetic)
+
+PENCIL
+  MAIN : physic(to_make,synthetic)
+
+MESSAGE
+  MAIN : synthetic(state)
+
+LESSON
+  MAIN : synthetic(order,psychologic)
 
 ~ Verbs
 
@@ -398,6 +410,21 @@ TO_NAME
 
 TO_TALK
   MAIN : to_see(mobile,psychologic)
+
+TO_INSERT
+  MAIN : to_make(children)
+
+TO_FIND
+  MAIN : to_see(certain)
+
+TO_SEARCH
+  MAIN : to_see(possible)
+
+TO_CLAW
+  MAIN : to_make(negative,phisionomic)
+
+TO_OPEN
+  MAIN : to_make(inward)
 
 ~ Prepositions
 
@@ -690,7 +717,7 @@ AWARE
 UNBREAKABLE
   MAIN : impossible(to_make,multiple)
 
-~ Particles
+~ Grammar
 
 TRUE
   MAIN : true()
@@ -724,3 +751,29 @@ RELATION
 
 CHILDREN
   MAIN : children()
+
+~ Foreign
+
+CAT
+  TYPE : Foreign
+  MAIN : location(phisionomic)
+
+TELEPHONE
+  TYPE : Foreign
+  MAIN : real(push,to_be,to_be)
+
+OWL
+  TYPE : Foreign
+  MAIN : impossible(none)
+
+FOX
+  TYPE : Foreign
+  MAIN : to_be(impossible)
+
+BAT
+  TYPE : Foreign
+  MAIN : neutral(phisionomic)
+
+LIETAL
+  TYPE : Foreign
+  MAIN : multiple(push,phisionomic,single)
