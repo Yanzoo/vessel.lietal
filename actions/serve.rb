@@ -21,7 +21,11 @@ class ActionServe
     $dictionaery = Dictionaery.new(@host.path)
     $aebeth = Aebeth.new(@host.path)
 
-    if q.downcase == "documentation"
+    if q.downcase.split(" ").first == "side_by_side"
+      file_name = q.downcase.split(" ").last
+      file = Memory_Hash.new(file_name.sub(".mh",""),@host.path).to_h
+      return $dictionaery.side_by_side_large(file)
+    elsif q.downcase == "documentation"
       documentation = Documentation.new(@host.path)
       documentation.dictionaery = $dictionaery
       documentation.aebeth = $aebeth

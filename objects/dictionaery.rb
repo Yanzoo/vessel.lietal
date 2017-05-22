@@ -68,10 +68,21 @@ class Dictionaery
 
   end
 
-  def side_by_side sentence_target, sentence, construction_target, construction
+  def side_by_side sentence_target, sentence, construction_target, construction, template = :small
 
     return "<code><comment>English   </comment>#{sentence.sub(sentence_target,'<b>'+sentence_target+'</b>')}\n<comment>Lietal    </comment>#{construct(construction).sub(translate(construction_target).to_s,'<b>'+translate(construction_target).to_s+'</b>')}<comment>Construct </comment>#{construction.sub(construction_target,'<b>'+construction_target+'</b>')}</code>"
     
+  end
+
+  def side_by_side_large file
+
+    html = "<style>unknown { color:#999}</style>"
+    file["MAIN"].each do |english,construction|
+      html += "#{english.append(' ',40)} <comment>:</comment> #{construction ? construct(construction) : 'Missing\n'}"
+    end
+
+    return "<code style='font-size:12px'>#{html}</code>"
+
   end
 
   def construct construction

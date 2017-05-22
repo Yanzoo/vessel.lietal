@@ -63,9 +63,11 @@ class Vieth
 
     _childspeak = childspeak
 
-    if _childspeak.length == 4 && (_childspeak[1,1] == _childspeak[3,1] || _childspeak[0,1] == _childspeak[2,1]) then return adultspeak_segement(_childspeak[0,4]) end
-    if _childspeak.length == 6 then return _childspeak[0,2]+adultspeak_segement(_childspeak[2,4]) end
-    if _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
+    if _childspeak.length == 2 then return childspeak[1,1]+childspeak[0,1]
+    elsif _childspeak.length == 4 && (_childspeak[1,1] == _childspeak[3,1] || _childspeak[0,1] == _childspeak[2,1]) then return adultspeak_segement(_childspeak[0,4])
+    elsif _childspeak.length == 6 && (_childspeak[0,1] == _childspeak[2,1]) then return adultspeak_segement(_childspeak[0,4])+_childspeak[4,2]
+    elsif _childspeak.length == 6 then return _childspeak[0,2]+adultspeak_segement(_childspeak[2,4])
+    elsif _childspeak.length == 8 then return adultspeak_segement(_childspeak[0,4])+adultspeak_segement(_childspeak[4,4]) end
 
     return _childspeak
 
@@ -91,7 +93,7 @@ class Vieth
       v2 = ""
     end
 
-    return "#{c1}#{v1}#{v2}#{c2}"
+    return "#{c1}#{v1}#{c2}#{v2}"
 
   end
 

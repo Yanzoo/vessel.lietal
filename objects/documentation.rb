@@ -65,15 +65,15 @@ class Documentation
 </table>
 
 #{index.add(:basics,:morphology)}
-<p>Building words from Lietal's phonemes is called {_childspeak_}. It makes for rythmical and syllabic words, but which take quite a long time to say. </p>
-<p>In this documentation, {_childspeak_} is condensed into the phonetically denser form named{_adultspeak_}.</p>
+<p>Building words from Lietal's phonemes is called {_childspeak_}. It makes for rythmical and syllabic words, but which take quite a long time to say. This documentation uses the phonetically denser {_adultspeak_}.</p>
+<p>Single syllable words are reversed, so {_#{@dictionaery.translate('no',:lietal).childspeak}_} becomes {_#{@dictionaery.translate('no',:lietal).adultspeak}_}. Vowel sequences, like {_#{@dictionaery.translate('he_she',:lietal).childspeak}_}, are condensed into {_#{@dictionaery.translate('he_she',:lietal).adultspeak}_}. Consonant sequences, like {_#{@dictionaery.translate('grey',:lietal).childspeak}_}, are condensed into {_#{@dictionaery.translate('grey',:lietal).adultspeak}_}. </p>
 <table>
   <tr><td></td><th>Childspeak</th><th>Adultspeak</th></tr>
+  <tr><th>Yes</th><td>#{@dictionaery.translate('yes',:lietal).childspeak}</td><td>#{@dictionaery.translate('yes',:lietal).adultspeak}</td></tr>
   <tr><th>Who</th><td>#{@dictionaery.translate('who',:lietal).childspeak}</td><td>#{@dictionaery.translate('who',:lietal).adultspeak}</td></tr>
   <tr><th>Outside</th><td>#{@dictionaery.translate('outside',:lietal).childspeak}</td><td>#{@dictionaery.translate('outside',:lietal).adultspeak}</td></tr>
-  <tr><th>House</th><td>#{@dictionaery.translate('house',:lietal).childspeak}</td><td>#{@dictionaery.translate('house',:lietal).adultspeak}</td></tr>
   <tr><th>To Read</th><td>#{@dictionaery.translate('to_read',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_read',:lietal).adultspeak}</td></tr>
-  <tr><th>Everyone</th><td>#{@dictionaery.translate('everyone',:lietal).childspeak}</td><td>#{@dictionaery.translate('everyone',:lietal).adultspeak}</td></tr>
+  <tr><th>Whenever</th><td>#{@dictionaery.translate('whenever',:lietal).childspeak}</td><td>#{@dictionaery.translate('whenever',:lietal).adultspeak}</td></tr>
 </table>
 
 #{index.add(:root,:aebeth)}
@@ -84,7 +84,7 @@ class Documentation
 
 #{index.add(:vocabulary,:pronouns)}
 <p>Usually, a sentence is expected to be at the first person if a pronoun has not already been declared, pronouns are often ommited when possible.</p>
-#{@dictionaery.side_by_side('you','I give you the book.','you','I.to_give you book')}
+#{@dictionaery.side_by_side('you','I give you the book.','you','to_give you book')}
 #{$dictionaery.collect('pronoun')}
 
 #{index.add(:vocabulary,:questions)}
@@ -207,10 +207,6 @@ class Documentation
 <tr>
   <th>To wear</th><td>#{@dictionaery.translate('to_wear',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_wear',:lietal)}</td>
   <th>To say</th><td>#{@dictionaery.translate('to_say',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_say',:lietal)}</td>
-</tr>
-<tr>
-  <th>To warn</th><td>#{@dictionaery.translate('to_warn',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_warn',:lietal)}</td>
-  <th>To waste</th><td>#{@dictionaery.translate('to_waste',:lietal).childspeak}</td><td>#{@dictionaery.translate('to_waste',:lietal)}</td>
 </tr>
 </table>
 

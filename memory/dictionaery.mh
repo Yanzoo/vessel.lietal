@@ -241,12 +241,6 @@ YESTERDAY
 HOUSE
   MAIN : physic(location,to_be)
 
-ROOM
-  MAIN : synthetic(location,to_be)
-
-WALL
-  MAIN : synthetic(impossible,interaction)
-
 BOOK
   MAIN : physic(synthetic,psychologic)
 
@@ -301,14 +295,32 @@ SCHOOL
 DESK
   MAIN : physic(order,synthetic)
 
-PENCIL
-  MAIN : physic(to_make,synthetic)
-
 MESSAGE
-  MAIN : synthetic(state)
+  MAIN : synthetic(order,state)
+
+SCRIBBLE
+  MAIN : synthetic(chaos,state)
 
 LESSON
   MAIN : synthetic(order,psychologic)
+
+PLACE
+  MAIN : synthetic(location)
+
+ROOM
+  MAIN : synthetic(parent)
+
+WALL
+  MAIN : impossible(interaction)
+
+PENCIL
+  MAIN : physic(to_make,phisionomic,state)
+
+PAPER
+  MAIN : physic(to_see,phisionomic,state)
+
+VISITOR
+  MAIN : organic(disconnect)
 
 ~ Verbs
 
@@ -381,7 +393,7 @@ TO_SPEAK
 TO_WARN
   MAIN : to_see(outward,possible,negative)
 
-TO_WASTE
+TO_DESTROY
   MAIN : to_make(none)
 
 TO_SEE
@@ -420,11 +432,23 @@ TO_FIND
 TO_SEARCH
   MAIN : to_see(possible)
 
-TO_CLAW
-  MAIN : to_make(negative,phisionomic)
-
 TO_OPEN
   MAIN : to_make(inward)
+
+TO_DO
+  MAIN : to_make()
+
+TO_CONTAIN
+  MAIN : to_be(parent)
+
+TO_ENTER
+  MAIN : to_be(inward,location)
+
+TO_LEAVE
+  MAIN : to_be(outward,location)
+
+TO_ATTACK
+  MAIN : to_make(negative,phisionomic)
 
 ~ Prepositions
 
@@ -716,6 +740,9 @@ AWARE
 
 UNBREAKABLE
   MAIN : impossible(to_make,multiple)
+
+INSIDE_OUT
+  MAIN : inward(outward)
 
 ~ Grammar
 
