@@ -23,8 +23,7 @@ class ActionServe
 
     if q.downcase.split(" ").first == "side_by_side"
       file_name = q.downcase.split(" ").last
-      file = Memory_Hash.new(file_name.sub(".mh",""),@host.path).to_h
-      return $dictionaery.side_by_side_large(file)
+      return $dictionaery.side_by_side_large(file_name)
     elsif q.downcase == "documentation"
       documentation = Documentation.new(@host.path)
       documentation.dictionaery = $dictionaery

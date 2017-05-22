@@ -2,27 +2,15 @@
 ~ NOTE : *
 ~ AUTH : Devine Lu Linvega
 
-ENGLISH
-  Whenever she went out, the little girl wore a red riding cloak, 
-  so everyone in the village called her <i>Little Red Riding Hood</i>.<br />
-  One morning, Little Red Riding Hood asked her mother 
-  if she could go to visit her grandmother 
-  as it had been awhile since they'd seen each other.<br />
-  "That's a good idea", her mother said.
-  So they packed a nice basket for Little Red Riding Hood
-  to take to her grandmother. When the basket was ready, 
-  the little girl put on her red cloak and kissed her mother goodbye.<br />
-  "Remember, go straight to Grandma's house", her mother cautioned. 
-  "Don't dawdle along the way and please don't talk to strangers!"
-  "The woods are dangerous."
-
-CONSTRUCTION
-  He_She.to_go outside ! He_She.to_wear Cloak [ little & red ]
-  City.beings.to_name He_She Cloak [ red & to_walk ]
-  Morning ! He_She.to_ask Mother Potential_present ! I.to_go Grandmother.house
-  He_She.mother.to_say Idea [ good ]
-  [ He_She & He_She.mother ].to_assemble Basket
-  Basket [ assembled ] ! He_She.to_wear Cloak [ red ] & He_She.to_give He_She.mother kiss
-  He_She.mother.to_warn to_go directly Grandmother.house
-  [ to_go wherever | to_talk stranger ].imperative_negative
-  Woods [ dangerous ]
+MAIN
+  Little Red Riding Hood                                                                         : Cloak little red to_walk
+  Whenever she went out, the little girl wore a red riding cloak                                 : He_She.to_walk outside ! He_She.to_wear Cloak [ little & red ]
+  so everyone in the village called her <b>Little Red Riding Hood</b>                            : City.to_name He_She <b> Cloak little red to_walk </b>
+  One morning, Little Red Riding Hood asked her mother                                           : Morning ! He_She.to_ask Mother
+  if she could go to visit her grandmother as it had been awhile since they'd seen each other    : Potential ! I.to_go Grandmother.house
+  "That's a good idea", her mother said                                                          : mother.to_say <i> Idea [ good ] </i>
+  So they packed a nice basket for Little Red Riding Hood to take to her grandmother             : [ He_She & mother ].to_assemble Basket
+  When the basket was ready, the little girl put on her red cloak and kissed her mother goodbye  : Basket [ assembled ] ! [ to_wear Cloak & to_give mother kiss ]
+  "Remember, go straight to Grandma's house", her mother cautioned                               : mother.to_warn he_she.to_go Grandmother.house.directly
+  "Don't dawdle along the way and please don't talk to strangers!"                               : [ to_go wherever | to_talk stranger ].imperative_negative
+  "The woods are dangerous."                                                                     : Woods [ dangerous ]

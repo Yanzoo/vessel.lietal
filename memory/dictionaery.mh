@@ -322,6 +322,15 @@ PAPER
 VISITOR
   MAIN : organic(disconnect)
 
+STYLE
+  MAIN : phisionomic(synthetic)
+
+HANDWRITTING
+  MAIN : phisionomic(synthetic)
+
+VERSION
+  MAIN : single(structure)
+
 ~ Verbs
 
 TO_GO
@@ -450,9 +459,19 @@ TO_LEAVE
 TO_ATTACK
   MAIN : to_make(negative,phisionomic)
 
+TO_HAVE
+  MAIN : to_be(parent)
+
+TO_EDIT
+  MAIN : to_make(order)
+
 ~ Prepositions
 
 ON
+  TYPE : Preposition
+  MAIN : parent()
+
+ONTO
   TYPE : Preposition
   MAIN : parent()
 
@@ -466,7 +485,7 @@ IN
 
 INSIDE
   TYPE : Preposition
-  MAIN : children(location)
+  MAIN : children()
 
 UNDER
   TYPE : Preposition
@@ -730,7 +749,7 @@ DANGEROUS
   MAIN : negative(to_make,phisionomic)
 
 DIRECTLY
-  MAIN : certain(position)
+  MAIN : certain(outward)
 
 ASSEMBLED
   MAIN : united(children)
@@ -743,6 +762,15 @@ UNBREAKABLE
 
 INSIDE_OUT
   MAIN : inward(outward)
+
+CROWDED
+  MAIN : chaos(multiple,organic)
+
+FIRST
+  MAIN : counter(order)
+
+LAST
+  MAIN : counter(chaos)
 
 ~ Grammar
 
@@ -778,6 +806,9 @@ RELATION
 
 CHILDREN
   MAIN : children()
+
+NTH
+  MAIN : related()
 
 ~ Foreign
 

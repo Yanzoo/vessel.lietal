@@ -13,9 +13,6 @@ class Documentation
   def initialize path
 
     @path = path
-    @lrrh = Memory_Hash.new("little_riding_hood",@path).to_h
-    @lrrh[:english] = @lrrh["ENGLISH"].join("\n")
-    @lrrh[:construction] = @lrrh["CONSTRUCTION"].join("\n")
 
   end
 
@@ -210,10 +207,8 @@ class Documentation
 </tr>
 </table>
 
-<h3>#{@dictionaery.construct('Cloak [ little & red ]')}</h3>
-<p>#{@dictionaery.construct(@lrrh[:construction])}</p>
-
-<code>#{@lrrh[:english]}</code>
+#{index.add(:practice,@dictionaery.construct('Cloak little red to_walk'))}
+#{@dictionaery.side_by_side_large('little_riding_hood.mh')}
 
 #{index.add(:root,:development)}
 #{index.add(:development,:contribute)}

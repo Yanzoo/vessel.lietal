@@ -9,6 +9,7 @@ class Dictionaery
 
 	def initialize path
 
+    @path = path
 		@en = Memory_Hash.new("dictionaery",path).to_h("vieth")
 
 	end
@@ -74,14 +75,16 @@ class Dictionaery
     
   end
 
-  def side_by_side_large file
+  def side_by_side_large file_name
+
+    file = Memory_Hash.new(file_name.sub(".mh",""),@path).to_h
 
     html = "<style>unknown { color:#999}</style>"
     file["MAIN"].each do |english,construction|
-      html += "#{english.append(' ',40)} <comment>:</comment> #{construction ? construct(construction) : 'Missing\n'}"
+      html += "<tr><th width='50%'>#{english.append(' ',40)}</th><td>#{construction ? construct(construction) : 'Missing\n'}</td></tr>"
     end
 
-    return "<code style='font-size:12px'>#{html}</code>"
+    return "<table>#{html}</table>"
 
   end
 

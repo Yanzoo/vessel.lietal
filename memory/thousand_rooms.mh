@@ -4,35 +4,43 @@
 
 MAIN
   Thousand Rooms                          : 1000.moment
-  Lesson 1                                : lesson.1
+  Cat, Owl, Bat & Fox                     : & [ cat owl bat fox ]
+  Illustrated by R. Bellum                : Rekka Bellum.to_draw
+  Edited by D. Lu Linvega                 : Dekka Lu Linvega.to_edit
+  First Edition                           : Version.1
+  You wake up in a room, surrounded by unbreakable walls. : Room [ white & unbreakable ].inside ! You.to_become aware
+  On a desk, lies a pencil and a sheet of blank paper.    : Desk.onto ! [ pencil & paper ]
+  Inside the desk, notes bearing your handwriting         : Desk.inside ! message.handwritting [ you.handwritting ]
+  You have no recollection.                               : You.to_remember.negative
+  Lesson 1                                : lesson.first
   Cat awakens.                            : cat.to_become aware
   Owl finds a piece of paper.             : owl.to_find paper
   Bat finds a pencil.                     : bat.to_find pencil
   Fox opens the desk.                     : fox.to_open desk
   Lesson 2                                : lesson.2
   Cat claws at the walls.                 : cat.to_attack wall
-  Owl leaves a message in the desk.       : owl.to_insert desk.inside message
-  Bat finds a second pencil.              : bat.to_find pencil.2
+  Owl leaves a message in the desk.       : owl.to_insert [ desk.inside ! message ]
+  Bat finds a second pencil.              : bat.to_find pencil.2.nth
   Fox dismantles the desk.                : fox.to_divide desk
   Lesson 3                                : lesson.3
   Cat destroys the pencil and the paper.  : cat.to_destroy [ pencil & paper ]
-  Owl finds notes in the desk.            : owl.to_find desk.inside message
-  Bat finds the desk full with pencils.   : bat.to_find desk.inside pencil.multiple
+  Owl finds notes in the desk.            : owl.to_find [ desk.inside ! message ]
+  Bat finds the desk full with pencils.   : bat.to_find [ desk.inside ! pencil.multiple ]
   Fox builds the desk inside-out.         : fox.to_build desk.inside_out
   Lesson 4                                : lesson.4
   Cat enters the desk.                    : cat.to_enter desk
   Owl tries to understand.                : owl.to_understand.potential_present
   Bat sees no escape.                     : bat.to_leave.negative
-  Fox has a visitor.                      : fox.to_see visitor.1
+  Fox has a visitor.                      : fox.to_see visitor.1.nth
   Lesson 5                                : lesson.5
   Cat comes out of the desk.              : cat.to_leave desk
   Owl understands the room.               : owl.to_understand room
   Bat awakens.                            : bat.to_become aware
-  Fox has a second visitor.               : fox.to_see visitor.2
+  Fox has a second visitor.               : fox.to_see visitor.2.nth
   Lesson 6                                : lesson.6
   Cat destroys the desk.                  : cat.to_destroy desk
   Owl finds a scribble.                   : owl.to_find scribble
   Bat finds a pencil..                    : bat.to_find pencil
-  Fox has too many visitors.              : fox.to_see visitor.multiple
-  Lesson 7                                : lesson.7
+  Fox has too many visitors.              : fox.to_be crowded
+  Last Lesson                             : lesson.last
   What would you do?                      : you.to_do what
