@@ -32,32 +32,32 @@ class Documentation
   <th colspan='6'>6 Vowels</th>
 </tr>
 <tr>
-  <th>i</th><td>l<b>ea</b>ves</td>
-  <th>a</th><td>hex<b>a</b>gram</td>
-  <th>o</th><td><b>au</b>tomobile</td>
+  <th style='font-family:\"input_mono_medium\"'>i</th><td>l<b>ea</b>ves</td>
+  <th style='font-family:\"input_mono_medium\"'>a</th><td>hex<b>a</b>gram</td>
+  <th style='font-family:\"input_mono_medium\"'>o</th><td><b>au</b>tomobile</td>
 </tr>
 <tr>
-  <th>e</th><td>n<b>e</b>ver</td>
-  <th>u</th><td>n<b>ew</b></td>
-  <th>y</th><td>b<b>uy</b></td>
+  <th style='font-family:\"input_mono_medium\"'>e</th><td>n<b>e</b>ver</td>
+  <th style='font-family:\"input_mono_medium\"'>u</th><td>n<b>ew</b></td>
+  <th style='font-family:\"input_mono_medium\"'>y</th><td>b<b>uy</b></td>
 </tr>
 <tr>
   <th colspan='6'>9 Consonants</th>
 </tr>
 <tr>
-  <th>k</th><td>basi<b>c</b></td>
-  <th>s</th><td><b>s</b>ymphony</td>
-  <th>j</th><td><b>j</b>eovah</td>
+  <th style='font-family:\"input_mono_medium\"'>k</th><td><b>k</b>iss</td>
+  <th style='font-family:\"input_mono_medium\"'>t</th><td>ti<b>t</b>le</td>
+  <th style='font-family:\"input_mono_medium\"'>d</th><td><b>d</b>evice</td>
 </tr>
 <tr>
-  <th>t</th><td>ti<b>t</b>le</td>
-  <th>l</th><td><b>l</b>ength</td>
-  <th>v</th><td><b>v</b>ideo</td>
+  <th style='font-family:\"input_mono_medium\"'>r</th><td><b>r</b>eturn</td>
+  <th style='font-family:\"input_mono_medium\"'>s</th><td><b>s</b>ymphony</td>
+  <th style='font-family:\"input_mono_medium\"'>l</th><td><b>l</b>igature</td>
 </tr>
 <tr>
-  <th>p</th><td><b>d</b>evice</td>
-  <th>v</th><td><b>v</b>acant</td>
-  <th>f</th><td><b>f</b>estival</td>
+  <th style='font-family:\"input_mono_medium\"'>j</th><td><b>g</b>enesis</td>
+  <th style='font-family:\"input_mono_medium\"'>v</th><td><b>v</b>ideo</td>
+  <th style='font-family:\"input_mono_medium\"'>f</th><td><b>f</b>estival</td>
 </tr>
 </table>
 

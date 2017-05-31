@@ -28,6 +28,8 @@ PLEASE
   TYPE : Expression
   MAIN : possible(positive)
 
+
+
 ~ Question Words
 
 WHEN
@@ -464,6 +466,9 @@ TO_HAVE
 
 TO_EDIT
   MAIN : to_make(order)
+
+TO_THANK
+  MAIN : to_see(positive,interaction)
 
 ~ Prepositions
 

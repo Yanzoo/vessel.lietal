@@ -8,7 +8,6 @@ The lietal language toolchain.
 Custom
   Translate      | Translate English word into Lietal.
   Serve          | Deliver html documentation.
-  Print          | List Dictionaery content as JSON.
 Generic
   Document       | Generate the Github documentation file.
   Help           | List available commands.
@@ -16,7 +15,7 @@ Generic
 
 ## Documentation
 
-Generated with [Nataniev](http://wiki.xxiivv.com/Nataniev) on **Tetresamber 19, 2017**, view the [project site](htp://google.com).
+Generated with [Nataniev](http://wiki.xxiivv.com/Nataniev) on **Hexesamber 10, 2017**, view the [project site](htp://google.com).
 
 ##License
 
