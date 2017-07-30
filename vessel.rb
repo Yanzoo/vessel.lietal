@@ -14,6 +14,8 @@ class VesselLietal
     @docs = "The lietal language toolchain."
     
     install(:custom,:translate)
+    install(:custom,:query)
+    install(:custom,:generate)
     install(:custom,:serve)
     install(:generic,:document)
     install(:generic,:help)

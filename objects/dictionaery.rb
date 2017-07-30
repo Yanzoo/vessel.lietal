@@ -3,16 +3,38 @@
 
 class Dictionaery
 
-	attr_accessor :vowels
-	attr_accessor :consonants
-	attr_accessor :path
+  attr_accessor :vowels
+  attr_accessor :consonants
+  attr_accessor :path
+  attr_accessor :dict
 
-	def initialize path
+  def initialize path
 
     @path = path
-		@en = Memory_Hash.new("dictionaery",path).to_h("vieth")
+    @en = Memory_Hash.new("dictionaery",path).to_h("vieth")
 
-	end
+  end
+
+  def generate
+
+    h = {}
+
+    longest = 0
+    # Find longest word
+    @en.each do |name,w|
+      en = name.downcase.gsub("_"," ")
+      if en.length > longest then longest = en.length end
+    end
+
+    puts "@ #{'ENGLISH'.append(' ',longest-2)} LIETAL"
+    @en.sort.each do |name,w|
+      en = name.downcase.gsub("_"," ")
+      li = w
+      puts "#{en.append(' ',longest)} #{li}"
+    end
+    return h
+
+  end
 
   def english e
 

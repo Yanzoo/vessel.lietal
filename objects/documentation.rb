@@ -215,7 +215,7 @@ class Documentation
 <p>You can improve this documentation by the means of {_pull requests_} on {{documentation.rb|http://github.com/XXIIVV/vessel.lietal/blob/master/objects/documentation.rb}}, and you can add new words with {{dictionaery.mh|http://github.com/XXIIVV/vessel.lietal/blob/master/memory/dictionaery.mh}}.</p>
 "
   
-  return index.to_s+html
+  return index.to_s(true)+html
 
   end
 
