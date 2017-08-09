@@ -210,6 +210,9 @@ LIFE
 AUTOMATION
   MAIN : outward(synthetic)
 
+DIVINITY
+  MAIN : parent(order,to_make)
+
 HAND
   MAIN : organic(to_make)
 
