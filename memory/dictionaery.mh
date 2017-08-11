@@ -350,6 +350,9 @@ VERSION
   
 MISTAKE
   MAIN : negative(real)
+  
+USEFUL
+  MAIN : positive(active)
 
 ~ Verbs
 
