@@ -78,7 +78,7 @@ THEY
   TYPE : Pronoun
   MAIN : multiple(position)
 
-YOUS
+YOU(PLURAL)
   TYPE : Pronoun
   MAIN : multiple(outward)
 
@@ -102,7 +102,7 @@ THEIR
   TYPE : Pronoun
   MAIN : children(multiple,position)
 
-YOUSR
+YOUR(PLURAL)
   TYPE : Pronoun
   MAIN : children(multiple,outward)
   
@@ -347,6 +347,9 @@ HANDWRITTING
 
 VERSION
   MAIN : single(structure)
+  
+MISTAKE
+  MAIN : negative(real)
 
 ~ Verbs
 
@@ -484,6 +487,9 @@ TO_EDIT
 
 TO_THANK
   MAIN : to_see(positive,interaction)
+  
+TO_PARDON
+  MAIN : to_see(negative,interaction)
 
 ~ Prepositions
 
@@ -594,7 +600,7 @@ HERE
 BETWEEN
   TYPE : Preposition
   MAIN : location(united)
-
+  
 ~ Color
 
 COLOR
