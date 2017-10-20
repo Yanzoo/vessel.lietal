@@ -194,6 +194,9 @@ PATH
 
 CLOAK
   MAIN : synthetic(parent,phisionomic)
+  
+DARK
+  MAIN : inward(organic,complex)
 
 WOODS
   MAIN : location(organic,synthetic)
@@ -258,6 +261,12 @@ HOUSE
 BOOK
   MAIN : physic(synthetic,psychologic)
   
+SHIELD
+  MAIN : impossible(interaction,mobile)
+
+SWORD
+  MAIN : mobile(interaction,inward,organic)
+  
 WORD
   MAIN : structure(synthetic,psychologic)
 
@@ -296,6 +305,9 @@ MAN
 
 SPEED
   MAIN : counter(position)
+  
+STRENGHT
+  MAIN : counter(outward,interaction)
 
 STRANGER
   MAIN : organic(unrelated)
@@ -356,6 +368,9 @@ MISTAKE
   
 USEFUL
   MAIN : positive(active)
+  
+CALLING
+  MAIN : structure(synthetic,inward)
 
 ~ Verbs
 
