@@ -269,6 +269,9 @@ DOCUMENTATION
 
 PARENT
   MAIN : organic(parent)
+  
+SIBLING
+  MAIN : organic(cholarchical,parent)
 
 MOTHER
   MAIN : organic(inward,parent)
